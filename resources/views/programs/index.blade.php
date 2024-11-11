@@ -47,7 +47,7 @@
                 </form>
             </section>
 
-            <div class="bg-white overflow-hidden border border-gray-200 rounded-2xl">
+            <div class="bg-white overflow-hidden border border-gray-200 md:rounded-2xl">
                 <div class="p-6 text-gray-900 space-y-5">
                     <div class="relative overflow-x-auto sm:rounded-lg">
                         <table class="w-full text-sm text-left rtl:text-right text-gray-500">
@@ -111,7 +111,7 @@
                                         </td>
                                         <td class="px-6 py-4 flex gap-2">
                                             <form action="{{ route('programs.updatestatus', $program->id) }}"
-                                                method="POST">
+                                                method="POST" onclick="return confirmUpdate();">
                                                 @csrf
                                                 @method('PATCH')
                                                 <button type="submit"
@@ -124,7 +124,7 @@
                                                 <i class="fa-regular fa-pen-to-square"></i>
                                             </a>
                                             <form action="{{ route('programs.destroy', $program->id) }}" method="POST"
-                                                class="inline">
+                                                class="inline" onclick="return confirmDelete();">
                                                 @csrf
                                                 @method('DELETE')
                                                 <button type="submit"
@@ -151,4 +151,15 @@
                 </div>
             </div>
         </div>
+        @push('scripts')
+            <script>
+                function confirmUpdate(){
+                    return confirm('Are you sure you want to update this data?');
+                }
+                function confirmDelete(){
+                    return confirm('Are you sure you want to delete this data?');
+                }
+            </script>
+        @endpush
     </x-app-layout>
+

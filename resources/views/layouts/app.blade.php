@@ -34,5 +34,6 @@
             </main>
         </div>
         <script src="{{ asset('js/all.min.js') }}"></script>
+        @stack('scripts')
     </body>
 </html>
