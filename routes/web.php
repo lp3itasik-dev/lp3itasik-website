@@ -21,6 +21,7 @@ Route::middleware('auth')->group(function () {
 
 Route::middleware('auth')->group(function () {
     Route::resource('programs', ProgramController::class);
+    Route::patch('programs/updatestatus/{id}', [ProgramController::class, 'updatestatus'])->name('programs.updatestatus');
     Route::resource('programs-interests', ProgramInterestController::class);
 });
 
