@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Program;
+use App\Models\ProgramInterest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -116,9 +117,17 @@ class ProgramController extends Controller
      * Display the specified resource.
      */
 
-    public function show(Program $program)
+    public function show($id)
     {
-        //
+        $program = Program::findOrFail($id);
+        $search_val = request('search');
+        $interest_query = ProgramInterest::query();
+        if ($search_val) {
+            $interest_query->where('name', 'like', '%' . $search_val . '%');
+        }
+        $total = ProgramInterest::count();
+        $interests = $interest_query->where('program_id', $id)->paginate(5);
+        return view('programs.show', compact(['program', 'interests', 'total']));
     }
 
     /**
@@ -189,6 +198,7 @@ class ProgramController extends Controller
                 $path = $request->file('image')->store('images/programs', 'public');
                 $data['image'] = $path;
             }
+
             $program->update($data);
 
             return redirect()

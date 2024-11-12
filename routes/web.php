@@ -22,7 +22,12 @@ Route::middleware('auth')->group(function () {
 Route::middleware('auth')->group(function () {
     Route::resource('programs', ProgramController::class);
     Route::patch('programs/updatestatus/{id}', [ProgramController::class, 'updatestatus'])->name('programs.updatestatus');
-    Route::resource('programs-interests', ProgramInterestController::class);
+    Route::get('programinterests/create/{id}', [ProgramInterestController::class, 'create'])->name('programinterests.create');
+    Route::get('programinterests/edit/{id}', [ProgramInterestController::class, 'edit'])->name('programinterests.edit');
+    Route::post('programinterests/store', [ProgramInterestController::class, 'store'])->name('programinterests.store');
+    Route::patch('programinterests/update/{id}', [ProgramInterestController::class, 'update'])->name('programinterests.update');
+    Route::patch('programinterests/updatestatus/{id}', [ProgramInterestController::class, 'updatestatus'])->name('programinterests.updatestatus');
+    Route::delete('programinterests/destroy/{id}/{program_id}', [ProgramInterestController::class, 'destroy'])->name('programinterests.destroy');
 });
 
 require __DIR__.'/auth.php';
