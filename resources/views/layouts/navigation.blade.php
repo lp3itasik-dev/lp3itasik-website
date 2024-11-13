@@ -20,6 +20,8 @@
                         'programs.create',
                         'programs.edit',
                         'programs.show',
+                        'programinterests.create',
+                        'programinterests.edit',
                     ])">
                         {{ __('Programs') }}
                     </x-nav-link>
