@@ -33,48 +33,57 @@
                             <div class="w-[300px] relative top-0 rounded-md ">
                                 <div class="w-full bg-gray-50 p-4 rounded-2xl">
                                     <dl class="space-y-3 text-sm">
-                                        <dt class="font-bold bg-sky-100 px-3 py-1.5 rounded-xl text-sky-700">Politeknik LP3I Kampus Tasikmalaya</dt>
-                                        <hr>
+                                        @if (count($program_plt) > 0)
+                                            <dt class="font-bold bg-sky-100 px-3 py-1.5 rounded-xl text-sky-700">
+                                                Politeknik LP3I Kampus Tasikmalaya</dt>
+                                            <hr>
+                                        @endif
                                         @foreach ($programs_plt as $program)
-                                        <dd>
-                                            <a href="#"
-                                                class="space-x-1 text-gray-500 hover:text-gray-700 transition-all ease-in-out">
-                                                <i class="fa-solid fa-circle text-xs"></i>
-                                                <span class="font-medium">
-                                                    {{ $program->level }}
-                                                    {{ $program->title }}
-                                                </span>
-                                            </a>
-                                        </dd>
+                                            <dd>
+                                                <a href="#"
+                                                    class="space-x-1 text-gray-500 hover:text-gray-700 transition-all ease-in-out">
+                                                    <i class="fa-solid fa-circle text-xs"></i>
+                                                    <span class="font-medium">
+                                                        {{ $program->level }}
+                                                        {{ $program->title }}
+                                                    </span>
+                                                </a>
+                                            </dd>
                                         @endforeach
-                                        <dt class="font-bold bg-emerald-100 px-3 py-1.5 rounded-xl text-emerald-700">LP3I Tasikmalaya</dt>
-                                        <hr>
+                                        @if (count($program_plt_vokasi) > 0)
+                                            <dt
+                                                class="font-bold bg-emerald-100 px-3 py-1.5 rounded-xl text-emerald-700">
+                                                LP3I Tasikmalaya</dt>
+                                            <hr>
+                                        @endif
                                         @foreach ($programs_plt_vokasi as $program)
-                                        <dd>
-                                            <a href="#"
-                                                class="space-x-1 text-gray-500 hover:text-gray-700 transition-all ease-in-out">
-                                                <i class="fa-solid fa-circle text-xs"></i>
-                                                <span class="font-medium">
-                                                    {{ $program->level }}
-                                                    {{ $program->title }}
-                                                </span>
-                                            </a>
-                                        </dd>
+                                            <dd>
+                                                <a href="#"
+                                                    class="space-x-1 text-gray-500 hover:text-gray-700 transition-all ease-in-out">
+                                                    <i class="fa-solid fa-circle text-xs"></i>
+                                                    <span class="font-medium">
+                                                        {{ $program->level }}
+                                                        {{ $program->title }}
+                                                    </span>
+                                                </a>
+                                            </dd>
                                         @endforeach
-                                        <dt class="font-bold bg-amber-100 px-3 py-1.5 rounded-xl text-amber-700">
-                                            Kampus Utama</dt>
-                                        <hr>
+                                        @if (count($program_plb) > 0)
+                                            <dt class="font-bold bg-amber-100 px-3 py-1.5 rounded-xl text-amber-700">
+                                                Kampus Utama</dt>
+                                            <hr>
+                                        @endif
                                         @foreach ($programs_plb as $program)
-                                        <dd>
-                                            <a href="#"
-                                                class="space-x-1 text-gray-500 hover:text-gray-700 transition-all ease-in-out">
-                                                <i class="fa-solid fa-circle text-xs"></i>
-                                                <span class="font-medium">
-                                                    {{ $program->level }}
-                                                    {{ $program->title }}
-                                                </span>
-                                            </a>
-                                        </dd>
+                                            <dd>
+                                                <a href="#"
+                                                    class="space-x-1 text-gray-500 hover:text-gray-700 transition-all ease-in-out">
+                                                    <i class="fa-solid fa-circle text-xs"></i>
+                                                    <span class="font-medium">
+                                                        {{ $program->level }}
+                                                        {{ $program->title }}
+                                                    </span>
+                                                </a>
+                                            </dd>
                                         @endforeach
                                     </dl>
                                 </div>
