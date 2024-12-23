@@ -19,7 +19,7 @@
                         @close.stop="open = false">
                         <div @click="open = ! open"
                             class="text-sm text-gray-500 hover:text-gray-700 cursor-pointer space-x-1 transition-all ease-in-out">
-                            <span>Program Studi</span>
+                            <span class="font-medium">Program Studi</span>
                             <i class="fa-solid fa-angle-down"></i>
                         </div>
 

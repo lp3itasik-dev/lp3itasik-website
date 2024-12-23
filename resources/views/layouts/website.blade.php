@@ -40,6 +40,7 @@
         </nav>
         @include('layouts.navigation-website')
         <div>{{ $slot }}</div>
+        @include('layouts.footer-website')
     </body>
     <script src="{{ asset('js/all.min.js') }}"></script>
 </html>
