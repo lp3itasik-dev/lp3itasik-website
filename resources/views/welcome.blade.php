@@ -97,78 +97,144 @@
             </div>
         </div>
     </section>
-    <section>
-        <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-5 px-8 py-16">
-            <div class="space-y-10 order-2 md:order-1">
-                <div class="space-y-4">
-                    <div class="space-y-1">
-                        <h2 class="font-bold text-lg">Politeknik LP3I Kampus Tasikmalaya</h2>
-                        <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam,
-                            possimus?
-                        </p>
-                    </div>
-                    <ul class="space-y-3">
-                        @foreach ($programs_plt as $program)
-                            <li class="border-l-8 border-lp3i-200 px-5">
-                                <a href="#"
-                                    class="flex items-center gap-2 text-2xl font-bold hover:underline underline-offset-4">
-                                    <span>{{ $program->level }} {{ $program->title }}</span>
-                                    <i class="fa-solid fa-external-link text-sm"></i>
-                                </a>
-                            </li>
-                        @endforeach
-                    </ul>
+    @if (count($programs_plt) > 0 || count($programs_plt_vokasi) > 0 || count($programs_plb) > 0)
+        <section>
+            <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-5 px-8 py-16">
+                <div class="space-y-10 order-2 md:order-1">
+                    @if (count($programs_plt) > 0)
+                        <div class="space-y-4">
+                            <div class="space-y-1">
+                                <h2 class="font-bold text-lg">Politeknik LP3I Kampus Tasikmalaya</h2>
+                                <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Totam,
+                                    possimus?
+                                </p>
+                            </div>
+                            <ul class="space-y-3">
+                                @foreach ($programs_plt as $program)
+                                    <li class="border-l-8 border-lp3i-200 px-5">
+                                        <a href="#"
+                                            class="flex items-center gap-2 text-2xl font-bold hover:underline underline-offset-4">
+                                            <span>{{ $program->level }} {{ $program->title }}</span>
+                                            <i class="fa-solid fa-external-link text-sm"></i>
+                                        </a>
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </div>
+                        <hr>
+                    @endif
+                    @if (count($programs_plt_vokasi) > 0)
+                        <div class="space-y-4">
+                            <div class="space-y-1">
+                                <h2 class="font-bold text-lg">Vokasi 2 Tahun LP3I Tasikmalaya</h2>
+                                <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Totam,
+                                    possimus?
+                                </p>
+                            </div>
+                            <ul class="space-y-3">
+                                @foreach ($programs_plt_vokasi as $program)
+                                    <li class="border-l-8 border-lp3i-emerald-100 px-5">
+                                        <a href="#"
+                                            class="flex items-center gap-2 text-2xl font-bold hover:underline underline-offset-4">
+                                            <span>{{ $program->title }}</span>
+                                            <i class="fa-solid fa-external-link text-sm"></i>
+                                        </a>
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </div>
+                        <hr>
+                    @endif
+                    @if (count($programs_plb) > 0)
+                        <div class="space-y-4">
+                            <div class="space-y-1">
+                                <h2 class="font-bold text-lg">Kampus Utama</h2>
+                                <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Totam,
+                                    possimus?
+                                </p>
+                            </div>
+                            <ul class="space-y-3">
+                                @foreach ($programs_plb as $program)
+                                    <li class="border-l-8 border-lp3i-red-100 px-5">
+                                        <a href="#"
+                                            class="flex items-center gap-2 text-2xl font-bold hover:underline underline-offset-4">
+                                            <span>{{ $program->level }} {{ $program->title }}</span>
+                                            <i class="fa-solid fa-external-link text-sm"></i>
+                                        </a>
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
                 </div>
-                <hr>
-                <div class="space-y-4">
-                    <div class="space-y-1">
-                        <h2 class="font-bold text-lg">Vokasi 2 Tahun LP3I Tasikmalaya</h2>
-                        <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam,
-                            possimus?
-                        </p>
+                <div
+                    class="flex flex-col items-center justify-center gap-5 border-r-8 border-lp3i-emerald-100 order-1 md:order-2">
+                    <div class="text-center space-y-1">
+                        <h2 class="uppercase font-bold text-2xl">
+                            <span class="border-l-4 border-sky-500 pl-2">Program Studi</span>
+                        </h2>
+                        <p class="text-sm text-gray-600">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Totam,
+                            possimus?</p>
                     </div>
-                    <ul class="space-y-3">
-                        @foreach ($programs_plt_vokasi as $program)
-                            <li class="border-l-8 border-lp3i-emerald-100 px-5">
-                                <a href="#"
-                                    class="flex items-center gap-2 text-2xl font-bold hover:underline underline-offset-4">
-                                    <span>{{ $program->title }}</span>
-                                    <i class="fa-solid fa-external-link text-sm"></i>
-                                </a>
-                            </li>
-                        @endforeach
-                    </ul>
-                </div>
-                <hr>
-                <div class="space-y-4">
-                    <div class="space-y-1">
-                        <h2 class="font-bold text-lg">Kampus Utama</h2>
-                        <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam,
-                            possimus?
-                        </p>
-                    </div>
-                    <ul class="space-y-3">
-                        @foreach ($programs_plb as $program)
-                            <li class="border-l-8 border-lp3i-red-100 px-5">
-                                <a href="#"
-                                    class="flex items-center gap-2 text-2xl font-bold hover:underline underline-offset-4">
-                                    <span>{{ $program->level }} {{ $program->title }}</span>
-                                    <i class="fa-solid fa-external-link text-sm"></i>
-                                </a>
-                            </li>
-                        @endforeach
-                    </ul>
+                    <img src="{{ asset('images/illustration/model.png') }}" alt="Computer Engineer"
+                        class="text-center w-96 drop-shadow-lg">
                 </div>
             </div>
-            <div class="flex flex-col items-center justify-center gap-5 border-r-8 border-lp3i-emerald-100 order-1 md:order-2">
-                <div class="text-center space-y-1">
-                    <h2 class="uppercase font-bold text-2xl">
-                        <span class="border-l-4 border-sky-500 pl-2">Program Studi</span>
-                    </h2>
-                    <p class="text-sm text-gray-600">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, possimus?</p>
+        </section>
+    @endif
+    <section>
+        <div class="container mx-auto p-8">
+            <div class="owl-carousel owl-theme">
+                <div class="item">
+                    <img src="{{ asset('images/doc-kk/KK-1.jpeg') }}" alt="KK-1">
                 </div>
-                <img src="{{ asset('images/illustration/model.png') }}" alt="Computer Engineer"
-                    class="text-center w-96 drop-shadow-lg">
+                <div class="item">
+                    <img src="{{ asset('images/doc-kk/KK-2.jpeg') }}" alt="KK-2">
+                </div>
+                <div class="item">
+                    <img src="{{ asset('images/doc-kk/KK-3.jpeg') }}" alt="KK-3">
+                </div>
+                <div class="item">
+                    <img src="{{ asset('images/doc-kk/KK-4.jpeg') }}" alt="KK-4">
+                </div>
+                <div class="item">
+                    <img src="{{ asset('images/doc-kk/KK-5.jpeg') }}" alt="KK-5">
+                </div>
+                <div class="item">
+                    <img src="{{ asset('images/doc-kk/KK-6.jpeg') }}" alt="KK-6">
+                </div>
+                <div class="item">
+                    <img src="{{ asset('images/doc-kk/KK-7.jpeg') }}" alt="KK-7">
+                </div>
+                <div class="item">
+                    <img src="{{ asset('images/doc-kk/KK-8.jpeg') }}" alt="KK-8">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container mx-auto p-8">
+            <div class="text-center mb-10">
+                <h2 class="font-bold text-2xl text-gray-900">Kerjasama</h2>
+                <p class="text-sm text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, tenetur!</p>
+            </div>
+            <div class="flex flex-wrap justify-center items-center gap-5">
+                <img src="{{ asset('images/companies-logo/logo-1.png') }}" alt="Logo-1" class="w-24">
+                <img src="{{ asset('images/companies-logo/logo-2.png') }}" alt="Logo-2" class="w-24">
+                <img src="{{ asset('images/companies-logo/logo-3.png') }}" alt="Logo-3" class="w-24">
+                <img src="{{ asset('images/companies-logo/logo-4.png') }}" alt="Logo-4" class="w-24">
+                <img src="{{ asset('images/companies-logo/logo-6.png') }}" alt="Logo-6" class="w-24">
+                <img src="{{ asset('images/companies-logo/logo-7.png') }}" alt="Logo-7" class="w-24">
+                <img src="{{ asset('images/companies-logo/logo-8.png') }}" alt="Logo-8" class="w-24">
+                <img src="{{ asset('images/companies-logo/logo-9.png') }}" alt="Logo-9" class="w-24">
+                <img src="{{ asset('images/companies-logo/logo-10.png') }}" alt="Logo-10" class="w-24">
+                <img src="{{ asset('images/companies-logo/logo-11.png') }}" alt="Logo-11" class="w-24">
+                <img src="{{ asset('images/companies-logo/logo-12.png') }}" alt="Logo-12" class="w-24">
+                <img src="{{ asset('images/companies-logo/logo-14.png') }}" alt="Logo-14" class="w-24">
             </div>
         </div>
     </section>

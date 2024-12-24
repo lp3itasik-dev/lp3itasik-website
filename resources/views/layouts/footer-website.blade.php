@@ -1,4 +1,4 @@
-<section class="bg-gradient-to-r from-lp3i-500 via-lp3i-200 to-lp3i-400 border-t-8 border-lp3i-emerald-100">
+<section class="bg-gradient-to-r from-lp3i-500 via-lp3i-100 to-lp3i-400 border-t-8 border-lp3i-emerald-100">
     <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 items-center gap-5 p-8">
         <div class="space-y-4">
             <div class="flex items-center gap-4">
