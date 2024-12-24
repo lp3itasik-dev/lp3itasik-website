@@ -1,5 +1,12 @@
 <x-website-layout>
-    <header class="h-[500px] bg-gray-200"></header>
+    <header class="owl-carousel carousel-one owl-theme">
+        <div class="item h-[450px] bg-cover bg-center"
+            style="background-image: url('{{ asset('images/doc-kk/KK-1.jpeg') }}');"></div>
+        <div class="item h-[450px] bg-cover bg-center"
+            style="background-image: url('{{ asset('images/doc-kk/KK-2.jpeg') }}');"></div>
+        <div class="item h-[450px] bg-cover bg-center"
+            style="background-image: url('{{ asset('images/doc-kk/KK-8.jpeg') }}');"></div>
+    </header>
     <section>
         <div class="container mx-auto p-8">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-10 justify-center text-center text-sm">
@@ -145,9 +152,9 @@
                                 @endforeach
                             </ul>
                         </div>
-                        <hr>
                     @endif
                     @if (count($programs_plb) > 0)
+                        <hr>
                         <div class="space-y-4">
                             <div class="space-y-1">
                                 <h2 class="font-bold text-lg">Kampus Utama</h2>
@@ -188,7 +195,7 @@
     @endif
     <section>
         <div class="container mx-auto p-8">
-            <div class="owl-carousel owl-theme">
+            <div class="owl-carousel carousel-two owl-theme">
                 <div class="item">
                     <img src="{{ asset('images/doc-kk/KK-1.jpeg') }}" alt="KK-1">
                 </div>
@@ -220,7 +227,8 @@
         <div class="container mx-auto p-8">
             <div class="text-center mb-10">
                 <h2 class="font-bold text-2xl text-gray-900">Kerjasama</h2>
-                <p class="text-sm text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, tenetur!</p>
+                <p class="text-sm text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero,
+                    tenetur!</p>
             </div>
             <div class="flex flex-wrap justify-center items-center gap-5">
                 <img src="{{ asset('images/companies-logo/logo-1.png') }}" alt="Logo-1" class="w-24">
@@ -238,4 +246,33 @@
             </div>
         </div>
     </section>
+    @push('scripts')
+        <script>
+            $('.carousel-one').owlCarousel({
+                loop: true,
+                margin: 10,
+                nav: false,
+                autoplay: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                }
+            });
+            $('.carousel-two').owlCarousel({
+                loop: true,
+                margin: 10,
+                nav: false,
+                autoplay: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 3
+                    },
+                }
+            });
+        </script>
+    @endpush
 </x-website-layout>

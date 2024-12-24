@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="{{ asset('css/all.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/select2.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/owl.theme.default.min.css') }}">
 
@@ -20,8 +21,9 @@
 </head>
 
 <body class="font-sans text-gray-900 antialiased">
+    @include('components.popup-reguler')
     <nav class="bg-gradient-to-r from-cyan-600 via-cyan-500 to-cyan-600 p-5">
-        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center gap-3 md:gap-0">
             <div class="flex items-center gap-5">
                 <div class="inline-block text-xs text-white drop-shadow">
                     <i class="fa-solid fa-phone"></i>
@@ -46,25 +48,24 @@
     @include('layouts.navigation-website')
     <div>{{ $slot }}</div>
     @include('layouts.footer-website')
+    <div class="fixed right-0 bottom-0 z-50">
+        <a href="https://politekniklp3i-tasikmalaya.ac.id/penerimaan-mahasiswa" target="_blank"
+            class="flex items-center justify-center drop-shadow-lg">
+            <lottie-player src="{{ asset('animations/whatsapp.json') }}" background="Transparent" speed="1"
+                style="width: 100px; height: 100px" direction="1" mode="normal" loop autoplay></lottie-player>
+        </a>
+    </div>
 </body>
-<script src="{{ asset('js//jquery-1.11.0.min.js') }}"></script>
+<script src="{{ asset('js/lottie.js') }}"></script>
 <script src="{{ asset('js/all.min.js') }}"></script>
+<script src="{{ asset('js/axios.min.js') }}"></script>
+<script src="{{ asset('js/jquery-1.11.0.min.js') }}"></script>
 <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
 <script>
-    $('.owl-carousel').owlCarousel({
-        loop: true,
-        margin: 10,
-        nav: false,
-        autoplay: true,
-        responsive: {
-            0: {
-                items: 1
-            },
-            600: {
-                items: 3
-            },
-        }
-    });
+    function hiddenPopup() {
+        document.getElementById('popup').style.display = 'none';
+    }
 </script>
+@stack('scripts')
 
 </html>

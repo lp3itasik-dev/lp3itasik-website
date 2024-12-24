@@ -28,10 +28,9 @@
                             x-transition:leave="transition ease-in duration-75"
                             x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-95"
                             class="absolute z-50 top-10 rounded-2xl shadow-xl
-                                style="display:
-                            none;" @click="open = false">
-                            <div class="w-[300px] relative top-0 rounded-md ">
-                                <div class="w-full bg-gray-50 p-4 rounded-2xl">
+                                style="display: none;" @click="open = false">
+                            <div class="w-[300px] relative top-0 rounded-md">
+                                <div class="w-full bg-white border-4 border-gray-400/500 p-4 rounded-2xl shadow-lg">
                                     <dl class="space-y-3 text-sm">
                                         @if (count($programs_plt) > 0)
                                             <dt class="font-bold bg-sky-100 px-3 py-1.5 rounded-xl text-sky-700">

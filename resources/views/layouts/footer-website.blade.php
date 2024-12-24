@@ -7,7 +7,7 @@
                 <img src="{{ asset('images/logo/global-mandiri-white.png') }}" alt="Politeknik LP3I Kampus Tasikmalaya"
                     class="h-10 drop-shadow">
             </div>
-            <div class="space-y-3">
+            <div class="space-y-3 drop-shadow">
                 <p class="text-white text-sm">Politeknik LP3I Kampus Tasikmalaya adalah kampus vokasi di Priangan Timur
                     dengan penempatan kerja.</p>
                 <a href="https://goo.gl/maps/1dxJCzGBDvgNje8cA" target="_blank" class="inline-block text-white text-xs hover:underline">Jl. Ir. H. Juanda No.106, Panglayungan, Kec.
@@ -33,11 +33,11 @@
             </div>
         </div>
         <div class="space-y-4">
-            <div class="space-y-1">
+            <div class="space-y-1 drop-shadow-sm">
                 <h2 class="text-xl font-bold text-white drop-shadow">Tentang Kampus</h2>
                 <p class="text-sm text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             </div>
-            <ul class="text-sm text-white list-disc space-y-1 ml-4">
+            <ul class="text-sm text-white list-disc space-y-1 ml-4 drop-shadow-sm">
                 <li>
                     <a href="#" class="hover:underline">Mengenal LP3I</a>
                 </li>
@@ -53,37 +53,37 @@
             </ul>
         </div>
         <div class="space-y-4">
-            <div class="space-y-1">
-                <h2 class="text-xl font-bold text-white drop-shadow">Layanan Kampus</h2>
+            <div class="space-y-1 drop-shadow-sm">
+                <h2 class="text-xl font-bold text-white">Layanan Kampus</h2>
                 <p class="text-sm text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             </div>
-            <ul class="text-sm text-white list-disc space-y-1 ml-4">
+            <ul class="text-sm text-white list-disc space-y-1 ml-4 drop-shadow-sm">
                 <li>
-                    <a href="#" class="hover:underline space-x-1">
+                    <a href="#" class="hover:underline space-x-1 cursor-pointer">
                         <span>PMB Online</span>
                         <i class="fa-solid fa-external-link text-xs"></i>
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="hover:underline space-x-1">
+                    <a href="#" class="hover:underline space-x-1 cursor-pointer">
                         <span>SIAKAD Kampus Tasikmalaya</span>
                         <i class="fa-solid fa-external-link text-xs"></i>
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="hover:underline space-x-1">
+                    <a href="#" class="hover:underline space-x-1 cursor-pointer">
                         <span>SIAKAD PLB</span>
                         <i class="fa-solid fa-external-link text-xs"></i>
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="hover:underline space-x-1">
+                    <a href="#" class="hover:underline space-x-1 cursor-pointer">
                         <span>SIRUANG</span>
                         <i class="fa-solid fa-external-link text-xs"></i>
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="hover:underline space-x-1">
+                    <a href="#" class="hover:underline space-x-1 cursor-pointer">
                         <span>Customer Care LP3I</span>
                         <i class="fa-solid fa-external-link text-xs"></i>
                     </a>
@@ -92,6 +92,6 @@
         </div>
     </div>
     <footer class="pt-10 pb-3">
-        <p class="text-xs text-white text-center">Copyright © 2024 Politeknik LP3I Kampus Tasikmalaya</p>
+        <p class="text-xs text-white text-center drop-shadow-sm">Copyright © 2024 Politeknik LP3I Kampus Tasikmalaya</p>
     </footer>
 </section>
