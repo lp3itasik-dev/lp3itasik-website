@@ -4,7 +4,7 @@
             class="absolute top-4 right-5 text-red-500 hover:text-red-600 cursor-pointer">
             <i class="fa-solid fa-times text-xl"></i>
         </button>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-4xl bg-white p-10 border-l-8 border-lp3i-100">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 max-w-4xl bg-white p-10 border-l-8 border-lp3i-100">
             <div>
                 <img src="{{ asset('images/doc-kk/KK-1.jpeg') }}" alt="">
                 <div class="mt-3 space-y-1">
@@ -12,34 +12,34 @@
                     <p class="text-sm text-gray-700">Pendaftaran Gelombang 1 telah resmi dibuka. Ayo daftar sekarang untuk mendapatkan potongan beasiswa sampai dengan Rp5.000.000!</p>
                 </div>
             </div>
-            <form onsubmit="RegisterPMBAPI(event)">
-                <div class="space-y-1">
+            <form onsubmit="RegisterPMBAPI(event)" class="grid grid-cols-2 gap-2">
+                <div class="col-span-2 space-y-1">
                     <label for="name" class="text-sm font-medium">Nama Lengkap</label>
                     <input type="text" name="name" id="name"
                         class="w-full border border-gray-300 text-gray-800 text-sm px-3 py-2" placeholder="Nama Lengkap"
                         required>
                     <small class="text-xs text-red-500" id="error-name"></small>
                 </div>
-                <div class="space-y-1 mt-2">
+                <div class="col-span-1 space-y-1">
                     <label for="phone" class="text-sm font-medium">No. Whatsapp</label>
                     <input type="number" name="phone" id="phone"
                         class="w-full border border-gray-300 text-gray-800 text-sm px-3 py-2" placeholder="No. Whatsapp"
                         required>
                     <small class="text-xs text-red-500" id="error-phone"></small>
                 </div>
-                <div class="space-y-1 mt-2">
-                    <label for="school" class="text-sm font-medium">Pilih Sekolah</label>
-                    <select name="school" id="school" class="js-example-input-single w-full" required></select>
-                    <small class="text-xs text-red-500" id="error-school"></small>
-                </div>
-                <div class="space-y-1 mt-2">
+                <div class="col-span-1 space-y-1">
                     <label for="year" class="text-sm font-medium">Tahun Lulus</label>
                     <input type="number" name="year" id="year"
                         class="w-full border border-gray-300 text-gray-800 text-sm px-3 py-2" placeholder="Tahun Lulus" required>
                     <small class="text-xs text-red-500" id="error-year"></small>
                 </div>
+                <div class="col-span-2 space-y-1">
+                    <label for="school" class="text-sm font-medium">Pilih Sekolah</label>
+                    <select name="school" id="school" class="js-example-input-single w-full" required></select>
+                    <small class="text-xs text-red-500" id="error-school"></small>
+                </div>
                 <button type="submit"
-                    class="mt-5 bg-sky-500 hover:bg-sky-600 text-white px-3 py-2.5 text-sm font-medium border-l-4 border-sky-700">Dapatkan
+                    class="mt-2 bg-sky-500 hover:bg-sky-600 text-white px-3 py-2.5 text-sm font-medium border-l-4 border-sky-700">Dapatkan
                     Beasiswa!</button>
             </form>
         </div>
