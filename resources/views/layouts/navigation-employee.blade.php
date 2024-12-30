@@ -92,12 +92,6 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Organisasi Mahasiswa') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('career-center')" :active="request()->routeIs('career-center')">
-                        {{ __('Pusat Karir') }}
-                    </x-nav-link>
-                    <x-nav-link :href="route('employee')" :active="request()->routeIs('dashboard')">
-                        {{ __('Reguler Sore') }}
-                    </x-nav-link>
                     <a href="#"
                         class="inline-flex items-center bg-lp3i-200 hover:bg-lp3i-300 transition-all ease-in-out py-3 px-5 text-sm text-center font-bold text-white rounded-2xl">Daftar
                         Sekarang!</a>
@@ -131,12 +125,6 @@
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('Organisasi Mahasiswa') }}
-            </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('career-center')" :active="request()->routeIs('career-center')">
-                {{ __('Pusat Karir') }}
-            </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('employee')" :active="request()->routeIs('dashboard')">
-                {{ __('Reguler Sore') }}
             </x-responsive-nav-link>
         </div>
 

@@ -1,4 +1,7 @@
 <x-website-layout>
+    @push('components')
+        @include('components.popup-reguler')
+    @endpush
     <header class="owl-carousel carousel-one owl-theme">
         <div class="item h-[450px] bg-cover bg-center"
             style="background-image: url('{{ asset('images/doc-kk/KK-1.jpeg') }}');"></div>
@@ -15,7 +18,7 @@
                     <span>Informasi Pendaftaran</span>
                     <i class="fa-solid fa-external-link"></i>
                 </a>
-                <a href="#"
+                <a href="{{ route('career-center') }}"
                     class="flex items-center justify-center gap-3 bg-gray-200 hover:bg-gray-300 transition-all ease-in-out px-4 py-3 border-l-8 border-lp3i-emerald-100 text-gray-900 font-medium">
                     <span>Pusat Karir</span>
                     <i class="fa-solid fa-external-link"></i>

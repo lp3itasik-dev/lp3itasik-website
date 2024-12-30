@@ -7,6 +7,10 @@ use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [WelcomeController::class, 'index'])->name('welcome');
+Route::get('/reguler-sore', [WelcomeController::class, 'employee'])->name('employee');
+Route::get('/about', [WelcomeController::class, 'about'])->name('about');
+Route::get('/career-center', [WelcomeController::class, 'career_center'])->name('career-center');
+Route::get('/penerimaan-mahasiswa', [WelcomeController::class, 'redirect_link'])->name('redirect-link');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
