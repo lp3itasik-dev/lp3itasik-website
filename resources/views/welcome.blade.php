@@ -23,7 +23,7 @@
                     <span>Pusat Karir</span>
                     <i class="fa-solid fa-external-link"></i>
                 </a>
-                <a href="#"
+                <a href="https://virtualkampus.politekniklp3i-tasikmalaya.ac.id" target="_blank"
                     class="flex items-center justify-center gap-3 bg-gray-200 hover:bg-gray-300 transition-all ease-in-out px-4 py-3 border-l-8 border-lp3i-100 text-gray-900 font-medium space-x-1">
                     <span>Virtual Kampus</span>
                     <i class="fa-solid fa-external-link"></i>

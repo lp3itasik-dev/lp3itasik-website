@@ -38,7 +38,7 @@
                                             <hr>
                                             @foreach ($programs_plt as $program)
                                                 <dd>
-                                                    <a href="#"
+                                                    <a href="{{ route('program-studi', $program->code) }}"
                                                         class="space-x-1 text-gray-500 hover:text-gray-700 transition-all ease-in-out">
                                                         <i class="fa-solid fa-circle text-xs"></i>
                                                         <span class="font-medium">
@@ -56,7 +56,7 @@
                                             <hr>
                                             @foreach ($programs_plt_vokasi as $program)
                                                 <dd>
-                                                    <a href="#"
+                                                    <a href="{{ route('program-studi', $program->code) }}"
                                                         class="space-x-1 text-gray-500 hover:text-gray-700 transition-all ease-in-out">
                                                         <i class="fa-solid fa-circle text-xs"></i>
                                                         <span class="font-medium">
@@ -73,7 +73,7 @@
                                             <hr>
                                             @foreach ($programs_plb as $program)
                                                 <dd>
-                                                    <a href="#"
+                                                    <a href="{{ route('program-studi', $program->code) }}"
                                                         class="space-x-1 text-gray-500 hover:text-gray-700 transition-all ease-in-out">
                                                         <i class="fa-solid fa-circle text-xs"></i>
                                                         <span class="font-medium">
@@ -98,9 +98,8 @@
                     <x-nav-link :href="route('employee')" :active="request()->routeIs('dashboard')">
                         {{ __('Reguler Sore') }}
                     </x-nav-link>
-                    <a href="#"
-                        class="inline-flex items-center bg-lp3i-200 hover:bg-lp3i-300 transition-all ease-in-out py-3 px-5 text-sm text-center font-bold text-white rounded-2xl">Daftar
-                        Sekarang!</a>
+                    <a href="https://pmb.politekniklp3i-tasikmalaya.ac.id" target="_blank"
+                        class="inline-flex items-center bg-lp3i-200 hover:bg-lp3i-300 transition-all ease-in-out py-3 px-5 text-sm text-center font-bold text-white rounded-2xl">Daftar Sekarang!</a>
                 </div>
             </div>
 
@@ -141,9 +140,8 @@
         </div>
 
         <div class="mb-5 px-4">
-            <a href="#"
-                class="block bg-lp3i-200 hover:bg-lp3i-300 transition-all ease-in-out py-3 px-4 text-center font-bold text-white rounded-2xl">Daftar
-                Sekarang!</a>
+            <a href="https://pmb.politekniklp3i-tasikmalaya.ac.id" target="_blank"
+                class="block bg-lp3i-200 hover:bg-lp3i-300 transition-all ease-in-out py-3 px-4 text-center font-bold text-white rounded-2xl">Daftar Sekarang!</a>
         </div>
     </div>
 </nav>

@@ -40,7 +40,7 @@
                     <a href="#" class="text-xs font-medium text-white drop-shadow">UPPM</a>
                 </li>
                 <li>
-                    <a href="#" class="text-xs font-medium text-white drop-shadow">Virtual Kampus</a>
+                    <a href="https://virtualkampus.politekniklp3i-tasikmalaya.ac.id" target="_blank" class="text-xs font-medium text-white drop-shadow">Virtual Kampus</a>
                 </li>
             </ul>
         </div>

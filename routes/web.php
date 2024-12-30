@@ -11,6 +11,7 @@ Route::get('/reguler-sore', [WelcomeController::class, 'employee'])->name('emplo
 Route::get('/about', [WelcomeController::class, 'about'])->name('about');
 Route::get('/ormawa', [WelcomeController::class, 'ormawa'])->name('ormawa');
 Route::get('/career-center', [WelcomeController::class, 'career_center'])->name('career-center');
+Route::get('/program-studi/{code}', [WelcomeController::class, 'program_studi'])->name('program-studi');
 Route::get('/penerimaan-mahasiswa', [WelcomeController::class, 'redirect_link'])->name('redirect-link');
 
 Route::get('/dashboard', function () {
