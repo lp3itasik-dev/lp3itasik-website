@@ -89,7 +89,7 @@
                             </div>
                         </div>
                     </div>
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                    <x-nav-link :href="route('ormawa')" :active="request()->routeIs('ormawa')">
                         {{ __('Organisasi Mahasiswa') }}
                     </x-nav-link>
                     <a href="#"
@@ -123,7 +123,7 @@
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('Program Studi') }}
             </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+            <x-responsive-nav-link :href="route('ormawa')" :active="request()->routeIs('ormawa')">
                 {{ __('Organisasi Mahasiswa') }}
             </x-responsive-nav-link>
         </div>

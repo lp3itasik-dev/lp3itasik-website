@@ -8,9 +8,6 @@
                         unggul, impian terwujud.
                         Bergabunglah dan raih kesuksesan bersama kami sekarang!</p>
                 </div>
-                <button type="button"
-                    class="bg-red-500 hover:bg-red-600 transition-all ease-in-out text-white px-5 py-2.5 border-b-4 border-red-600">Hubungi
-                    Kami!</button>
             </div>
             <div class="flex items-center justify-center md:justify-end">
                 <img src="{{ asset('images/cover-employee.png') }}" alt="Hero" class="w-96" />

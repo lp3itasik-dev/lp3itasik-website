@@ -58,6 +58,10 @@ class WelcomeController extends Controller {
         return view( 'career-center' );
     }
 
+    public function ormawa() {
+        return view( 'ormawa' );
+    }
+
     public function redirect_link() {
         return view( 'redirect' );
     }

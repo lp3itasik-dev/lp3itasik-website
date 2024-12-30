@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [WelcomeController::class, 'index'])->name('welcome');
 Route::get('/reguler-sore', [WelcomeController::class, 'employee'])->name('employee');
 Route::get('/about', [WelcomeController::class, 'about'])->name('about');
+Route::get('/ormawa', [WelcomeController::class, 'ormawa'])->name('ormawa');
 Route::get('/career-center', [WelcomeController::class, 'career_center'])->name('career-center');
 Route::get('/penerimaan-mahasiswa', [WelcomeController::class, 'redirect_link'])->name('redirect-link');
 
