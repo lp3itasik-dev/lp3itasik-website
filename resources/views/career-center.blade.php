@@ -1,7 +1,4 @@
 <x-website-layout>
-    @push('components')
-        @include('components.popup-employee')
-    @endpush
     <header class="py-28 px-8">
         <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-5">
             <div class="space-y-8">
