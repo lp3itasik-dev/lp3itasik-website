@@ -40,7 +40,11 @@
                     <a href="#" class="text-xs font-medium text-white drop-shadow">UPPM</a>
                 </li>
                 <li>
-                    <a href="https://virtualkampus.politekniklp3i-tasikmalaya.ac.id" target="_blank" class="text-xs font-medium text-white drop-shadow">Virtual Kampus</a>
+                    <a href="https://virtualkampus.politekniklp3i-tasikmalaya.ac.id" target="_blank"
+                        class="text-xs font-medium text-white drop-shadow space-x-1">
+                        <span>Virtual Kampus</span>
+                        <i class="fa-solid fa-external-link"></i>
+                    </a>
                 </li>
             </ul>
         </div>
@@ -49,8 +53,7 @@
     <div>{{ $slot }}</div>
     @include('layouts.footer-website')
     <div class="fixed right-0 bottom-0 z-50">
-        <a href="{{ route('redirect-link') }}" target="_blank"
-            class="flex items-center justify-center drop-shadow-lg">
+        <a href="{{ route('redirect-link') }}" target="_blank" class="flex items-center justify-center drop-shadow-lg">
             <lottie-player src="{{ asset('animations/whatsapp.json') }}" background="Transparent" speed="1"
                 style="width: 100px; height: 100px" direction="1" mode="normal" loop autoplay></lottie-player>
         </a>
