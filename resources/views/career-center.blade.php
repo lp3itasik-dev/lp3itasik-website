@@ -81,6 +81,7 @@
             </div>
         </div>
     </section>
+    <hr>
     <section class="py-10 px-8">
         <div class="max-w-7xl mx-auto space-y-5 text-center">
             <div>
