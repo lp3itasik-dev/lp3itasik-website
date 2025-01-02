@@ -1,6 +1,6 @@
 <x-employee-layout>
     @push('components')
-        @include('components.popup-employee')
+        {{-- @include('components.popup-employee') --}}
     @endpush
     <header class="py-28 px-8">
         <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-5">
@@ -11,9 +11,9 @@
                         unggul, impian terwujud.
                         Bergabunglah dan raih kesuksesan bersama kami sekarang!</p>
                 </div>
-                <button type="button"
-                    class="bg-red-500 hover:bg-red-600 transition-all ease-in-out text-white px-5 py-2.5 border-b-4 border-red-600">Hubungi
-                    Kami!</button>
+                <a href="{{ route('redirect-link') }}" target="_blank"
+                    class="inline-block bg-red-500 hover:bg-red-600 transition-all ease-in-out text-white px-5 py-2.5 border-b-4 border-red-600">Hubungi
+                    Kami!</a>
             </div>
             <div class="flex items-center justify-center md:justify-end">
                 <img src="{{ asset('images/cover-employee.png') }}" alt="Hero" class="w-96" />

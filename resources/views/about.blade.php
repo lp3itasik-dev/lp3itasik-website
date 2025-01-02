@@ -103,7 +103,7 @@
                 </div>
                 <div class="space-y-2">
                     <h2 class="font-bold text-2xl">Misi</h2>
-                    <ul class="text-sm text-gray-600 space-y-2 list-decimal ml-1">
+                    <ul class="text-sm text-gray-600 space-y-2 list-decimal ml-2">
                         <li>Menyelenggarakan pendidikan yang berpusat pada peserta didik, menggunakan pendekatan link and match serta mengoptimalkan pemanfaatan teknologi.</li>
                         <li>Menyelenggarakan penelitian yang bermanfaat bagi pengembangan IPTEK dan kesejatraan masyarakat.</li>
                         <li>Meningkatkan kualitas sistem penjamin mutu untuk menopang pencapaian institusi.</li>

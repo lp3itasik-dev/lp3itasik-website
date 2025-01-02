@@ -1,6 +1,6 @@
 <x-website-layout>
     @push('components')
-        @include('components.popup-reguler')
+        {{-- @include('components.popup-reguler') --}}
     @endpush
     <header class="owl-carousel carousel-one owl-theme">
         <div class="item h-[450px] bg-cover bg-center"
@@ -33,6 +33,53 @@
     </section>
     <section>
         <div class="container mx-auto px-8 pb-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div
+                    class="text-center bg-gray-50 hover:bg-gray-100 border-b-4 border-lp3i-emerald-200 p-4 space-y-1 transition-all ease-in-out drop-shadow-lg">
+                    <i class="fa-solid fa-certificate text-lg bg-sky-200 text-sky-700 p-3 rounded-full"></i>
+                    <h2 class="font-bold text-xl">Terakreditasi BAN-PT</h2>
+                    <p class="text-sm text-gray-600">Politeknik LP3I Kampus Tasikmalaya telah terakreditasi BAN-PT dengan peringkat B</p>
+                </div>
+                <div
+                    class="text-center bg-gray-50 hover:bg-gray-100 border-b-4 border-lp3i-emerald-200 p-4 space-y-1 transition-all ease-in-out drop-shadow-lg">
+                    <i class="fa-solid fa-graduation-cap text-lg bg-sky-200 text-sky-700 p-3 rounded-full"></i>
+                    <h2 class="font-bold text-xl">Kurikulum Berbasis Link & Match</h2>
+                    <p class="text-sm text-gray-600">Memiliki kerjasama dengan perusahaan serta memiliki kurikulum yang sesuai dengan kebutuhan dunia kerja. Dengan pola perkuliahan 70% praktikum dan 30% teori</p>
+                </div>
+                <div
+                    class="text-center bg-gray-50 hover:bg-gray-100 border-b-4 border-lp3i-emerald-200 p-4 space-y-1 transition-all ease-in-out drop-shadow-lg">
+                    <i class="fa-solid fa-medal text-lg bg-sky-200 text-sky-700 p-3 rounded-full"></i>
+                    <h2 class="font-bold text-xl">Sertifikasi Kompetensi</h2>
+                    <p class="text-sm text-gray-600">Mahasiswa Politeknik LP3I memiliki 4 sertifikasi kompetensi dari Badan Nasional Sertifikasi Profesi (BNSP) dan International Test Center</p>
+                </div>
+                <div
+                    class="text-center bg-gray-50 hover:bg-gray-100 border-b-4 border-lp3i-emerald-200 p-4 space-y-1 transition-all ease-in-out drop-shadow-lg">
+                    <i class="fa-solid fa-chalkboard-user text-lg bg-sky-200 text-sky-700 p-3 rounded-full"></i>
+                    <h2 class="font-bold text-xl">Dosen Profesional dan Praktisi</h2>
+                    <p class="text-sm text-gray-600">Dosen Politeknik LP3I memiliki sertifikasi dosen dari Kemendikbud dan Dosen praktisi yang berpengalaman di bidang industri</p>
+                </div>
+                <div
+                    class="text-center bg-gray-50 hover:bg-gray-100 border-b-4 border-lp3i-emerald-200 p-4 space-y-1 transition-all ease-in-out drop-shadow-lg">
+                    <i class="fa-solid fa-briefcase text-lg bg-sky-200 text-sky-700 p-3 rounded-full"></i>
+                    <h2 class="font-bold text-xl">Penempatan Magang dan Kerja</h2>
+                    <p class="text-sm text-gray-600">Mahasiswa mengikuti proses kuliah kerja industri dan penempatan kerja di industri dan dunia kerja</p>
+                </div>
+                <div
+                    class="text-center bg-gray-50 hover:bg-gray-100 border-b-4 border-lp3i-emerald-200 p-4 space-y-1 transition-all ease-in-out drop-shadow-lg">
+                    <i class="fa-regular fa-lightbulb text-lg bg-sky-200 text-sky-700 p-3 rounded-full"></i>
+                    <h2 class="font-bold text-xl">Memiliki Hardskill dan Softskill</h2>
+                    <p class="text-sm text-gray-600">Mendapatkan pembekalan hardskill dan softskill untuk dunia kerja</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr class="my-10">
+    <section>
+        <div class="container mx-auto px-8 pb-8 space-y-5">
+            <div class="text-center space-y-1">
+                <h2 class="font-bold text-xl text-gray-900">Informasi Penerimaan Mahasiswa Baru</h2>
+                <p class="text-sm text-gray-700">Politeknik LP3I Kampus Tasikmalaya juga menerima mahasiswa.</p>
+            </div>
             <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
                 <div
                     class="text-center bg-white hover:bg-gray-50 border-b-4 border-gray-300/40 p-4 space-y-1 transition-all ease-in-out">
@@ -226,6 +273,7 @@
             </div>
         </div>
     </section>
+    <hr>
     <section>
         <div class="container mx-auto p-8">
             <div class="text-center mb-10">

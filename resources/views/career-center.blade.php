@@ -3,10 +3,8 @@
         <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-5">
             <div class="space-y-8">
                 <div class="space-y-4">
-                    <h2 class="font-bold text-5xl">Kuliah Cepat Selesai Bebas Tugas Akhir/Skripsi</h2>
-                    <p class="text-gray-700">LP3I hadir dengan kuliah mendukungmu untuk kuliah sambil bekerja, karir
-                        unggul, impian terwujud.
-                        Bergabunglah dan raih kesuksesan bersama kami sekarang!</p>
+                    <h2 class="font-bold text-5xl">Corporate & Placement</h2>
+                    <p class="text-gray-700">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate, ratione ea architecto beatae rem pariatur saepe neque suscipit. Obcaecati dolores facere illo vero necessitatibus ut fugiat placeat iure sed rem!</p>
                 </div>
             </div>
             <div class="flex items-center justify-center md:justify-end">

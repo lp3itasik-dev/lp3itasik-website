@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Program;
+use App\Models\ProgramInterest;
 use Illuminate\Http\Request;
 
 class WelcomeController extends Controller {
@@ -63,8 +64,9 @@ class WelcomeController extends Controller {
     }
 
     public function program_studi($code) {
-        $program = Program::where( 'code', $code )->firstOrFail();
+        $program = Program::with('programInterests')->where( 'code', $code )->firstOrFail();
         $program_view = $program->type == 'N' ? 'program-studi-employee' : 'program-studi';
+        // dd($program);
         return view( $program_view, compact( 'program' ) );
     }
 

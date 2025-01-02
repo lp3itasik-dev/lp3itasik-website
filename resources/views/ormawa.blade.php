@@ -4,9 +4,7 @@
             <div class="space-y-8">
                 <div class="space-y-4">
                     <h2 class="font-bold text-5xl">Organisasi Mahasiswa</h2>
-                    <p class="text-gray-700">LP3I hadir dengan kuliah mendukungmu untuk kuliah sambil bekerja, karir
-                        unggul, impian terwujud.
-                        Bergabunglah dan raih kesuksesan bersama kami sekarang!</p>
+                    <p class="text-gray-700">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat cupiditate laborum minima reprehenderit maxime adipisci nemo, illum id veritatis nihil iste aliquam beatae laboriosam! Non nobis ea temporibus nostrum similique!</p>
                 </div>
             </div>
             <div class="flex items-center justify-center md:justify-end">
@@ -19,7 +17,7 @@
         <div class="container mx-auto px-8 pb-8">
             <div class="text-center space-y-2 mb-10">
                 <h2 class="font-bold text-2xl text-white drop-shadow">Organisasi Mahasiswa</h2>
-                <p class="text-white drop-shadow">Berikut ini adalah beberapa alasan kenapa harus Politeknik LP3I.</p>
+                <p class="text-white drop-shadow">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
                 <div
@@ -28,9 +26,7 @@
                         style="background-image: url('{{ asset('images/banner-default.jpg') }}');"></div>
                     <div>
                         <h2 class="font-bold text-xl">Badan Eksekutif Mahasiswa</h2>
-                        <p class="text-sm text-gray-600">Nikmati Waktu kuliah sambil bekerja, atur belajar sesuai
-                            kebutuhan
-                            Anda.</p>
+                        <p class="text-sm text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, velit.</p>
                     </div>
                     <ul class="text-sm text-gray-700 space-y-1">
                         <li>Presiden Mahasiswa: <span class="font-medium">Pian Abdul Jabar</span></li>
@@ -47,9 +43,7 @@
                         style="background-image: url('{{ asset('images/banner-default.jpg') }}');"></div>
                     <div>
                         <h2 class="font-bold text-xl">HIMA MKP</h2>
-                        <p class="text-sm text-gray-600">Nikmati Waktu kuliah sambil bekerja, atur belajar sesuai
-                            kebutuhan
-                            Anda.</p>
+                        <p class="text-sm text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, velit.</p>
                     </div>
                     <ul class="text-sm text-gray-700 space-y-1">
                         <li>Gubernur HMKP: <span class="font-medium">Rahmat Dani</span></li>
@@ -66,9 +60,7 @@
                         style="background-image: url('{{ asset('images/banner-default.jpg') }}');"></div>
                     <div>
                         <h2 class="font-bold text-xl">HIMA MP</h2>
-                        <p class="text-sm text-gray-600">Nikmati Waktu kuliah sambil bekerja, atur belajar sesuai
-                            kebutuhan
-                            Anda.</p>
+                        <p class="text-sm text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, velit.</p>
                     </div>
                     <ul class="text-sm text-gray-700 space-y-1">
                         <li>Gubernur HMP: <span class="font-medium">Asep Saepul Milah</span></li>
@@ -85,9 +77,7 @@
                         style="background-image: url('{{ asset('images/banner-default.jpg') }}');"></div>
                     <div>
                         <h2 class="font-bold text-xl">LP3I Computer Club (LCC)</h2>
-                        <p class="text-sm text-gray-600">Nikmati Waktu kuliah sambil bekerja, atur belajar sesuai
-                            kebutuhan
-                            Anda.</p>
+                        <p class="text-sm text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, velit.</p>
                     </div>
                     <ul class="text-sm text-gray-700 space-y-1">
                         <li>Ketua: <span class="font-medium">Khikmal Kurniawan</span></li>
@@ -104,9 +94,7 @@
                         style="background-image: url('{{ asset('images/banner-default.jpg') }}');"></div>
                     <div>
                         <h2 class="font-bold text-xl">LP3I Otomotif Club (LOC)</h2>
-                        <p class="text-sm text-gray-600">Nikmati Waktu kuliah sambil bekerja, atur belajar sesuai
-                            kebutuhan
-                            Anda.</p>
+                        <p class="text-sm text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, velit.</p>
                     </div>
                     <ul class="text-sm text-gray-700 space-y-1">
                         <li>Ketua: <span class="font-medium">Muhamad Nauval Rizqi P</span></li>
@@ -123,9 +111,7 @@
                         style="background-image: url('{{ asset('images/banner-default.jpg') }}');"></div>
                     <div>
                         <h2 class="font-bold text-xl">LP3I Innovation Art Club (LIAC)</h2>
-                        <p class="text-sm text-gray-600">Nikmati Waktu kuliah sambil bekerja, atur belajar sesuai
-                            kebutuhan
-                            Anda.</p>
+                        <p class="text-sm text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, velit.</p>
                     </div>
                     <ul class="text-sm text-gray-700 space-y-1">
                         <li>Ketua: <span class="font-medium">Hani Haryani</span></li>
@@ -142,9 +128,7 @@
                         style="background-image: url('{{ asset('images/banner-default.jpg') }}');"></div>
                     <div>
                         <h2 class="font-bold text-xl">LP3I Sport Club (LSC)</h2>
-                        <p class="text-sm text-gray-600">Nikmati Waktu kuliah sambil bekerja, atur belajar sesuai
-                            kebutuhan
-                            Anda.</p>
+                        <p class="text-sm text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, velit.</p>
                     </div>
                     <ul class="text-sm text-gray-700 space-y-1">
                         <li>Ketua: <span class="font-medium">Dimas Septian Permana</span></li>
@@ -161,9 +145,7 @@
                         style="background-image: url('{{ asset('images/banner-default.jpg') }}');"></div>
                     <div>
                         <h2 class="font-bold text-xl">LP3I Moslem Association (LMA)</h2>
-                        <p class="text-sm text-gray-600">Nikmati Waktu kuliah sambil bekerja, atur belajar sesuai
-                            kebutuhan
-                            Anda.</p>
+                        <p class="text-sm text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, velit.</p>
                     </div>
                     <ul class="text-sm text-gray-700 space-y-1">
                         <li>Ketua: <span class="font-medium">Muhammad Rasyid Ridho</span></li>
@@ -180,9 +162,7 @@
                         style="background-image: url('{{ asset('images/banner-default.jpg') }}');"></div>
                     <div>
                         <h2 class="font-bold text-xl">Student English Association LP3I (SEAL)</h2>
-                        <p class="text-sm text-gray-600">Nikmati Waktu kuliah sambil bekerja, atur belajar sesuai
-                            kebutuhan
-                            Anda.</p>
+                        <p class="text-sm text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, velit.</p>
                     </div>
                     <ul class="text-sm text-gray-700 space-y-1">
                         <li>Ketua: <span class="font-medium">Selna Nurhasanah</span></li>
