@@ -16,8 +16,29 @@ class Program extends Model
         'status'
     ];
 
+    protected $table = 'programs';
+
     public function programInterests()
     {
         return $this->hasMany(ProgramInterest::class);
+    }
+
+    public function programPotentions()
+    {
+        return $this->hasMany(ProgramPotention::class);
+    }
+
+    public function programMissions()
+    {
+        return $this->hasMany(ProgramMission::class);
+    }
+
+    public function programBenefits()
+    {
+        return $this->hasMany(ProgramBenefit::class);
+    }
+    public function programCompetentions()
+    {
+        return $this->hasMany(ProgramCompetention::class);
     }
 }

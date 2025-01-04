@@ -23,7 +23,6 @@ class EmployeeLayout extends Component
         $programs_plb = Program::where([
             'status' => '1',
             'type' => 'N',
-            'level' => 'D3',
             'campus' => 'Kampus Utama'
         ])->get();
         $programs_plt_vokasi = Program::where([

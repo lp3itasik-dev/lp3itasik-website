@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Program;
-use App\Models\ProgramInterest;
 use Illuminate\Http\Request;
 
 class WelcomeController extends Controller {
@@ -17,7 +16,6 @@ class WelcomeController extends Controller {
         $programs_plb = Program::where( [
             'status' => '1',
             'type' => 'R',
-            'level' => 'D3',
             'campus' => 'Kampus Utama'
         ] )->get();
         $programs_plt_vokasi = Program::where( [
@@ -39,7 +37,6 @@ class WelcomeController extends Controller {
         $programs_plb = Program::where( [
             'status' => '1',
             'type' => 'N',
-            'level' => 'D3',
             'campus' => 'Kampus Utama'
         ] )->get();
         $programs_plt_vokasi = Program::where( [
@@ -64,9 +61,8 @@ class WelcomeController extends Controller {
     }
 
     public function program_studi($code) {
-        $program = Program::with('programInterests')->where( 'code', $code )->firstOrFail();
+        $program = Program::with(['programInterests','programPotentions','programMissions','programBenefits','programCompetentions'])->where( 'code', $code )->firstOrFail();
         $program_view = $program->type == 'N' ? 'program-studi-employee' : 'program-studi';
-        // dd($program);
         return view( $program_view, compact( 'program' ) );
     }
 

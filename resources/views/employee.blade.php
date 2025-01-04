@@ -83,7 +83,6 @@
                                 @endforeach
                             </ul>
                         </div>
-                        <hr>
                     @endif
                     @if (count($programs_plt_vokasi) > 0)
                         <div class="space-y-4">

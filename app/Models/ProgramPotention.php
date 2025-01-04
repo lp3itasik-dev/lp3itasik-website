@@ -2,9 +2,10 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class ProgramInterest extends Model
+class ProgramPotention extends Model
 {
     protected $fillable = [
         'program_id',
@@ -12,7 +13,7 @@ class ProgramInterest extends Model
         'status'
     ];
 
-    protected $table = 'program_interests';
+    protected $table = 'program_potentions';
 
     public function program()
     {

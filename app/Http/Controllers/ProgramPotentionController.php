@@ -3,30 +3,30 @@
 namespace App\Http\Controllers;
 
 use App\Models\Program;
-use App\Models\ProgramInterest;
+use App\Models\ProgramPotention;
 use Illuminate\Http\Request;
 
-class ProgramInterestController extends Controller
+class ProgramPotentionController extends Controller
 {
     public function create($id)
     {
         $program = Program::findOrFail($id);
-        return view('programs.interests.create', compact('program'));
+        return view('programs.potentions.create', compact('program'));
     }
 
     public function edit($id)
     {
-        $interest = ProgramInterest::findOrFail($id);
-        $program = Program::where('id', $interest->program_id)->first();
-        return view('programs.interests.edit', compact(['interest', 'program']));
+        $potention = ProgramPotention::findOrFail($id);
+        $program = Program::where('id', $potention->program_id)->first();
+        return view('programs.potentions.edit', compact(['potention', 'program']));
     }
 
     public function show($id)
     {
-        $interests = ProgramInterest::where(['program_id' => $id])->paginate(5);
-        $total = ProgramInterest::where(['program_id' => $id])->count();
+        $potentions = ProgramPotention::where(['program_id' => $id])->paginate(5);
+        $total = ProgramPotention::where(['program_id' => $id])->count();
         $program = Program::findOrFail($id);
-        return view('programs.interests.show', compact(['interests', 'program', 'total']));
+        return view('programs.potentions.show', compact(['potentions', 'program', 'total']));
     }
 
     public function store(Request $request)
@@ -52,18 +52,18 @@ class ProgramInterestController extends Controller
                 'status' => 1,
             ];
 
-            ProgramInterest::create($data);
+            ProgramPotention::create($data);
 
             return redirect()
-                ->route('programs.show', $request->program_id)
+                ->route('programpotentions.show', $request->program_id)
                 ->with([
-                    'message' => 'Program interest created successfully',
+                    'message' => 'Program potention created successfully',
                     'alert-type' => 'success',
                 ]);
         } catch (\Illuminate\Database\QueryException $e) {
             if ($e->errorInfo[1] == 1062) {
                 return redirect()
-                    ->route('programs.show', $request->program_id)
+                    ->route('programpotentions.show', $request->program_id)
                     ->with([
                         'message' => 'Code already exists. Please use a different code.',
                         'alert-type' => 'failed',
@@ -71,7 +71,7 @@ class ProgramInterestController extends Controller
             }
 
             return redirect()
-                ->route('programs.show', $request->program_id)
+                ->route('programpotentions.show', $request->program_id)
                 ->with([
                     'message' => 'An unexpected error occurred. Please try again later.',
                     'alert-type' => 'failed',
@@ -98,19 +98,19 @@ class ProgramInterestController extends Controller
                 'status' => 1,
             ];
 
-            $interest = ProgramInterest::findOrFail($id);
-            $interest->update($data);
+            $potention = ProgramPotention::findOrFail($id);
+            $potention->update($data);
 
             return redirect()
-                ->route('programs.show', $interest->program_id)
+                ->route('programpotentions.show', $potention->program_id)
                 ->with([
-                    'message' => 'Program interest created successfully',
+                    'message' => 'Program potention created successfully',
                     'alert-type' => 'success',
                 ]);
         } catch (\Illuminate\Database\QueryException $e) {
             if ($e->errorInfo[1] == 1062) {
                 return redirect()
-                    ->route('programs.show', $interest->program_id)
+                    ->route('programpotentions.show', $potention->program_id)
                     ->with([
                         'message' => 'Code already exists. Please use a different code.',
                         'alert-type' => 'failed',
@@ -118,7 +118,7 @@ class ProgramInterestController extends Controller
             }
 
             return redirect()
-                ->route('programs.show', $interest->program_id)
+                ->route('programpotentions.show', $potention->program_id)
                 ->with([
                     'message' => 'An unexpected error occurred. Please try again later.',
                     'alert-type' => 'failed',
@@ -128,28 +128,28 @@ class ProgramInterestController extends Controller
 
     public function updatestatus($id)
     {
-        $interest = ProgramInterest::findOrFail($id);
-        $interest->update([
-            'status' => !$interest->status,
+        $potention = ProgramPotention::findOrFail($id);
+        $potention->update([
+            'status' => !$potention->status,
         ]);
 
         return redirect()
-            ->route('programs.show', $interest->program_id)
+            ->route('programpotentions.show', $potention->program_id)
             ->with([
-                'message' => 'Program interest status updated successfully',
+                'message' => 'Program potention status updated successfully',
                 'alert-type' => 'success',
             ]);
     }
 
     public function destroy($id, $program_id)
     {
-        $interest = ProgramInterest::findOrFail($id);
-        $interest->delete();
+        $potention = ProgramPotention::findOrFail($id);
+        $potention->delete();
 
         return redirect()
-            ->route('programs.show', $program_id)
+            ->route('programpotentions.show', $program_id)
             ->with([
-                'message' => 'Program interest deleted successfully',
+                'message' => 'Program potention deleted successfully',
                 'alert-type' => 'success',
             ]);
     }
