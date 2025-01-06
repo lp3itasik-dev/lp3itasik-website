@@ -1,6 +1,6 @@
 <x-website-layout>
     @push('components')
-        {{-- @include('components.popup-reguler') --}}
+        @include('components.popup-reguler')
     @endpush
     <header class="owl-carousel carousel-one owl-theme">
         <div class="item h-[450px] bg-cover bg-center"
