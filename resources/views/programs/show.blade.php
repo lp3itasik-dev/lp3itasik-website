@@ -44,6 +44,9 @@
                 <li class="text-gray-700">
                     <a href="{{ route('programcompetentions.show', $program->id) }}" class="underline underline-offset-2">Competentions</a>
                 </li>
+                <li class="text-gray-700">
+                    <a href="{{ route('programalumnis.show', $program->id) }}" class="underline underline-offset-2">Alumnis</a>
+                </li>
             </ul>
         </div>
     </div>

@@ -13,6 +13,7 @@ class Program extends Model
         'level',
         'image',
         'type',
+        'vision',
         'status'
     ];
 
@@ -37,8 +38,14 @@ class Program extends Model
     {
         return $this->hasMany(ProgramBenefit::class);
     }
+
     public function programCompetentions()
     {
         return $this->hasMany(ProgramCompetention::class);
+    }
+
+    public function programAlumnis()
+    {
+        return $this->hasMany(ProgramAlumni::class);
     }
 }

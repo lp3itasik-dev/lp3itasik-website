@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('level',100);
             $table->text('image')->nullable();
             $table->char('type', 3);
+            $table->text('vision')->nullable();
             $table->boolean('status')->default(1);
             $table->timestamps();
         });

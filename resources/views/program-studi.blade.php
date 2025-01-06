@@ -83,16 +83,14 @@
         <div class="container mx-auto px-8 py-10">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
                 <div class="space-y-5">
-                    <div>
-                        <div class="space-y-1 mb-2">
-                            <h4 class="font-medium text-sky-700">#mengenalLP3I</h4>
-                            <h2 class="font-bold text-2xl">Visi</h2>
-                        </div>
-                        <p class="text-sm text-gray-600 text-justify">Pada tahun 2031 ditingkat Asia menjadi institusi
-                            pendidikan tinggi vokasional yang mampu menjawab tantangan di era globalisasi dalam
-                            menghasilkan sumber daya manusia yang unggul dan berkompeten pada bidang keahlian.</p>
-                    </div>
                     @if (count($program->programMissions) > 0)
+                        <div>
+                            <div class="space-y-1 mb-2">
+                                <h4 class="font-medium text-sky-700">#mengenalLP3I</h4>
+                                <h2 class="font-bold text-2xl">Visi</h2>
+                            </div>
+                            <p class="text-sm text-gray-600 text-justify">{{ $program->vision ?? 'Belum ada visi' }}</p>
+                        </div>
                         <div class="space-y-2">
                             <h2 class="font-bold text-2xl">Misi</h2>
                             <ul class="text-sm text-gray-600 space-y-2 list-decimal ml-3">
@@ -128,121 +126,48 @@
                                     </li>
                                 @endforeach
                             </ul>
-                            </ul>
                         </div>
                     @endif
                 </div>
                 <div class="space-y-8">
-                    <div>
-                        <div class="space-y-1 mb-2">
-                            <h4 class="font-medium text-sky-700">#mengenalLP3I</h4>
-                            <h2 class="font-bold text-2xl">Testimoni Alumni & Mahasiswa</h2>
-                        </div>
-                        <p class="text-sm text-gray-600 text-justify">Lorem, ipsum dolor sit amet consectetur
-                            adipisicing elit. Aperiam, nesciunt.</p>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-                        <div class="bg-white p-5 rounded-lg space-y-3 border-b-8 border-lp3i-200 shadow-lg">
-                            <div class="mx-auto flex justify-center">
-                                <i class="fa-solid fa-right-left text-lg bg-sky-200 text-sky-700 p-3 rounded-full"></i>
+                    @if (count($program->programAlumnis) > 0)
+                        <div>
+                            <div class="space-y-1 mb-2">
+                                <h4 class="font-medium text-sky-700">#mengenalLP3I</h4>
+                                <h2 class="font-bold text-2xl">Testimoni Alumni & Mahasiswa</h2>
                             </div>
-                            <h2 class="text-center font-bold text-xl text-gray-900">Nabila Azzahra</h2>
-                            <hr>
-                            <ul class="text-sm text-center">
-                                <li>
-                                    <span class="text-gray-700">Asal Sekolah</span>
-                                    <span class="font-medium text-gray-800">SMAN 2 Banjar</span>
-                                </li>
-                                <li>
-                                    <span class="text-gray-700">Bekerja</span>
-                                    <span class="font-medium text-gray-800">Politeknik LP3I</span>
-                                </li>
-                                <li>
-                                    <span class="text-gray-700">Sebagai</span>
-                                    <span class="font-medium text-gray-800">Software Developer</span>
-                                </li>
-                            </ul>
-                            <hr>
-                            <p class="text-sm text-center italic">"Lorem ipsum dolor sit amet consectetur adipisicing
-                                elit. Quae commodi quibusdam est, voluptates optio fuga possimus dolores laboriosam
-                                numquam dolor."</p>
+                            <p class="text-sm text-gray-600 text-justify">Lorem, ipsum dolor sit amet consectetur
+                                adipisicing elit. Aperiam, nesciunt.</p>
                         </div>
-                        <div class="bg-white p-5 rounded-lg space-y-3 border-b-8 border-lp3i-200 shadow-lg">
-                            <div class="mx-auto flex justify-center">
-                                <i class="fa-solid fa-right-left text-lg bg-sky-200 text-sky-700 p-3 rounded-full"></i>
-                            </div>
-                            <h2 class="text-center font-bold text-xl text-gray-900">Nabila Azzahra</h2>
-                            <hr>
-                            <ul class="text-sm text-center">
-                                <li>
-                                    <span class="text-gray-700">Asal Sekolah</span>
-                                    <span class="font-medium text-gray-800">SMAN 2 Banjar</span>
-                                </li>
-                                <li>
-                                    <span class="text-gray-700">Bekerja</span>
-                                    <span class="font-medium text-gray-800">Politeknik LP3I</span>
-                                </li>
-                                <li>
-                                    <span class="text-gray-700">Sebagai</span>
-                                    <span class="font-medium text-gray-800">Software Developer</span>
-                                </li>
-                            </ul>
-                            <hr>
-                            <p class="text-sm text-center italic">"Lorem ipsum dolor sit amet consectetur adipisicing
-                                elit. Quae commodi quibusdam est, voluptates optio fuga possimus dolores laboriosam
-                                numquam dolor."</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                            @foreach ($program->programAlumnis as $alumni)
+                                <div class="bg-white p-5 rounded-lg space-y-3 border-b-8 border-lp3i-200 shadow-lg">
+                                    <div class="mx-auto flex justify-center">
+                                        <img src="{{ asset('images/user.png') }}" alt=""
+                                            class="w-10 h-10 rounded-full">
+                                    </div>
+                                    <h2 class="text-center font-bold text-xl text-gray-900">{{ $alumni->name }}</h2>
+                                    <hr>
+                                    <ul class="text-sm text-center">
+                                        <li>
+                                            <span class="text-gray-700">Asal Sekolah</span>
+                                            <span class="font-medium text-gray-800">{{ $alumni->school }}</span>
+                                        </li>
+                                        <li>
+                                            <span class="text-gray-700">Bekerja</span>
+                                            <span class="font-medium text-gray-800">{{ $alumni->work }}</span>
+                                        </li>
+                                        <li>
+                                            <span class="text-gray-700">Sebagai</span>
+                                            <span class="font-medium text-gray-800">{{ $alumni->profession }}</span>
+                                        </li>
+                                    </ul>
+                                    <hr>
+                                    <p class="text-sm text-center italic">"{{ $alumni->quote }}"</p>
+                                </div>
+                            @endforeach
                         </div>
-                        <div class="bg-white p-5 rounded-lg space-y-3 border-b-8 border-lp3i-200 shadow-lg">
-                            <div class="mx-auto flex justify-center">
-                                <i class="fa-solid fa-right-left text-lg bg-sky-200 text-sky-700 p-3 rounded-full"></i>
-                            </div>
-                            <h2 class="text-center font-bold text-xl text-gray-900">Nabila Azzahra</h2>
-                            <hr>
-                            <ul class="text-sm text-center">
-                                <li>
-                                    <span class="text-gray-700">Asal Sekolah</span>
-                                    <span class="font-medium text-gray-800">SMAN 2 Banjar</span>
-                                </li>
-                                <li>
-                                    <span class="text-gray-700">Bekerja</span>
-                                    <span class="font-medium text-gray-800">Politeknik LP3I</span>
-                                </li>
-                                <li>
-                                    <span class="text-gray-700">Sebagai</span>
-                                    <span class="font-medium text-gray-800">Software Developer</span>
-                                </li>
-                            </ul>
-                            <hr>
-                            <p class="text-sm text-center italic">"Lorem ipsum dolor sit amet consectetur adipisicing
-                                elit. Quae commodi quibusdam est, voluptates optio fuga possimus dolores laboriosam
-                                numquam dolor."</p>
-                        </div>
-                        <div class="bg-white p-5 rounded-lg space-y-3 border-b-8 border-lp3i-200 shadow-lg">
-                            <div class="mx-auto flex justify-center">
-                                <i class="fa-solid fa-right-left text-lg bg-sky-200 text-sky-700 p-3 rounded-full"></i>
-                            </div>
-                            <h2 class="text-center font-bold text-xl text-gray-900">Nabila Azzahra</h2>
-                            <hr>
-                            <ul class="text-sm text-center">
-                                <li>
-                                    <span class="text-gray-700">Asal Sekolah</span>
-                                    <span class="font-medium text-gray-800">SMAN 2 Banjar</span>
-                                </li>
-                                <li>
-                                    <span class="text-gray-700">Bekerja</span>
-                                    <span class="font-medium text-gray-800">Politeknik LP3I</span>
-                                </li>
-                                <li>
-                                    <span class="text-gray-700">Sebagai</span>
-                                    <span class="font-medium text-gray-800">Software Developer</span>
-                                </li>
-                            </ul>
-                            <hr>
-                            <p class="text-sm text-center italic">"Lorem ipsum dolor sit amet consectetur adipisicing
-                                elit. Quae commodi quibusdam est, voluptates optio fuga possimus dolores laboriosam
-                                numquam dolor."</p>
-                        </div>
-                    </div>
+                    @endif
                 </div>
             </div>
         </div>

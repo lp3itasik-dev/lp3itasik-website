@@ -40,8 +40,7 @@
             @endif
 
             @if (session('alert-type') == 'failed')
-                <div id="alert" class="flex items-center p-4 text-emerald-50 rounded-xl bg-red-500"
-                    role="alert">
+                <div id="alert" class="flex items-center p-4 text-emerald-50 rounded-xl bg-red-500" role="alert">
                     <i class="fa-solid fa-circle-info"></i>
                     <span class="sr-only">Info</span>
                     <div class="ms-3 text-sm font-medium">
@@ -56,7 +55,8 @@
 
             <div class="bg-white overflow-hidden border border-gray-200 md:rounded-2xl">
                 <div class="p-6 text-gray-900 space-y-5">
-                    <form method="POST" action="{{ route('programs.store') }}" enctype="multipart/form-data">
+                    <form method="POST" action="{{ route('programs.store') }}" enctype="multipart/form-data"
+                        class="space-y-4">
                         @csrf
                         <div class="grid gap-5 mb-4 md:grid-cols-3">
                             <div>
@@ -65,9 +65,9 @@
                                 <input type="text" name="code" id="code"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                                     placeholder="Kode Jurusan" required />
-                                    <p class="mt-1 text-xs text-gray-500">
-                                        <span class="text-red-500 text-xs">{{ $errors->first('code') }}</span>
-                                    </p>
+                                <p class="mt-1 text-xs text-gray-500">
+                                    <span class="text-red-500 text-xs">{{ $errors->first('code') }}</span>
+                                </p>
                             </div>
                             <div>
                                 <label for="title" class="block mb-2 text-sm font-medium text-gray-900">Nama
@@ -75,12 +75,13 @@
                                 <input type="text" name="title" id="title"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                                     placeholder="Nama Jurusan" required />
-                                    <p class="mt-1 text-xs text-gray-500">
-                                        <span class="text-red-500 text-xs">{{ $errors->first('title') }}</span>
-                                    </p>
+                                <p class="mt-1 text-xs text-gray-500">
+                                    <span class="text-red-500 text-xs">{{ $errors->first('title') }}</span>
+                                </p>
                             </div>
                             <div>
-                                <label for="level" class="block mb-2 text-sm font-medium text-gray-900">Jenjang</label>
+                                <label for="level"
+                                    class="block mb-2 text-sm font-medium text-gray-900">Jenjang</label>
                                 <select id="level" name="level"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
                                     <option selected>Pilih Jenjang</option>
@@ -124,10 +125,19 @@
                                 <label for="image" class="block mb-2 text-sm font-medium text-gray-900">Cover</label>
                                 <input type="file" name="image" id="image"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" />
-                                    <p class="mt-1 text-xs text-gray-500">
-                                        <span class="text-red-500 text-xs">{{ $errors->first('image') }}</span>
-                                    </p>
+                                <p class="mt-1 text-xs text-gray-500">
+                                    <span class="text-red-500 text-xs">{{ $errors->first('image') }}</span>
+                                </p>
                             </div>
+                        </div>
+                        <div class="grid grid-cols-1">
+                            <label for="vision" class="block mb-2 text-sm font-medium text-gray-900">Visi</label>
+                            <textarea name="vision" id="vision"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                                placeholder="Visi"></textarea>
+                            <p class="mt-1 text-xs text-gray-500">
+                                <span class="text-red-500 text-xs">{{ $errors->first('vision') }}</span>
+                            </p>
                         </div>
                         <button type="submit"
                             class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-xl text-sm w-full sm:w-auto px-5 py-2.5 text-center space-x-1">

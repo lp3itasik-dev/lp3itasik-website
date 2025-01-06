@@ -61,7 +61,7 @@ class WelcomeController extends Controller {
     }
 
     public function program_studi($code) {
-        $program = Program::with(['programInterests','programPotentions','programMissions','programBenefits','programCompetentions'])->where( 'code', $code )->firstOrFail();
+        $program = Program::with(['programInterests','programPotentions','programMissions','programBenefits','programCompetentions','programAlumnis'])->where( 'code', $code )->firstOrFail();
         $program_view = $program->type == 'N' ? 'program-studi-employee' : 'program-studi';
         return view( $program_view, compact( 'program' ) );
     }

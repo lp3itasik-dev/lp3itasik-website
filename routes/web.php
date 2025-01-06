@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ProgramAlumniController;
 use App\Http\Controllers\ProgramBenefitController;
 use App\Http\Controllers\ProgramCompetentionController;
 use App\Http\Controllers\ProgramController;
@@ -71,6 +72,14 @@ Route::middleware('auth')->group(function () {
     Route::patch('programcompetentions/update/{id}', [ProgramCompetentionController::class, 'update'])->name('programcompetentions.update');
     Route::patch('programcompetentions/updatestatus/{id}', [ProgramCompetentionController::class, 'updatestatus'])->name('programcompetentions.updatestatus');
     Route::delete('programcompetentions/destroy/{id}/{program_id}', [ProgramCompetentionController::class, 'destroy'])->name('programcompetentions.destroy');
+
+    Route::get('programalumnis/create/{id}', [ProgramAlumniController::class, 'create'])->name('programalumnis.create');
+    Route::get('programalumnis/edit/{id}', [ProgramAlumniController::class, 'edit'])->name('programalumnis.edit');
+    Route::get('programalumnis/{id}', [ProgramAlumniController::class, 'show'])->name('programalumnis.show');
+    Route::post('programalumnis/store', [ProgramAlumniController::class, 'store'])->name('programalumnis.store');
+    Route::patch('programalumnis/update/{id}', [ProgramAlumniController::class, 'update'])->name('programalumnis.update');
+    Route::patch('programalumnis/updatestatus/{id}', [ProgramAlumniController::class, 'updatestatus'])->name('programalumnis.updatestatus');
+    Route::delete('programalumnis/destroy/{id}/{program_id}', [ProgramAlumniController::class, 'destroy'])->name('programalumnis.destroy');
 });
 
 require __DIR__.'/auth.php';
