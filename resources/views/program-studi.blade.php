@@ -83,14 +83,14 @@
         <div class="container mx-auto px-8 py-10">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
                 <div class="space-y-5">
-                    @if (count($program->programMissions) > 0)
-                        <div>
-                            <div class="space-y-1 mb-2">
-                                <h4 class="font-medium text-sky-700">#mengenalLP3I</h4>
-                                <h2 class="font-bold text-2xl">Visi</h2>
-                            </div>
-                            <p class="text-sm text-gray-600 text-justify">{{ $program->vision ?? 'Belum ada visi' }}</p>
+                    <div>
+                        <div class="space-y-1 mb-2">
+                            <h4 class="font-medium text-sky-700">#mengenalLP3I</h4>
+                            <h2 class="font-bold text-2xl">Visi</h2>
                         </div>
+                        <p class="text-sm text-gray-600 text-justify">{{ $program->vision ?? 'Belum ada visi' }}</p>
+                    </div>
+                    @if (count($program->programMissions) > 0)
                         <div class="space-y-2">
                             <h2 class="font-bold text-2xl">Misi</h2>
                             <ul class="text-sm text-gray-600 space-y-2 list-decimal ml-3">

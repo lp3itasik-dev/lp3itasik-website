@@ -1,4 +1,4 @@
-<x-employee-layout>
+<x-website-layout>
     <header class="py-28 px-8">
         <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-5">
             <div class="space-y-8">
@@ -22,25 +22,15 @@
                         </ul>
                     @endif
 
-                    @if (count($program->programInterests) > 0)
+                    @if (count($program->programPotentions) > 0)
                         <h3 class="bg-gray-100 px-5 py-2 text-sm border-l-8 border-gray-400 text-gray-700 font-medium">
                             Potensi Karir:</h3>
                         <ul class="flex flex-wrap gap-4">
-                            <li class="text-md text-gray-600 underline underline-offset-4 decoration-emerald-300">
-                                <span>Financial Analyst</span>
-                            </li>
-                            <li class="text-md text-gray-600 underline underline-offset-4 decoration-emerald-300">
-                                <span>Financial Controller</span>
-                            </li>
-                            <li class="text-md text-gray-600 underline underline-offset-4 decoration-emerald-300">
-                                <span>Business Controller</span>
-                            </li>
-                            <li class="text-md text-gray-600 underline underline-offset-4 decoration-emerald-300">
-                                <span>Staff Financial Reporting</span>
-                            </li>
-                            <li class="text-md text-gray-600 underline underline-offset-4 decoration-emerald-300">
-                                <span>Customer Service</span>
-                            </li>
+                            @foreach ($program->programPotentions as $potention)
+                                <li class="text-md text-gray-600 underline underline-offset-4 decoration-emerald-300">
+                                    <span>{{ $potention->name }}</span>
+                                </li>
+                            @endforeach
                         </ul>
                     @endif
                 </div>
@@ -98,162 +88,86 @@
                             <h4 class="font-medium text-sky-700">#mengenalLP3I</h4>
                             <h2 class="font-bold text-2xl">Visi</h2>
                         </div>
-                        <p class="text-sm text-gray-600 text-justify">Pada tahun 2031 ditingkat Asia menjadi institusi
-                            pendidikan tinggi vokasional yang mampu menjawab tantangan di era globalisasi dalam
-                            menghasilkan sumber daya manusia yang unggul dan berkompeten pada bidang keahlian.</p>
+                        <p class="text-sm text-gray-600 text-justify">{{ $program->vision ?? 'Belum ada visi' }}</p>
                     </div>
-                    <div class="space-y-2">
-                        <h2 class="font-bold text-2xl">Misi</h2>
-                        <ul class="text-sm text-gray-600 space-y-2 list-decimal ml-2">
-                            <li>Menyelenggarakan pendidikan yang berpusat pada peserta didik, menggunakan pendekatan
-                                link and match serta mengoptimalkan pemanfaatan teknologi.</li>
-                            <li>Menyelenggarakan penelitian yang bermanfaat bagi pengembangan IPTEK dan kesejatraan
-                                masyarakat.</li>
-                            <li>Meningkatkan kualitas sistem penjamin mutu untuk menopang pencapaian institusi.</li>
-                            <li>Menyebarluaskan artikel hasil penelitian baik melalui forum ilmia maupun jurnal nasional
-                                dan internasional.</li>
-                            <li>Menyelenggarakan kegiatan pengabdian kepada masyarakat dalam rangka mengembangkan hasil
-                                penelitian yang berorientasi pada proses pemberdayaan masyarakat.</li>
-                            <li>Menyelenggarakan tata pamong yang mandiri, akuntabel dan transparan yang menjamin
-                                peningkatan kualitas berkelanjutan.</li>
-                            <li>Menyelenggarakan kerjasama dengan dunia usaha dan industri serta pengembangan jiwa
-                                kemandirian yang profesional dan berkarakter.</li>
-                        </ul>
-                    </div>
-                    <div class="space-y-2">
-                        <h2 class="font-bold text-2xl">Keunggulan</h2>
-                        <ul class="text-sm text-gray-600 space-y-2 list-decimal ml-2">
-                            <li>Lulusan dibantu penempatan kerja.</li>
-                            <li>Kurikulum disesuaikan dengan kebutuhan Dunia Usaha dan Dunia Industri (DUDI).</li>
-                            <li>Aspek pembelajaran Praktik 70%, didukung oleh dosen-dosen praktisi yang berpengalaman di
-                                bidang Keuangan dan Perbankan.</li>
-                            <li>Dibekali dengan sertifikat Kompetensi BNSP.</li>
-                            <li>Dibekali dengan Sertifikat Softskill.</li>
-                            <li>Bekerja sama dengan dunia usaha dan dunia industri.</li>
-                        </ul>
-                    </div>
-                    <div class="space-y-2">
-                        <h2 class="font-bold text-2xl">Standar Kompetensi</h2>
-                        <ul class="text-sm text-gray-600 space-y-2 list-decimal ml-2">
-                            <li>Mampu merancang dan menjalankan sistem keuangan perusahaan.</li>
-                            <li>Mampu menjalankan seluruh kegiatan operasional perbankan.</li>
-                            <li>Mampu melahirkan unit bisnis atau koperasi baru yang memiliki Karakter dan daya saing
-                                dengan usaha serupa.</li>
-                            <li>Memiliki kemampuan bahasa inggris yang baik.</li>
-                        </ul>
-                    </div>
+                    @if (count($program->programMissions) > 0)
+                        <div class="space-y-2">
+                            <h2 class="font-bold text-2xl">Misi</h2>
+                            <ul class="text-sm text-gray-600 space-y-2 list-decimal ml-3">
+                                @foreach ($program->programMissions as $mission)
+                                    <li>
+                                        <span>{{ $mission->name }}</span>
+                                    </li>
+                                @endforeach
+                            </ul>
+                            </ul>
+                        </div>
+                    @endif
+                    @if (count($program->programBenefits) > 0)
+                        <div class="space-y-2">
+                            <h2 class="font-bold text-2xl">Keunggulan</h2>
+                            <ul class="text-sm text-gray-600 space-y-2 list-decimal ml-3">
+                                @foreach ($program->programBenefits as $benefit)
+                                    <li>
+                                        <span>{{ $benefit->name }}</span>
+                                    </li>
+                                @endforeach
+                            </ul>
+                            </ul>
+                        </div>
+                    @endif
+                    @if (count($program->programCompetentions) > 0)
+                        <div class="space-y-2">
+                            <h2 class="font-bold text-2xl">Standar Kompetensi</h2>
+                            <ul class="text-sm text-gray-600 space-y-2 list-decimal ml-3">
+                                @foreach ($program->programCompetentions as $competention)
+                                    <li>
+                                        <span>{{ $competention->name }}</span>
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
                 </div>
                 <div class="space-y-8">
-                    <div>
-                        <div class="space-y-1 mb-2">
-                            <h4 class="font-medium text-sky-700">#mengenalLP3I</h4>
-                            <h2 class="font-bold text-2xl">Testimoni Alumni & Mahasiswa</h2>
-                        </div>
-                        <p class="text-sm text-gray-600 text-justify">Lorem, ipsum dolor sit amet consectetur
-                            adipisicing elit. Aperiam, nesciunt.</p>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-                        <div class="bg-white p-5 rounded-lg space-y-3 border-b-8 border-lp3i-200 shadow-lg">
-                            <div class="mx-auto flex justify-center">
-                                <i class="fa-solid fa-right-left text-lg bg-sky-200 text-sky-700 p-3 rounded-full"></i>
+                    @if (count($program->programAlumnis) > 0)
+                        <div>
+                            <div class="space-y-1 mb-2">
+                                <h4 class="font-medium text-sky-700">#mengenalLP3I</h4>
+                                <h2 class="font-bold text-2xl">Testimoni Alumni & Mahasiswa</h2>
                             </div>
-                            <h2 class="text-center font-bold text-xl text-gray-900">Nabila Azzahra</h2>
-                            <hr>
-                            <ul class="text-sm text-center">
-                                <li>
-                                    <span class="text-gray-700">Asal Sekolah</span>
-                                    <span class="font-medium text-gray-800">SMAN 2 Banjar</span>
-                                </li>
-                                <li>
-                                    <span class="text-gray-700">Bekerja</span>
-                                    <span class="font-medium text-gray-800">Politeknik LP3I</span>
-                                </li>
-                                <li>
-                                    <span class="text-gray-700">Sebagai</span>
-                                    <span class="font-medium text-gray-800">Software Developer</span>
-                                </li>
-                            </ul>
-                            <hr>
-                            <p class="text-sm text-center italic">"Lorem ipsum dolor sit amet consectetur adipisicing
-                                elit. Quae commodi quibusdam est, voluptates optio fuga possimus dolores laboriosam
-                                numquam dolor."</p>
+                            <p class="text-sm text-gray-600 text-justify">Lorem, ipsum dolor sit amet consectetur
+                                adipisicing elit. Aperiam, nesciunt.</p>
                         </div>
-                        <div class="bg-white p-5 rounded-lg space-y-3 border-b-8 border-lp3i-200 shadow-lg">
-                            <div class="mx-auto flex justify-center">
-                                <i class="fa-solid fa-right-left text-lg bg-sky-200 text-sky-700 p-3 rounded-full"></i>
-                            </div>
-                            <h2 class="text-center font-bold text-xl text-gray-900">Nabila Azzahra</h2>
-                            <hr>
-                            <ul class="text-sm text-center">
-                                <li>
-                                    <span class="text-gray-700">Asal Sekolah</span>
-                                    <span class="font-medium text-gray-800">SMAN 2 Banjar</span>
-                                </li>
-                                <li>
-                                    <span class="text-gray-700">Bekerja</span>
-                                    <span class="font-medium text-gray-800">Politeknik LP3I</span>
-                                </li>
-                                <li>
-                                    <span class="text-gray-700">Sebagai</span>
-                                    <span class="font-medium text-gray-800">Software Developer</span>
-                                </li>
-                            </ul>
-                            <hr>
-                            <p class="text-sm text-center italic">"Lorem ipsum dolor sit amet consectetur adipisicing
-                                elit. Quae commodi quibusdam est, voluptates optio fuga possimus dolores laboriosam
-                                numquam dolor."</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                            @foreach ($program->programAlumnis as $alumni)
+                                <div class="bg-white p-5 rounded-lg space-y-3 border-b-8 border-lp3i-200 shadow-lg">
+                                    <div class="mx-auto flex justify-center">
+                                        <img src="{{ asset('images/user.png') }}" alt=""
+                                            class="w-10 h-10 rounded-full">
+                                    </div>
+                                    <h2 class="text-center font-bold text-xl text-gray-900">{{ $alumni->name }}</h2>
+                                    <hr>
+                                    <ul class="text-sm text-center">
+                                        <li>
+                                            <span class="text-gray-700">Asal Sekolah</span>
+                                            <span class="font-medium text-gray-800">{{ $alumni->school }}</span>
+                                        </li>
+                                        <li>
+                                            <span class="text-gray-700">Bekerja</span>
+                                            <span class="font-medium text-gray-800">{{ $alumni->work }}</span>
+                                        </li>
+                                        <li>
+                                            <span class="text-gray-700">Sebagai</span>
+                                            <span class="font-medium text-gray-800">{{ $alumni->profession }}</span>
+                                        </li>
+                                    </ul>
+                                    <hr>
+                                    <p class="text-sm text-center italic">"{{ $alumni->quote }}"</p>
+                                </div>
+                            @endforeach
                         </div>
-                        <div class="bg-white p-5 rounded-lg space-y-3 border-b-8 border-lp3i-200 shadow-lg">
-                            <div class="mx-auto flex justify-center">
-                                <i class="fa-solid fa-right-left text-lg bg-sky-200 text-sky-700 p-3 rounded-full"></i>
-                            </div>
-                            <h2 class="text-center font-bold text-xl text-gray-900">Nabila Azzahra</h2>
-                            <hr>
-                            <ul class="text-sm text-center">
-                                <li>
-                                    <span class="text-gray-700">Asal Sekolah</span>
-                                    <span class="font-medium text-gray-800">SMAN 2 Banjar</span>
-                                </li>
-                                <li>
-                                    <span class="text-gray-700">Bekerja</span>
-                                    <span class="font-medium text-gray-800">Politeknik LP3I</span>
-                                </li>
-                                <li>
-                                    <span class="text-gray-700">Sebagai</span>
-                                    <span class="font-medium text-gray-800">Software Developer</span>
-                                </li>
-                            </ul>
-                            <hr>
-                            <p class="text-sm text-center italic">"Lorem ipsum dolor sit amet consectetur adipisicing
-                                elit. Quae commodi quibusdam est, voluptates optio fuga possimus dolores laboriosam
-                                numquam dolor."</p>
-                        </div>
-                        <div class="bg-white p-5 rounded-lg space-y-3 border-b-8 border-lp3i-200 shadow-lg">
-                            <div class="mx-auto flex justify-center">
-                                <i class="fa-solid fa-right-left text-lg bg-sky-200 text-sky-700 p-3 rounded-full"></i>
-                            </div>
-                            <h2 class="text-center font-bold text-xl text-gray-900">Nabila Azzahra</h2>
-                            <hr>
-                            <ul class="text-sm text-center">
-                                <li>
-                                    <span class="text-gray-700">Asal Sekolah</span>
-                                    <span class="font-medium text-gray-800">SMAN 2 Banjar</span>
-                                </li>
-                                <li>
-                                    <span class="text-gray-700">Bekerja</span>
-                                    <span class="font-medium text-gray-800">Politeknik LP3I</span>
-                                </li>
-                                <li>
-                                    <span class="text-gray-700">Sebagai</span>
-                                    <span class="font-medium text-gray-800">Software Developer</span>
-                                </li>
-                            </ul>
-                            <hr>
-                            <p class="text-sm text-center italic">"Lorem ipsum dolor sit amet consectetur adipisicing
-                                elit. Quae commodi quibusdam est, voluptates optio fuga possimus dolores laboriosam
-                                numquam dolor."</p>
-                        </div>
-                    </div>
+                    @endif
                 </div>
             </div>
         </div>
@@ -286,7 +200,8 @@
         <div class="container mx-auto px-8 py-10 space-y-8">
             <div class="text-center space-y-1">
                 <h2 class="font-bold text-2xl">Siap Jadi Bagian dari Kami?</h2>
-                <p class="text-sm text-gray-600">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, maxime.</p>
+                <p class="text-sm text-gray-600">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit,
+                    maxime.</p>
             </div>
             <div class="owl-carousel carousel-two owl-theme">
                 <div class="item">
@@ -345,4 +260,4 @@
             });
         </script>
     @endpush
-</x-employee-layout>
+</x-website-layout>
