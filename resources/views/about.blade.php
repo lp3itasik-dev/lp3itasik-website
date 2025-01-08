@@ -121,7 +121,7 @@
         <div class="space-y-5">
             <div class="space-y-1 text-center">
                 <h2 class="font-bold text-2xl text-gray-900">Fasilitas Kampus</h2>
-                <p class="text-sm text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, laboriosam.</p>
+                <p class="text-base text-gray-600">Berikut adalah beberapa fasilitas kampus kami:</p>
             </div>
             <div class="owl-carousel carousel-one owl-theme">
                 <div class="item">
@@ -171,7 +171,7 @@
                     <span>Download Campus Branding</span>
                     <i class="fa-solid fa-download text-lp3i-200"></i>
                 </h2>
-                <p class="text-sm text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, laboriosam.</p>
+                <p class="text-base text-gray-600">Ini adalah tempat untuk mengunduh asset seperti logo kampus dan elemen branding lainnya.</p>
             </div>
             <div class="grid grid-cols-2 md:grid-cols-5 items-center gap-5">
                 <a href="{{ asset('images/logo/logo-lp3i.svg') }}" download="logo-lp3i-warna-SVG.svg">
@@ -214,7 +214,7 @@
                 <h2 class="font-bold text-2xl text-gray-900 space-x-1">
                     <span>Struktur Organisasi</span>
                 </h2>
-                <p class="text-sm text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, laboriosam.</p>
+                <p class="text-base text-gray-600">Berikut adalah struktur organisasi kampus yang menunjukkan posisi dan peran masing-masing anggota dalam manajemen kampus.</p>
             </div>
             <iframe frameborder="0" src="https://viewer.diagrams.net/?tags=%7B%7D&amp;highlight=0000ff&amp;edit=_blank&amp;layers=1&amp;nav=1&amp;title=org-lp3i.drawio#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1iR5ZGT2eRFgOkVCf67t0Mk-jmeIlBley%26export%3Ddownload" style="width: 100%; height: 800px;"></iframe>
         </div>

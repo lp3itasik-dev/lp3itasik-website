@@ -35,7 +35,7 @@
         <div class="space-y-4">
             <div class="space-y-1 drop-shadow-sm">
                 <h2 class="text-xl font-bold text-white drop-shadow">Tentang Kampus</h2>
-                <p class="text-sm text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <p class="text-sm text-white">Informasi seputar kampus, termasuk sejarah, visi & misi, serta struktur organisasi LP3I.</p>
             </div>
             <ul class="text-sm text-white list-disc space-y-1 ml-4 drop-shadow-sm">
                 <li>
@@ -55,7 +55,7 @@
         <div class="space-y-4">
             <div class="space-y-1 drop-shadow-sm">
                 <h2 class="text-xl font-bold text-white">Layanan Kampus</h2>
-                <p class="text-sm text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <p class="text-sm text-white">Akses berbagai aplikasi eksternal yang mendukung kegiatan akademik dan administrasi di LP3I.</p>
             </div>
             <ul class="text-sm text-white list-disc space-y-1 ml-4 drop-shadow-sm">
                 <li>

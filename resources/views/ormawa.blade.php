@@ -17,7 +17,7 @@
         <div class="container mx-auto px-8 pb-8">
             <div class="text-center space-y-2 mb-10">
                 <h2 class="font-bold text-2xl text-white drop-shadow">Organisasi Mahasiswa</h2>
-                <p class="text-white drop-shadow">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <p class="text-white drop-shadow">Ini adalah daftar organisasi mahasiswa (ORMAWA) di Politeknik LP3I Kampus Tasikmalaya yang aktif dalam berbagai kegiatan kampus.</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
                 <div

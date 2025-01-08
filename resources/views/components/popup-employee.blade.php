@@ -1,4 +1,4 @@
-<section id="popup" class="flex flex-col items-center justify-center bg-black bg-opacity-70 w-full h-full z-50 fixed">
+<section id="popup" class="hidden flex-col items-center justify-center bg-black bg-opacity-70 w-full h-full z-50 fixed">
     <div class="relative">
         <button type="button" onclick="hiddenPopup()"
             class="absolute top-4 right-5 text-red-500 hover:text-red-600 cursor-pointer">
@@ -47,13 +47,6 @@
 </section>
 @push('scripts')
     <script src="{{ asset('js/select2.min.js') }}"></script>
-    <script>
-        $(document).ready(function() {
-            $('.js-example-input-single').select2({
-                tags: true,
-            });
-        });
-    </script>
     <script>
         async function RegisterPMBAPI(e) {
             e.preventDefault();
@@ -125,5 +118,15 @@
                 });
         }
         getSchools();
+    </script>
+    <script>
+        function showUp() {
+            document.getElementById('popup').classList.remove('hidden');
+            document.getElementById('popup').classList.add('flex');
+            $('.js-example-input-single').select2({
+                tags: true,
+            });
+        }
+        setTimeout(() => showUp(), 2000);
     </script>
 @endpush

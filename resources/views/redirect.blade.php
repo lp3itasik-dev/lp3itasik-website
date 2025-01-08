@@ -20,18 +20,14 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="flex flex-col justify-center items-center font-sans text-gray-900 antialiased h-screen bg-gray-50">
+<body class="flex flex-col justify-center items-center font-sans text-gray-900 antialiased h-screen bg-gray-100">
     <div class="max-w-md mx-auto space-y-10">
         <div class="flex justify-center">
             <img src="{{ asset('images/logo/logo-lp3i.svg') }}" alt="" class="h-20">
         </div>
-        <div class="w-full absolute bg-red-200 flex justify-center items-center">
-            <lottie-player src="{{ asset('animations/server.json') }}" background="Transparent" speed="1"
-                style="width: 200px; height: 200px" direction="1" mode="normal" loop autoplay></lottie-player>
-        </div>
         <div class="space-y-3">
-            <h2 class="text-center">Connecting...</h2>
-            <p class="text-center">Halo! Kami sedang menyiapkan jalur eksklusif untuk langsung terhubung dengan tim kami
+            <h2 class="text-center text-gray-700 font-medium tracking-widest">Connecting...</h2>
+            <p class="text-center text-sm text-gray-600">Halo! Kami sedang menyiapkan jalur eksklusif untuk langsung terhubung dengan tim kami
                 melalui WhatsApp. Jangan khawatir, kami akan segera hadir untuk menjawab setiap pertanyaan Anda. Tetap
                 bersama kami, ya!</p>
         </div>
@@ -41,5 +37,12 @@
 <script src="{{ asset('js/all.min.js') }}"></script>
 <script src="{{ asset('js/axios.min.js') }}"></script>
 <script src="{{ asset('js/jquery-1.11.0.min.js') }}"></script>
+<script>
+    $(document).ready(function() {
+        setTimeout(function() {
+            window.location.href = 'https://api.whatsapp.com/send/?phone=6281261122555&text=Halo%2C%20saya%20ingin%20menanyakan%20tentang%20penerimaan%20mahasiswa%20baru.%20Apakah%20pendaftaran%20masih%20dibuka%3F&type=phone_number&app_absent=0';
+        }, 2000);
+    });
+</script>
 
 </html>

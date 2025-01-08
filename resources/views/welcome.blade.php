@@ -126,9 +126,7 @@
                 <div class="space-y-5">
                     <div class="space-y-1">
                         <h2 class="text-2xl font-bold text-white">Program Perkuliahan</h2>
-                        <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus,
-                            expedita reiciendis!
-                            Mollitia dolore ad aliquid fugit repudiandae possimus! Qui, adipisci?</p>
+                        <p class="text-white">Berikut adalah program perkuliahan yang tersedia di Politeknik LP3I Kampus Tasikmalaya, yang dirancang untuk mendukung berbagai kegiatan akademik dan non-akademik mahasiswa.</p>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                         <div class="space-y-2">
@@ -162,10 +160,7 @@
                         <div class="space-y-4">
                             <div class="space-y-1">
                                 <h2 class="font-bold text-lg">Politeknik LP3I Kampus Tasikmalaya</h2>
-                                <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Totam,
-                                    possimus?
-                                </p>
+                                <p class="text-gray-600">Politeknik LP3I Kampus Tasikmalaya menyediakan berbagai program pendidikan yang mendukung perkembangan keahlian dan karir mahasiswa di berbagai bidang.</p>
                             </div>
                             <ul class="space-y-3">
                                 @foreach ($programs_plt as $program)
@@ -185,10 +180,7 @@
                         <div class="space-y-4">
                             <div class="space-y-1">
                                 <h2 class="font-bold text-lg">Vokasi 2 Tahun LP3I Tasikmalaya</h2>
-                                <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Totam,
-                                    possimus?
-                                </p>
+                                <p class="text-gray-600">Program vokasi 2 tahun di LP3I Tasikmalaya dirancang untuk memberikan keterampilan praktis dan siap pakai bagi mahasiswa yang ingin langsung terjun ke dunia kerja.</p>
                             </div>
                             <ul class="space-y-3">
                                 @foreach ($programs_plt_vokasi as $program)
@@ -208,10 +200,7 @@
                         <div class="space-y-4">
                             <div class="space-y-1">
                                 <h2 class="font-bold text-lg">Kampus Utama</h2>
-                                <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Totam,
-                                    possimus?
-                                </p>
+                                <p class="text-gray-600">Kampus utama dilengkapi dengan berbagai fasilitas modern yang mendukung pembelajaran dan kegiatan mahasiswa secara optimal.</p>
                             </div>
                             <ul class="space-y-3">
                                 @foreach ($programs_plb as $program)
@@ -233,9 +222,7 @@
                         <h2 class="uppercase font-bold text-2xl">
                             <span class="border-l-4 border-sky-500 pl-2">Program Studi</span>
                         </h2>
-                        <p class="text-sm text-gray-600">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            Totam,
-                            possimus?</p>
+                        <p class="text-sm text-gray-600 max-w-md">Berikut adalah daftar program studi yang tersedia di Politeknik LP3I Kampus Tasikmalaya untuk mendukung perkembangan karir dan keahlian mahasiswa.</p>
                     </div>
                     <img src="{{ asset('images/illustration/model.png') }}" alt="Computer Engineer"
                         class="text-center w-96 drop-shadow-lg">
@@ -278,8 +265,7 @@
         <div class="container mx-auto p-8">
             <div class="text-center mb-10">
                 <h2 class="font-bold text-2xl text-gray-900">Kerjasama</h2>
-                <p class="text-sm text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero,
-                    tenetur!</p>
+                <p class="text-base text-gray-600 max-w-2xl mx-auto">Politeknik LP3I Kampus Tasikmalaya menjalin kerjasama dengan berbagai institusi untuk meningkatkan kualitas pendidikan dan memberikan peluang bagi mahasiswa dalam dunia industri.</p>
             </div>
             <div class="flex flex-wrap justify-center items-center gap-5">
                 <img src="{{ asset('images/companies-logo/logo-1.png') }}" alt="Logo-1" class="w-24">
