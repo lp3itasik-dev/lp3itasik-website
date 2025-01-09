@@ -36,9 +36,9 @@
                 </a>
             </div>
             <ul class="flex items-center gap-3">
-                <li>
+                {{-- <li>
                     <a href="#" class="text-xs font-medium text-white drop-shadow">UPPM</a>
-                </li>
+                </li> --}}
                 <li>
                     <a href="https://virtualkampus.politekniklp3i-tasikmalaya.ac.id" target="_blank"
                         class="text-xs font-medium text-white drop-shadow space-x-1">
