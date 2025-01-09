@@ -69,4 +69,8 @@ class WelcomeController extends Controller {
     public function redirect_link() {
         return view( 'redirect' );
     }
+
+    public function redirect_one() {
+        return view( 'redirect-one' );
+    }
 }
