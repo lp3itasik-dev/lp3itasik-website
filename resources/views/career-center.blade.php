@@ -90,14 +90,14 @@
             </div>
             <div class="space-y-2 text-2xl">
                 <h3><span class="font-bold text-red-600">Bebas Biaya</span> Pengembangan Institusi sebesar Rp. 2.500.000</h3>
-                <h3><span class="font-bold text-red-600">Voucher</span> Free 1 Tiket Nonton di Bioskop XXI 25 - 31 Desember 2024</h3>
+                <h3><span class="font-bold text-red-600">Voucher</span> Free 1 Tiket Nonton di Bioskop XXI 07 - 31 Januari 2025</h3>
             </div>
             <div class="space-y-3">
                 <a href="#" class="inline-block space-x-1 bg-emerald-500 hover:bg-emerald-600 text-white px-5 py-2.5 transition-all ease-in-out drop-shadow border-b-4 border-emerald-600">
                     <i class="fa-brands fa-whatsapp"></i>
                     <span>Daftar Sekarang</span>
                 </a>
-                <p class="text-sm text-red-600">*Bagi yang registrasi 25 - 31 Desember 2024, *Kuota Terbatas!</p>
+                <p class="text-sm text-red-600">*Bagi yang registrasi 07 - 31 Januari 2025, *Kuota Terbatas!</p>
             </div>
         </div>
     </section>

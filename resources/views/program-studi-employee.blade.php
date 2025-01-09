@@ -191,7 +191,7 @@
                     <i class="fa-brands fa-whatsapp"></i>
                     <span>Daftar Sekarang</span>
                 </a>
-                <p class="text-sm text-red-600">*Bagi yang registrasi 25 - 31 Desember 2024, *Kuota Terbatas!</p>
+                <p class="text-sm text-red-600">*Bagi yang registrasi 07 - 31 Januari 2025, *Kuota Terbatas!</p>
             </div>
         </div>
     </section>
