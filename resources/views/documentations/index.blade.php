@@ -74,6 +74,7 @@
                                             class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
                                             {{ $no + 1 }}
                                         </th>
+                                        {{ $documentation->image }}
                                         <td class="px-6 py-4">
                                             <img src="{{ asset('storage/' . $documentation->image) }}"
                                                 alt="Documentations" class="h-20 object-cover rounded-xl">
