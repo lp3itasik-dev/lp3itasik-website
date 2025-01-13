@@ -6,9 +6,7 @@
                     <h2 class="font-bold text-5xl">
                         {{ $program->level }} {{ $program->title }}
                     </h2>
-                    <p class="text-gray-700">LP3I hadir dengan kuliah mendukungmu untuk kuliah sambil bekerja, karir
-                        unggul, impian terwujud.
-                        Bergabunglah dan raih kesuksesan bersama kami sekarang!</p>
+                    <p class="text-gray-700">{{ $program->description }}</p>
                     @if (count($program->programInterests) > 0)
                         <h3 class="bg-gray-100 px-5 py-2 text-sm border-l-8 border-gray-400 text-gray-700 font-medium">
                             Konsentrasi:</h3>
@@ -36,7 +34,12 @@
                 </div>
             </div>
             <div class="flex items-center justify-center md:justify-end">
-                <img src="{{ asset('images/cover-employee.png') }}" alt="Hero" class="w-96" />
+                @if ($program->image)
+                    <img src="{{ asset('storage/' . $program->image) }}" alt="{{ $program->title }}"
+                        class="w-96 drop-shadow-lg" />
+                @else
+                    <img src="{{ asset('images/cover-employee.png') }}" alt="Hero" class="w-96" />
+                @endif
             </div>
         </div>
     </header>
@@ -83,13 +86,15 @@
         <div class="container mx-auto px-8 py-10">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
                 <div class="space-y-5">
-                    <div>
-                        <div class="space-y-1 mb-2">
-                            <h4 class="font-medium text-sky-700">#mengenalLP3I</h4>
-                            <h2 class="font-bold text-2xl">Visi</h2>
+                    @if ($program->vision)
+                        <div>
+                            <div class="space-y-1 mb-2">
+                                <h4 class="font-medium text-sky-700">#mengenalLP3I</h4>
+                                <h2 class="font-bold text-2xl">Visi</h2>
+                            </div>
+                            <p class="text-sm text-gray-600 text-justify">{{ $program->vision ?? 'Belum ada visi' }}</p>
                         </div>
-                        <p class="text-sm text-gray-600 text-justify">{{ $program->vision ?? 'Belum ada visi' }}</p>
-                    </div>
+                    @endif
                     @if (count($program->programMissions) > 0)
                         <div class="space-y-2">
                             <h2 class="font-bold text-2xl">Misi</h2>
@@ -134,10 +139,11 @@
                         <div>
                             <div class="space-y-1 mb-2">
                                 <h4 class="font-medium text-sky-700">#mengenalLP3I</h4>
-                                <h2 class="font-bold text-2xl">Testimoni Alumni & Mahasiswa</h2>
+                                <h2 class="font-bold text-2xl">Testimoni Alumni dan Mahasiswa</h2>
                             </div>
-                            <p class="text-sm text-gray-600 text-justify">Lorem, ipsum dolor sit amet consectetur
-                                adipisicing elit. Aperiam, nesciunt.</p>
+                            <p class="text-sm text-gray-600 text-justify">Pendidikan di LP3I telah membekali saya dengan
+                                keterampilan dan pengalaman yang luar biasa, mempersiapkan saya untuk meraih sukses di
+                                dunia profesional.</p>
                         </div>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                             @foreach ($program->programAlumnis as $alumni)
@@ -195,42 +201,24 @@
             </div>
         </div>
     </section>
-    <hr>
-    <section>
-        <div class="container mx-auto px-8 py-10 space-y-8">
-            <div class="text-center space-y-1">
-                <h2 class="font-bold text-2xl">Siap Jadi Bagian dari Kami?</h2>
-                <p class="text-sm text-gray-600">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit,
-                    maxime.</p>
-            </div>
-            <div class="owl-carousel carousel-two owl-theme">
-                <div class="item">
-                    <img src="{{ asset('images/doc-kk/KK-1.jpeg') }}" alt="KK-1">
+    @if (count($documentations) > 0)
+        <hr>
+        <section>
+            <div class="container mx-auto px-8 py-10 space-y-8">
+                <div class="text-center space-y-1">
+                    <h2 class="font-bold text-2xl">Siap Jadi Bagian dari Kami?</h2>
                 </div>
-                <div class="item">
-                    <img src="{{ asset('images/doc-kk/KK-2.jpeg') }}" alt="KK-2">
-                </div>
-                <div class="item">
-                    <img src="{{ asset('images/doc-kk/KK-3.jpeg') }}" alt="KK-3">
-                </div>
-                <div class="item">
-                    <img src="{{ asset('images/doc-kk/KK-4.jpeg') }}" alt="KK-4">
-                </div>
-                <div class="item">
-                    <img src="{{ asset('images/doc-kk/KK-5.jpeg') }}" alt="KK-5">
-                </div>
-                <div class="item">
-                    <img src="{{ asset('images/doc-kk/KK-6.jpeg') }}" alt="KK-6">
-                </div>
-                <div class="item">
-                    <img src="{{ asset('images/doc-kk/KK-7.jpeg') }}" alt="KK-7">
-                </div>
-                <div class="item">
-                    <img src="{{ asset('images/doc-kk/KK-8.jpeg') }}" alt="KK-8">
+                <div class="owl-carousel carousel-two owl-theme">
+                    @foreach ($documentations as $no => $documentation)
+                        <div class="item">
+                            <img src="{{ asset('storage/' . $documentation->image) }}"
+                                alt="Documentation {{ $no + 1 }}" />
+                        </div>
+                    @endforeach
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    @endif
     @push('scripts')
         <script>
             $('.carousel-one').owlCarousel({

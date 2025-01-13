@@ -146,36 +146,23 @@
             </div>
         </section>
     @endif
-    <section>
-        <div class="container mx-auto p-8">
-            <div class="owl-carousel carousel-two owl-theme">
-                <div class="item">
-                    <img src="{{ asset('images/doc-kk/KK-1.jpeg') }}" alt="KK-1">
+    @if (count($documentations) > 0)
+        <section>
+            <div class="container mx-auto px-8 py-10 space-y-8">
+                <div class="text-center space-y-1">
+                    <h2 class="font-bold text-2xl">Siap Jadi Bagian dari Kami?</h2>
                 </div>
-                <div class="item">
-                    <img src="{{ asset('images/doc-kk/KK-2.jpeg') }}" alt="KK-2">
-                </div>
-                <div class="item">
-                    <img src="{{ asset('images/doc-kk/KK-3.jpeg') }}" alt="KK-3">
-                </div>
-                <div class="item">
-                    <img src="{{ asset('images/doc-kk/KK-4.jpeg') }}" alt="KK-4">
-                </div>
-                <div class="item">
-                    <img src="{{ asset('images/doc-kk/KK-5.jpeg') }}" alt="KK-5">
-                </div>
-                <div class="item">
-                    <img src="{{ asset('images/doc-kk/KK-6.jpeg') }}" alt="KK-6">
-                </div>
-                <div class="item">
-                    <img src="{{ asset('images/doc-kk/KK-7.jpeg') }}" alt="KK-7">
-                </div>
-                <div class="item">
-                    <img src="{{ asset('images/doc-kk/KK-8.jpeg') }}" alt="KK-8">
+                <div class="owl-carousel carousel-two owl-theme">
+                    @foreach ($documentations as $no => $documentation)
+                        <div class="item">
+                            <img src="{{ asset('storage/' . $documentation->image) }}"
+                                alt="Documentation {{ $no + 1 }}" />
+                        </div>
+                    @endforeach
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    @endif
     <section class="py-10 px-8">
         <div class="max-w-7xl mx-auto space-y-5 text-center">
             <div>

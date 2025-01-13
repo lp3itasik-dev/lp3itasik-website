@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\BannerController;
+use App\Http\Controllers\DocumentationController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProgramAlumniController;
 use App\Http\Controllers\ProgramBenefitController;
@@ -35,6 +37,12 @@ Route::middleware('auth')->group(function () {
 Route::middleware('auth')->group(function () {
     Route::resource('programs', ProgramController::class);
     Route::patch('programs/updatestatus/{id}', [ProgramController::class, 'updatestatus'])->name('programs.updatestatus');
+
+    Route::resource('documentations', DocumentationController::class);
+    Route::patch('documentations/updatestatus/{id}', [DocumentationController::class, 'updatestatus'])->name('documentations.updatestatus');
+
+    Route::resource('banners', BannerController::class);
+    Route::patch('banners/updatestatus/{id}', [BannerController::class, 'updatestatus'])->name('banners.updatestatus');
 
     Route::get('programinterests/create/{id}', [ProgramInterestController::class, 'create'])->name('programinterests.create');
     Route::get('programinterests/edit/{id}', [ProgramInterestController::class, 'edit'])->name('programinterests.edit');

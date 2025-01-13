@@ -48,6 +48,7 @@ class ProgramController extends Controller
                 'level' => 'required|max:100|min:2',
                 'type' => 'required|max:10|min:1',
                 'vision' => 'nullable',
+                'description' => 'nullable',
                 'status' => 'boolean',
                 'image' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
             ],
@@ -81,6 +82,7 @@ class ProgramController extends Controller
                 'level' => $request->level,
                 'type' => $request->type,
                 'vision' => $request->vision,
+                'description' => $request->description,
                 'status' => 1,
             ];
             if($request->hasFile('image')){
@@ -156,6 +158,7 @@ class ProgramController extends Controller
                 'level' => 'required|max:100|min:2',
                 'type' => 'required|max:10|min:1',
                 'vision' => 'nullable',
+                'description' => 'nullable',
                 'status' => 'boolean',
                 'image' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
             ],
@@ -189,6 +192,7 @@ class ProgramController extends Controller
                 'level' => $request->level,
                 'type' => $request->type,
                 'vision' => $request->vision,
+                'description' => $request->description,
                 'status' => 1,
             ];
 

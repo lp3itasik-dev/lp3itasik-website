@@ -3,12 +3,13 @@
         @include('components.popup-reguler')
     @endpush
     <header class="owl-carousel carousel-one owl-theme">
+        @forelse ($banners as $banner)
+        <div class="item h-[450px] bg-cover bg-start"
+            style="background-image: url('{{ asset('storage/' . $banner->image) }}');"></div>
+        @empty
         <div class="item h-[450px] bg-cover bg-center"
             style="background-image: url('{{ asset('images/doc-kk/KK-1.jpeg') }}');"></div>
-        <div class="item h-[450px] bg-cover bg-center"
-            style="background-image: url('{{ asset('images/doc-kk/KK-2.jpeg') }}');"></div>
-        <div class="item h-[450px] bg-cover bg-center"
-            style="background-image: url('{{ asset('images/doc-kk/KK-8.jpeg') }}');"></div>
+        @endforelse
     </header>
     <section>
         <div class="container mx-auto p-8">
@@ -38,37 +39,43 @@
                     class="text-center bg-gray-50 hover:bg-gray-100 border-b-4 border-lp3i-emerald-200 p-4 space-y-1 transition-all ease-in-out drop-shadow-lg">
                     <i class="fa-solid fa-certificate text-lg bg-sky-200 text-sky-700 p-3 rounded-full"></i>
                     <h2 class="font-bold text-xl">Terakreditasi BAN-PT</h2>
-                    <p class="text-sm text-gray-600">Politeknik LP3I Kampus Tasikmalaya telah terakreditasi BAN-PT dengan peringkat B</p>
+                    <p class="text-sm text-gray-600">Politeknik LP3I Kampus Tasikmalaya telah terakreditasi BAN-PT
+                        dengan peringkat B</p>
                 </div>
                 <div
                     class="text-center bg-gray-50 hover:bg-gray-100 border-b-4 border-lp3i-emerald-200 p-4 space-y-1 transition-all ease-in-out drop-shadow-lg">
                     <i class="fa-solid fa-graduation-cap text-lg bg-sky-200 text-sky-700 p-3 rounded-full"></i>
                     <h2 class="font-bold text-xl">Kurikulum Berbasis Link & Match</h2>
-                    <p class="text-sm text-gray-600">Memiliki kerjasama dengan perusahaan serta memiliki kurikulum yang sesuai dengan kebutuhan dunia kerja. Dengan pola perkuliahan 70% praktikum dan 30% teori</p>
+                    <p class="text-sm text-gray-600">Memiliki kerjasama dengan perusahaan serta memiliki kurikulum yang
+                        sesuai dengan kebutuhan dunia kerja. Dengan pola perkuliahan 70% praktikum dan 30% teori</p>
                 </div>
                 <div
                     class="text-center bg-gray-50 hover:bg-gray-100 border-b-4 border-lp3i-emerald-200 p-4 space-y-1 transition-all ease-in-out drop-shadow-lg">
                     <i class="fa-solid fa-medal text-lg bg-sky-200 text-sky-700 p-3 rounded-full"></i>
                     <h2 class="font-bold text-xl">Sertifikasi Kompetensi</h2>
-                    <p class="text-sm text-gray-600">Mahasiswa Politeknik LP3I memiliki 4 sertifikasi kompetensi dari Badan Nasional Sertifikasi Profesi (BNSP) dan International Test Center</p>
+                    <p class="text-sm text-gray-600">Mahasiswa Politeknik LP3I memiliki 4 sertifikasi kompetensi dari
+                        Badan Nasional Sertifikasi Profesi (BNSP) dan International Test Center</p>
                 </div>
                 <div
                     class="text-center bg-gray-50 hover:bg-gray-100 border-b-4 border-lp3i-emerald-200 p-4 space-y-1 transition-all ease-in-out drop-shadow-lg">
                     <i class="fa-solid fa-chalkboard-user text-lg bg-sky-200 text-sky-700 p-3 rounded-full"></i>
                     <h2 class="font-bold text-xl">Dosen Profesional dan Praktisi</h2>
-                    <p class="text-sm text-gray-600">Dosen Politeknik LP3I memiliki sertifikasi dosen dari Kemendikbud dan Dosen praktisi yang berpengalaman di bidang industri</p>
+                    <p class="text-sm text-gray-600">Dosen Politeknik LP3I memiliki sertifikasi dosen dari Kemendikbud
+                        dan Dosen praktisi yang berpengalaman di bidang industri</p>
                 </div>
                 <div
                     class="text-center bg-gray-50 hover:bg-gray-100 border-b-4 border-lp3i-emerald-200 p-4 space-y-1 transition-all ease-in-out drop-shadow-lg">
                     <i class="fa-solid fa-briefcase text-lg bg-sky-200 text-sky-700 p-3 rounded-full"></i>
                     <h2 class="font-bold text-xl">Penempatan Magang dan Kerja</h2>
-                    <p class="text-sm text-gray-600">Mahasiswa mengikuti proses kuliah kerja industri dan penempatan kerja di industri dan dunia kerja</p>
+                    <p class="text-sm text-gray-600">Mahasiswa mengikuti proses kuliah kerja industri dan penempatan
+                        kerja di industri dan dunia kerja</p>
                 </div>
                 <div
                     class="text-center bg-gray-50 hover:bg-gray-100 border-b-4 border-lp3i-emerald-200 p-4 space-y-1 transition-all ease-in-out drop-shadow-lg">
                     <i class="fa-regular fa-lightbulb text-lg bg-sky-200 text-sky-700 p-3 rounded-full"></i>
                     <h2 class="font-bold text-xl">Memiliki Hardskill dan Softskill</h2>
-                    <p class="text-sm text-gray-600">Mendapatkan pembekalan hardskill dan softskill untuk dunia kerja</p>
+                    <p class="text-sm text-gray-600">Mendapatkan pembekalan hardskill dan softskill untuk dunia kerja
+                    </p>
                 </div>
             </div>
         </div>
@@ -126,7 +133,9 @@
                 <div class="space-y-5">
                     <div class="space-y-1">
                         <h2 class="text-2xl font-bold text-white">Program Perkuliahan</h2>
-                        <p class="text-white">Berikut adalah program perkuliahan yang tersedia di Politeknik LP3I Kampus Tasikmalaya, yang dirancang untuk mendukung berbagai kegiatan akademik dan non-akademik mahasiswa.</p>
+                        <p class="text-white">Berikut adalah program perkuliahan yang tersedia di Politeknik LP3I Kampus
+                            Tasikmalaya, yang dirancang untuk mendukung berbagai kegiatan akademik dan non-akademik
+                            mahasiswa.</p>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                         <div class="space-y-2">
@@ -160,7 +169,9 @@
                         <div class="space-y-4">
                             <div class="space-y-1">
                                 <h2 class="font-bold text-lg">Politeknik LP3I Kampus Tasikmalaya</h2>
-                                <p class="text-gray-600">Politeknik LP3I Kampus Tasikmalaya menyediakan berbagai program pendidikan yang mendukung perkembangan keahlian dan karir mahasiswa di berbagai bidang.</p>
+                                <p class="text-gray-600">Politeknik LP3I Kampus Tasikmalaya menyediakan berbagai program
+                                    pendidikan yang mendukung perkembangan keahlian dan karir mahasiswa di berbagai
+                                    bidang.</p>
                             </div>
                             <ul class="space-y-3">
                                 @foreach ($programs_plt as $program)
@@ -180,7 +191,9 @@
                         <div class="space-y-4">
                             <div class="space-y-1">
                                 <h2 class="font-bold text-lg">Vokasi 2 Tahun LP3I Tasikmalaya</h2>
-                                <p class="text-gray-600">Program vokasi 2 tahun di LP3I Tasikmalaya dirancang untuk memberikan keterampilan praktis dan siap pakai bagi mahasiswa yang ingin langsung terjun ke dunia kerja.</p>
+                                <p class="text-gray-600">Program vokasi 2 tahun di LP3I Tasikmalaya dirancang untuk
+                                    memberikan keterampilan praktis dan siap pakai bagi mahasiswa yang ingin langsung
+                                    terjun ke dunia kerja.</p>
                             </div>
                             <ul class="space-y-3">
                                 @foreach ($programs_plt_vokasi as $program)
@@ -200,7 +213,8 @@
                         <div class="space-y-4">
                             <div class="space-y-1">
                                 <h2 class="font-bold text-lg">Kampus Utama</h2>
-                                <p class="text-gray-600">Kampus utama dilengkapi dengan berbagai fasilitas modern yang mendukung pembelajaran dan kegiatan mahasiswa secara optimal.</p>
+                                <p class="text-gray-600">Kampus utama dilengkapi dengan berbagai fasilitas modern yang
+                                    mendukung pembelajaran dan kegiatan mahasiswa secara optimal.</p>
                             </div>
                             <ul class="space-y-3">
                                 @foreach ($programs_plb as $program)
@@ -222,7 +236,9 @@
                         <h2 class="uppercase font-bold text-2xl">
                             <span class="border-l-4 border-sky-500 pl-2">Program Studi</span>
                         </h2>
-                        <p class="text-sm text-gray-600 max-w-md">Berikut adalah daftar program studi yang tersedia di Politeknik LP3I Kampus Tasikmalaya untuk mendukung perkembangan karir dan keahlian mahasiswa.</p>
+                        <p class="text-sm text-gray-600 max-w-md">Berikut adalah daftar program studi yang tersedia di
+                            Politeknik LP3I Kampus Tasikmalaya untuk mendukung perkembangan karir dan keahlian
+                            mahasiswa.</p>
                     </div>
                     <img src="{{ asset('images/illustration/model.png') }}" alt="Computer Engineer"
                         class="text-center w-96 drop-shadow-lg">
@@ -230,42 +246,28 @@
             </div>
         </section>
     @endif
-    <section>
-        <div class="container mx-auto p-8">
-            <div class="owl-carousel carousel-two owl-theme">
-                <div class="item">
-                    <img src="{{ asset('images/doc-kk/KK-1.jpeg') }}" alt="KK-1">
-                </div>
-                <div class="item">
-                    <img src="{{ asset('images/doc-kk/KK-2.jpeg') }}" alt="KK-2">
-                </div>
-                <div class="item">
-                    <img src="{{ asset('images/doc-kk/KK-3.jpeg') }}" alt="KK-3">
-                </div>
-                <div class="item">
-                    <img src="{{ asset('images/doc-kk/KK-4.jpeg') }}" alt="KK-4">
-                </div>
-                <div class="item">
-                    <img src="{{ asset('images/doc-kk/KK-5.jpeg') }}" alt="KK-5">
-                </div>
-                <div class="item">
-                    <img src="{{ asset('images/doc-kk/KK-6.jpeg') }}" alt="KK-6">
-                </div>
-                <div class="item">
-                    <img src="{{ asset('images/doc-kk/KK-7.jpeg') }}" alt="KK-7">
-                </div>
-                <div class="item">
-                    <img src="{{ asset('images/doc-kk/KK-8.jpeg') }}" alt="KK-8">
+    @if (count($documentations) > 0)
+        <section>
+            <div class="container mx-auto p-8">
+                <div class="owl-carousel carousel-two owl-theme">
+                    @foreach ($documentations as $no => $documentation)
+                        <div class="item">
+                            <img src="{{ asset('storage/' . $documentation->image) }}"
+                                alt="Documentation {{ $no + 1 }}" />
+                        </div>
+                    @endforeach
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    @endif
     <hr>
     <section>
         <div class="container mx-auto p-8">
             <div class="text-center mb-10">
                 <h2 class="font-bold text-2xl text-gray-900">Kerjasama</h2>
-                <p class="text-base text-gray-600 max-w-2xl mx-auto">Politeknik LP3I Kampus Tasikmalaya menjalin kerjasama dengan berbagai institusi untuk meningkatkan kualitas pendidikan dan memberikan peluang bagi mahasiswa dalam dunia industri.</p>
+                <p class="text-base text-gray-600 max-w-2xl mx-auto">Politeknik LP3I Kampus Tasikmalaya menjalin
+                    kerjasama dengan berbagai institusi untuk meningkatkan kualitas pendidikan dan memberikan peluang
+                    bagi mahasiswa dalam dunia industri.</p>
             </div>
             <div class="flex flex-wrap justify-center items-center gap-5">
                 <img src="{{ asset('images/companies-logo/logo-1.png') }}" alt="Logo-1" class="w-24">

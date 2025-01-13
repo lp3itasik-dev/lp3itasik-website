@@ -130,14 +130,25 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="grid grid-cols-1">
-                            <label for="vision" class="block mb-2 text-sm font-medium text-gray-900">Visi</label>
-                            <textarea name="vision" id="vision"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-                                placeholder="Visi"></textarea>
-                            <p class="mt-1 text-xs text-gray-500">
-                                <span class="text-red-500 text-xs">{{ $errors->first('vision') }}</span>
-                            </p>
+                        <div class="grid grid-cols-1 gap-4">
+                            <div>
+                                <label for="vision" class="block mb-2 text-sm font-medium text-gray-900">Visi</label>
+                                <textarea name="vision" id="vision"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                                    placeholder="Visi"></textarea>
+                                <p class="mt-1 text-xs text-gray-500">
+                                    <span class="text-red-500 text-xs">{{ $errors->first('vision') }}</span>
+                                </p>
+                            </div>
+                            <div>
+                                <label for="description" class="block mb-2 text-sm font-medium text-gray-900">Description</label>
+                                <textarea name="description" id="description"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                                    placeholder="Deskripsi"></textarea>
+                                <p class="mt-1 text-xs text-gray-500">
+                                    <span class="text-red-500 text-xs">{{ $errors->first('description') }}</span>
+                                </p>
+                            </div>
                         </div>
                         <button type="submit"
                             class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-xl text-sm w-full sm:w-auto px-5 py-2.5 text-center space-x-1">

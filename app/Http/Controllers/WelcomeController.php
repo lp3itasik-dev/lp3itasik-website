@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Banner;
+use App\Models\Documentation;
 use App\Models\Program;
 use Illuminate\Http\Request;
 
@@ -24,7 +26,9 @@ class WelcomeController extends Controller {
             'level' => 'Vokasi 2 Tahun',
             'campus' => 'LP3I Tasikmalaya'
         ] )->get();
-        return view( 'welcome', compact( [ 'programs_plt', 'programs_plb', 'programs_plt_vokasi' ] ) );
+        $banners = Banner::all();
+        $documentations = Documentation::all();
+        return view( 'welcome', compact( [ 'programs_plt', 'programs_plb', 'programs_plt_vokasi', 'documentations', 'banners' ] ) );
     }
 
     public function employee() {
@@ -45,7 +49,8 @@ class WelcomeController extends Controller {
             'level' => 'Vokasi 2 Tahun',
             'campus' => 'LP3I Tasikmalaya'
         ] )->get();
-        return view( 'employee', compact( [ 'programs_plt', 'programs_plb', 'programs_plt_vokasi' ] ) );
+        $documentations = Documentation::where('type', 'N')->get();
+        return view( 'employee', compact( [ 'programs_plt', 'programs_plb', 'programs_plt_vokasi', 'documentations' ] ) );
     }
 
     public function about() {
@@ -62,8 +67,9 @@ class WelcomeController extends Controller {
 
     public function program_studi($code) {
         $program = Program::with(['programInterests','programPotentions','programMissions','programBenefits','programCompetentions','programAlumnis'])->where( 'code', $code )->firstOrFail();
+        $documentations = Documentation::where('type', $program->type)->get();
         $program_view = $program->type == 'N' ? 'program-studi-employee' : 'program-studi';
-        return view( $program_view, compact( 'program' ) );
+        return view( $program_view, compact( 'program', 'documentations' ) );
     }
 
     public function redirect_link() {

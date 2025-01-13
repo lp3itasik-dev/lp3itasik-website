@@ -14,6 +14,7 @@ class Program extends Model
         'image',
         'type',
         'vision',
+        'description',
         'status'
     ];
 

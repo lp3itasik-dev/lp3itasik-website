@@ -25,6 +25,22 @@
                     ])">
                         {{ __('Programs') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('banners.index')" :active="request()->routeIs([
+                        'banners.index',
+                        'banners.create',
+                        'banners.edit',
+                        'banners.show',
+                    ])">
+                        {{ __('Banners') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('documentations.index')" :active="request()->routeIs([
+                        'documentations.index',
+                        'documentations.create',
+                        'documentations.edit',
+                        'documentations.show',
+                    ])">
+                        {{ __('Documentations') }}
+                    </x-nav-link>
                 </div>
             </div>
 
@@ -88,10 +104,26 @@
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('banners.index')" :active="request()->routeIs([
+                'banners.index',
+                'banners.create',
+                'banners.edit',
+                'banners.show',
+            ])">
+                {{ __('Documentations') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('documentations.index')" :active="request()->routeIs([
+                'documentations.index',
+                'documentations.create',
+                'documentations.edit',
+                'documentations.show',
+            ])">
+                {{ __('Documentations') }}
+            </x-responsive-nav-link>
         </div>
 
         <!-- Responsive Settings Options -->
-        <div class="pt-4 pb-1 border-t border-gray-200 dark:border-gray-600">
+        <div class="pt-4 pb-1 border-t border-gray-200">
             <div class="px-4">
                 <div class="font-medium text-base text-gray-800 dark:text-gray-200">{{ Auth::user()->name }}</div>
                 <div class="font-medium text-sm text-gray-500">{{ Auth::user()->email }}</div>
