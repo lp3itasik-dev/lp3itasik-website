@@ -27,7 +27,7 @@ class WelcomeController extends Controller {
             'campus' => 'LP3I Tasikmalaya'
         ] )->get();
         $banners = Banner::all();
-        $documentations = Documentation::all();
+        $documentations = Documentation::where('type', 'R')->get();
         return view( 'welcome', compact( [ 'programs_plt', 'programs_plb', 'programs_plt_vokasi', 'documentations', 'banners' ] ) );
     }
 
