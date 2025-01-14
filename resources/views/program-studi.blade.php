@@ -35,7 +35,7 @@
             </div>
             <div class="flex items-center justify-center md:justify-end">
                 @if ($program->image)
-                    <img src="{{ asset('storage/' . $program->image) }}" alt="{{ $program->title }}"
+                    <img src="{{ asset($program->image) }}" alt="{{ $program->title }}"
                         class="w-96 drop-shadow-lg" />
                 @else
                     <img src="{{ asset('images/cover-employee.png') }}" alt="Hero" class="w-96" />
@@ -211,7 +211,7 @@
                 <div class="owl-carousel carousel-two owl-theme">
                     @foreach ($documentations as $no => $documentation)
                         <div class="item">
-                            <img src="{{ asset('storage/' . $documentation->image) }}"
+                            <img src="{{ asset($documentation->image) }}"
                                 alt="Documentation {{ $no + 1 }}" />
                         </div>
                     @endforeach
