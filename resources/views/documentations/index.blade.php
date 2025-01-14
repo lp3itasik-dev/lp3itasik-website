@@ -107,6 +107,10 @@
                                                     {!! $documentation->status ? '<i class="fa-solid fa-toggle-on"></i>' : '<i class="fa-solid fa-toggle-off"></i>' !!}
                                                 </button>
                                             </form>
+                                            <a href="{{ route('documentations.edit', $documentation->id) }}"
+                                                class="bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 text-xs rounded-xl hover font-medium">
+                                                <i class="fa-regular fa-pen-to-square"></i>
+                                            </a>
                                             <form action="{{ route('documentations.destroy', $documentation->id) }}" method="POST"
                                                 class="inline-block" onclick="return confirmDelete();">
                                                 @csrf

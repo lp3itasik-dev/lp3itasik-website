@@ -71,15 +71,7 @@
                                         Pembelajaran Lampau</option>
                                 </select>
                                 <p class="mt-1 text-xs text-gray-500">
-                                    <span class="text-red-500 text-xs">{{ $errors->first('tipe') }}</span>
-                                </p>
-                            </div>
-                            <div>
-                                <label for="image" class="block mb-2 text-sm font-medium text-gray-900">Image</label>
-                                <input type="file" name="image" id="image"
-                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-xs rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" />
-                                <p class="mt-1 text-xs text-gray-500">
-                                    <span class="text-red-500 text-xs">{{ $errors->first('image') }}</span>
+                                    <span class="text-red-500 text-xs">{{ $errors->first('type') }}</span>
                                 </p>
                             </div>
                         </div>

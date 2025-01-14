@@ -103,7 +103,49 @@ class BannerController extends Controller {
     */
 
     public function update( Request $request, string $id ) {
-        //
+        $request->validate(
+            [
+                'type' => 'required|max:10|min:1',
+            ],
+            [
+                'type.required' => 'Type is required',
+                'type.max' => 'Type should not be more than 10 characters',
+                'type.min' => 'Type should not be less than 1 characters',
+            ],
+        );
+
+        try {
+            $data = [
+                'type' => $request->type,
+            ];
+
+            $banner = Banner::findOrFail( $id );
+
+            $banner->update( $data );
+
+            return redirect()
+            ->route( 'banners.index' )
+            ->with( [
+                'message' => 'Banner updated successfully',
+                'alert-type' => 'success',
+            ] );
+        } catch ( \Illuminate\Database\QueryException $e ) {
+            if ( $e->errorInfo[ 1 ] == 1062 ) {
+                return redirect()
+                ->route( 'banners.index' )
+                ->with( [
+                    'message' => 'Code already exists. Please use a different code.',
+                    'alert-type' => 'failed',
+                ] );
+            }
+
+            return redirect()
+            ->route( 'banners.index' )
+            ->with( [
+                'message' => 'An unexpected error occurred. Please try again later.',
+                'alert-type' => 'failed',
+            ] );
+        }
     }
 
     /**
