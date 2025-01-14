@@ -24,6 +24,20 @@
                 </div>
             @endif
 
+            @if (session('alert-type') == 'failed')
+                <div id="alert" class="flex items-center p-4 text-emerald-50 rounded-xl bg-red-500" role="alert">
+                    <i class="fa-solid fa-circle-xmark"></i>
+                    <span class="sr-only">Info</span>
+                    <div class="ms-3 text-sm font-medium">
+                        {{ session('message') }}
+                    </div>
+                    <button type="button" onclick="document.getElementById('alert').style.display = 'none';"
+                        class="text-emerald-50 hover:text-emerald-100 transition-all ease-in-out ms-auto">
+                        <i class="fa-solid fa-circle-xmark"></i>
+                    </button>
+                </div>
+            @endif
+
             <section class="flex flex-col md:flex-row items-center justify-between md:items-end gap-4 md:gap-0">
                 <a href="{{ route('programs.create') }}"
                     class="flex items-center gap-2 bg-sky-500 hover:bg-sky-600 text-white px-4 py-2.5 rounded-xl transition-all ease-in-out">
