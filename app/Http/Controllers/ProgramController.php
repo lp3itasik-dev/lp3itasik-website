@@ -6,6 +6,7 @@ use App\Models\Program;
 use App\Models\ProgramInterest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
 class ProgramController extends Controller
 {
@@ -86,8 +87,9 @@ class ProgramController extends Controller
                 'status' => 1,
             ];
             if($request->hasFile('image')){
-                $path = $request->file('image')->store('images/programs', 'public');
-                $data['image'] = $path;
+                $imageName = Str::uuid() . '.' . $request->image->extension();
+                $request->image->move( public_path( 'images/programs' ), $imageName );
+                $data[ 'image' ] = 'images/programs/' . $imageName;
             }
 
             Program::create($data);
@@ -199,12 +201,13 @@ class ProgramController extends Controller
             $program = Program::findOrFail($id);
 
             if($request->hasFile('image')){
-                if ($program->image && Storage::disk('public')->exists($program->image)) {
-                    Storage::disk('public')->delete($program->image);
+                if ($program->image && file_exists(public_path($program->image))) {
+                    unlink(public_path($program->image));
                 }
 
-                $path = $request->file('image')->store('images/programs', 'public');
-                $data['image'] = $path;
+                $imageName = Str::uuid() . '.' . $request->image->extension();
+                $request->image->move( public_path( 'images/programs' ), $imageName );
+                $data[ 'image' ] = 'images/programs/' . $imageName;
             }
 
             $program->update($data);
