@@ -173,6 +173,17 @@
                 </h2>
                 <p class="text-base text-gray-600">Ini adalah tempat untuk mengunduh asset seperti logo kampus dan elemen branding lainnya.</p>
             </div>
+            <div class="grid grid-cols-2 md:grid-cols-3 items-center gap-5">
+                <div onclick="copyToClipboard()" class="bg-[#00426D] text-white p-5 rounded-xl cursor-pointer">
+                    <h2>#00426D</h2>
+                </div>
+                <div onclick="copyToClipboard()" class="bg-[#F15C67] text-white p-5 rounded-xl cursor-pointer">
+                    <h2>#F15C67</h2>
+                </div>
+                <div onclick="copyToClipboard()" class="bg-[#00AEB6] text-white p-5 rounded-xl cursor-pointer">
+                    <h2>#00AEB6</h2>
+                </div>
+            </div>
             <div class="grid grid-cols-2 md:grid-cols-5 items-center gap-5">
                 <a href="{{ asset('images/logo/logo-lp3i.svg') }}" download="logo-lp3i-warna-SVG.svg">
                     <img src="{{ asset('images/logo/logo-lp3i.svg') }}" alt="">
@@ -235,6 +246,12 @@
                     },
                 }
             });
+        </script>
+        <script>
+            function copyToClipboard(){
+                navigator.clipboard.writeText(event.target.innerText);
+                alert('Hex berhasil disalin: ' + event.target.innerText);
+            }
         </script>
     @endpush
 </x-website-layout>
