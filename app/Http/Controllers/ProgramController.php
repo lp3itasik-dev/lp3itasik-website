@@ -231,7 +231,7 @@ class ProgramController extends Controller
             return redirect()
                 ->route('programs.index')
                 ->with([
-                    'message' => 'An unexpected error occurred. Please try again later.',
+                    'message' => $e->getMessage(),
                     'alert-type' => 'failed',
                 ]);
         }
