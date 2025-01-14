@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Banner;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
@@ -102,63 +103,7 @@ class BannerController extends Controller {
     */
 
     public function update( Request $request, string $id ) {
-        $request->validate(
-            [
-                'type' => 'required|max:10|min:1',
-                'status' => 'boolean',
-                'image' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
-            ],
-            [
-                'type.required' => 'Type is required',
-                'type.max' => 'Type should not be more than 10 characters',
-                'type.min' => 'Type should not be less than 1 characters',
-                'status.boolean' => 'Status should be boolean',
-                'image.image' => 'Image should be an image',
-            ],
-        );
-
-        try {
-            $data = [
-                'type' => $request->type,
-                'status' => 1,
-            ];
-
-            $banner = Banner::findOrFail( $id );
-
-            if ( $request->hasFile( 'image' ) ) {
-                if ( $banner->image && Storage::disk( 'public' )->exists( $banner->image ) ) {
-                    Storage::disk( 'public' )->delete( $banner->image );
-                }
-
-                $path = $request->file( 'image' )->store( 'images/banners', 'public' );
-                $data[ 'image' ] = $path;
-            }
-
-            $banner->update( $data );
-
-            return redirect()
-            ->route( 'banners.index' )
-            ->with( [
-                'message' => 'Banner updated successfully',
-                'alert-type' => 'success',
-            ] );
-        } catch ( \Illuminate\Database\QueryException $e ) {
-            if ( $e->errorInfo[ 1 ] == 1062 ) {
-                return redirect()
-                ->route( 'banners.index' )
-                ->with( [
-                    'message' => 'Code already exists. Please use a different code.',
-                    'alert-type' => 'failed',
-                ] );
-            }
-
-            return redirect()
-            ->route( 'banners.index' )
-            ->with( [
-                'message' => 'An unexpected error occurred. Please try again later.',
-                'alert-type' => 'failed',
-            ] );
-        }
+        //
     }
 
     /**
@@ -169,7 +114,7 @@ class BannerController extends Controller {
         $banner = Banner::findOrFail( $id );
 
         if ( $banner->image ) {
-            Storage::disk( 'public' )->delete( $banner->image );
+            File::delete(public_path($banner->image));
         }
 
         $banner->delete();

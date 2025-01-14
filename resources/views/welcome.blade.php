@@ -5,7 +5,7 @@
     <header class="owl-carousel carousel-one owl-theme">
         @forelse ($banners as $banner)
         <div class="item h-[450px] bg-cover bg-start"
-            style="background-image: url('{{ asset('storage/' . $banner->image) }}');"></div>
+            style="background-image: url('{{ asset($banner->image) }}');"></div>
         @empty
         <div class="item h-[450px] bg-cover bg-center"
             style="background-image: url('{{ asset('images/doc-kk/KK-1.jpeg') }}');"></div>
@@ -252,7 +252,7 @@
                 <div class="owl-carousel carousel-two owl-theme">
                     @foreach ($documentations as $no => $documentation)
                         <div class="item">
-                            <img src="{{ asset('storage/' . $documentation->image) }}"
+                            <img src="{{ asset($documentation->image) }}"
                                 alt="Documentation {{ $no + 1 }}" />
                         </div>
                     @endforeach
