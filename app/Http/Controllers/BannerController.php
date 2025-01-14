@@ -50,8 +50,8 @@ class BannerController extends Controller {
             ];
             if ( $request->hasFile( 'image' ) ) {
                 $imageName = Str::uuid() . '.' . $request->image->extension();
-                $request->image->move( public_path( 'banners' ), $imageName );
-                $data[ 'image' ] = 'banners/' . $imageName;
+                $request->image->move( public_path( 'images/banners' ), $imageName );
+                $data[ 'image' ] = 'images/banners/' . $imageName;
             }
 
             Banner::create( $data );
