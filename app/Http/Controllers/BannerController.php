@@ -5,11 +5,10 @@ namespace App\Http\Controllers;
 use App\Models\Banner;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
-class BannerController extends Controller
-{
-    public function index()
-    {
+class BannerController extends Controller {
+    public function index() {
         $banner_query = Banner::query();
         $total = Banner::count();
         $banners = $banner_query->paginate( 5 );
@@ -17,18 +16,18 @@ class BannerController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
+    * Show the form for creating a new resource.
+    */
+
+    public function create() {
         return view( 'banners.create' );
     }
 
     /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
+    * Store a newly created resource in storage.
+    */
+
+    public function store( Request $request ) {
         $request->validate(
             [
                 'type' => 'required|max:10|min:1',
@@ -50,8 +49,9 @@ class BannerController extends Controller
                 'status' => 1,
             ];
             if ( $request->hasFile( 'image' ) ) {
-                $path = $request->file( 'image' )->store( 'images/banners', 'public' );
-                $data[ 'image' ] = $path;
+                $imageName = Str::uuid() . '.' . $request->image->extension();
+                $request->image->move( public_path( 'banners' ), $imageName );
+                $data[ 'image' ] = 'banners/' . $imageName;
             }
 
             Banner::create( $data );
@@ -82,26 +82,26 @@ class BannerController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
+    * Display the specified resource.
+    */
+
+    public function show( string $id ) {
         //
     }
 
     /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
+    * Show the form for editing the specified resource.
+    */
+
+    public function edit( string $id ) {
         //
     }
 
     /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
+    * Update the specified resource in storage.
+    */
+
+    public function update( Request $request, string $id ) {
         $request->validate(
             [
                 'type' => 'required|max:10|min:1',
@@ -162,10 +162,10 @@ class BannerController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
+    * Remove the specified resource from storage.
+    */
+
+    public function destroy( string $id ) {
         $banner = Banner::findOrFail( $id );
 
         if ( $banner->image ) {
