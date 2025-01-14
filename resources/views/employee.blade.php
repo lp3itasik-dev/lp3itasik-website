@@ -155,7 +155,7 @@
                 <div class="owl-carousel carousel-two owl-theme">
                     @foreach ($documentations as $no => $documentation)
                         <div class="item">
-                            <img src="{{ asset('storage/' . $documentation->image) }}"
+                            <img src="{{ asset($documentation->image) }}"
                                 alt="Documentation {{ $no + 1 }}" />
                         </div>
                     @endforeach

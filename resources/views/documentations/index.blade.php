@@ -76,7 +76,7 @@
                                         </th>
                                         {{ $documentation->image }}
                                         <td class="px-6 py-4">
-                                            <img src="{{ asset('storage/' . $documentation->image) }}"
+                                            <img src="{{ asset($documentation->image) }}"
                                                 alt="Documentations" class="h-20 object-cover rounded-xl">
                                         </td>
                                         <td class="px-6 py-4 text-nowrap">
