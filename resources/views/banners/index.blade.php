@@ -75,7 +75,7 @@
                                             {{ $no + 1 }}
                                         </th>
                                         <td class="px-6 py-4">
-                                            <img src="{{ asset('storage/' . $banner->image) }}"
+                                            <img src="{{ asset($banner->image) }}"
                                                 alt="Documentations" class="h-20 object-cover rounded-xl">
                                         </td>
                                         <td class="px-6 py-4 text-nowrap">
