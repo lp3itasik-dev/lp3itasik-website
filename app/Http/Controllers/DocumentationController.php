@@ -100,7 +100,8 @@ class DocumentationController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $documentation = Documentation::findOrFail($id);
+        return view('documentations.edit', compact('documentation'));
     }
 
     /**

@@ -52,7 +52,7 @@
 
             <div class="bg-white overflow-hidden border border-gray-200 md:rounded-2xl">
                 <div class="p-6 text-gray-900 space-y-5">
-                    <form method="POST" action="{{ route('banners.update', $program->id) }}"
+                    <form method="POST" action="{{ route('banners.update', $banner->id) }}"
                         enctype="multipart/form-data" class="space-y-4">
                         @csrf
                         @method('PATCH')
@@ -61,13 +61,13 @@
                                 <label for="type" class="block mb-2 text-sm font-medium text-gray-900">Tipe</label>
                                 <select id="type" name="type"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
-                                    <option value="" disabled {{ empty($program->type) ? 'selected' : '' }}>Pilih
+                                    <option value="" disabled {{ empty($banner->type) ? 'selected' : '' }}>Pilih
                                         Tipe</option>
-                                    <option value="R" {{ $program->type === 'R' ? 'selected' : '' }}>Reguler
+                                    <option value="R" {{ $banner->type === 'R' ? 'selected' : '' }}>Reguler
                                     </option>
-                                    <option value="N" {{ $program->type === 'N' ? 'selected' : '' }}>Non-Reguler
+                                    <option value="N" {{ $banner->type === 'N' ? 'selected' : '' }}>Non-Reguler
                                     </option>
-                                    <option value="RPL" {{ $program->type === 'RPL' ? 'selected' : '' }}>Rekognisi
+                                    <option value="RPL" {{ $banner->type === 'RPL' ? 'selected' : '' }}>Rekognisi
                                         Pembelajaran Lampau</option>
                                 </select>
                                 <p class="mt-1 text-xs text-gray-500">
