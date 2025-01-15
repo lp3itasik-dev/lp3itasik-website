@@ -73,6 +73,9 @@
                 <a href="https://www.youtube.com/lp3itasik" target="_blank" class="text-gray-700 hover:text-sky-600 sosmed-5">
                     <i class="fa-brands fa-youtube text-2xl"></i>
                 </a>
+                <a href="https://politekniklp3i-tasikmalaya.ac.id" target="_blank" class="text-gray-700 hover:text-sky-600 sosmed-6">
+                    <i class="fa-brands fa-globe text-2xl"></i>
+                </a>
             </div>
         </div>
         <div class="w-full grid grid-cols-2 md:grid-cols-2 gap-3">
@@ -185,46 +188,53 @@
             delay: 0.8,
             ease: "elastic.out(1,0.3)"
         });
-        gsap.from(".link-1", {
+        gsap.from(".sosmed-6", {
             duration: 2.5,
-            y: -500,
+            y: -200,
             rotation: -30,
             delay: 0.9,
             ease: "elastic.out(1,0.3)"
         });
-        gsap.from(".link-2", {
+        gsap.from(".link-1", {
             duration: 2.5,
             y: -500,
             rotation: -30,
             delay: 1,
             ease: "elastic.out(1,0.3)"
         });
+        gsap.from(".link-2", {
+            duration: 2.5,
+            y: -500,
+            rotation: -30,
+            delay: 1.1,
+            ease: "elastic.out(1,0.3)"
+        });
         gsap.from(".link-3", {
             duration: 2.5,
             y: -700,
             rotation: -30,
-            delay: 1.1,
+            delay: 1.2,
             ease: "elastic.out(1,0.3)"
         });
         gsap.from(".link-4", {
             duration: 2.5,
             y: -700,
             rotation: -30,
-            delay: 1.2,
+            delay: 1.3,
             ease: "elastic.out(1,0.3)"
         });
         gsap.from(".link-5", {
             duration: 2.5,
             y: -700,
             rotation: -30,
-            delay: 1.2,
+            delay: 1.4,
             ease: "elastic.out(1,0.3)"
         });
         gsap.from(".whatsapp", {
             duration: 2.5,
             y: 200,
             rotation: -50,
-            delay: 1.3,
+            delay: 1.5,
             ease: "elastic.out(1,0.3)"
         });
     </script>
