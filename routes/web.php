@@ -20,6 +20,9 @@ Route::get('/ormawa', [WelcomeController::class, 'ormawa'])->name('ormawa');
 Route::get('/career-center', [WelcomeController::class, 'career_center'])->name('career-center');
 Route::get('/program-studi/{code}', [WelcomeController::class, 'program_studi'])->name('program-studi');
 
+Route::get('/catalog/management', [WelcomeController::class, 'catalog_management'])->name('catalog.management');
+Route::get('/catalog', [WelcomeController::class, 'catalog'])->name('catalog');
+
 // Redirect
 Route::get('/penerimaan-mahasiswa', [WelcomeController::class, 'redirect_link'])->name('redirect-link');
 Route::get('/beasiswakuliahlp3itasik', [WelcomeController::class, 'redirect_one'])->name('redirect-one');

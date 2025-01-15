@@ -79,4 +79,12 @@ class WelcomeController extends Controller {
     public function redirect_one() {
         return view( 'redirect-one' );
     }
+
+    public function catalog_management() {
+        return view( 'catalog-management' );
+    }
+
+    public function catalog() {
+        return view( 'catalog' );
+    }
 }
