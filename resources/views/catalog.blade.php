@@ -74,7 +74,7 @@
                     <i class="fa-brands fa-youtube text-2xl"></i>
                 </a>
                 <a href="https://politekniklp3i-tasikmalaya.ac.id" target="_blank" class="text-gray-700 hover:text-sky-600 sosmed-6">
-                    <i class="fa-brands fa-globe text-2xl"></i>
+                    <i class="fa-solid fa-globe text-2xl"></i>
                 </a>
             </div>
         </div>
