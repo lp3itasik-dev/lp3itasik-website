@@ -42,7 +42,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body style="background-image: url('{{ asset('images/background-campus.jpg') }}')" class="bg-center bg-cover bg-no-repeat bg-gray-900 bg-blend-multiply flex flex-col justify-center items-center py-10"">
+<body style="background-image: url('{{ asset('images/background-campus.jpg') }}')" class="bg-center bg-cover bg-gray-900 bg-blend-multiply flex flex-col justify-center items-center py-10"">
     <div class="container max-w-lg mx-auto flex flex-col items-center justify-center gap-5 px-5 md:px-0">
         <div class="profile-card bg-white rounded-2xl shadow-lg p-3 space-y-4">
             <div class="flex flex-col justify-center items-center gap-5 bg-[#F5F8FC] p-5 rounded-2xl">
