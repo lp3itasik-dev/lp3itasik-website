@@ -7,6 +7,12 @@
                         {{ $program->level }} {{ $program->title }}
                     </h2>
                     <p class="text-gray-700">{{ $program->description }}</p>
+                    @if ($program->accreditation && $program->accreditation_file)
+                        <a target="_blank" href="{{ asset($program->accreditation_file) }}"
+                            class="text-gray-700">Terakreditasi: <span
+                                class="font-bold text-lp3i-200">{{ $program->accreditation }}</span> <i
+                                class="fa-solid fa-arrow-up-right-from-square text-xs"></i></a>
+                    @endif
                     @if (count($program->programInterests) > 0)
                         <h3 class="bg-gray-100 px-5 py-2 text-sm border-l-8 border-gray-400 text-gray-700 font-medium">
                             Konsentrasi:</h3>
@@ -35,8 +41,7 @@
             </div>
             <div class="flex items-center justify-center md:justify-end">
                 @if ($program->image)
-                    <img src="{{ asset($program->image) }}" alt="{{ $program->title }}"
-                        class="w-96 drop-shadow-lg" />
+                    <img src="{{ asset($program->image) }}" alt="{{ $program->title }}" class="w-96 drop-shadow-lg" />
                 @else
                     <img src="{{ asset('images/cover-employee.png') }}" alt="Hero" class="w-96" />
                 @endif
@@ -92,7 +97,8 @@
                                 <h4 class="font-medium text-sky-700">#mengenalLP3I</h4>
                                 <h2 class="font-bold text-2xl">Visi</h2>
                             </div>
-                            <p class="text-sm text-gray-600 text-justify">{{ $program->vision ?? 'Belum ada visi' }}</p>
+                            <p class="text-sm text-gray-600 text-justify">{{ $program->vision ?? 'Belum ada visi' }}
+                            </p>
                         </div>
                     @endif
                     @if (count($program->programMissions) > 0)
@@ -211,8 +217,7 @@
                 <div class="owl-carousel carousel-two owl-theme">
                     @foreach ($documentations as $no => $documentation)
                         <div class="item">
-                            <img src="{{ asset($documentation->image) }}"
-                                alt="Documentation {{ $no + 1 }}" />
+                            <img src="{{ asset($documentation->image) }}" alt="Documentation {{ $no + 1 }}" />
                         </div>
                     @endforeach
                 </div>

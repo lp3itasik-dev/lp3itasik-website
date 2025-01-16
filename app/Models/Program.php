@@ -12,6 +12,8 @@ class Program extends Model
         'campus',
         'level',
         'image',
+        'accreditation',
+        'accreditation_file',
         'type',
         'vision',
         'description',

@@ -52,6 +52,8 @@ class ProgramController extends Controller
                 'description' => 'nullable',
                 'status' => 'boolean',
                 'image' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
+                'accreditation' => 'nullable',
+                'accreditation_file' => 'nullable|mimes:jpeg,png,jpg,pdf|max:2048',
             ],
             [
                 'code.required' => 'Code is required',
@@ -72,6 +74,7 @@ class ProgramController extends Controller
                 'type.min' => 'Type should not be less than 1 characters',
                 'status.boolean' => 'Status should be boolean',
                 'image.image' => 'Image should be an image',
+                'accreditation_file.mimes' => 'Accreditation should be an image or pdf',
             ],
         );
 
@@ -83,13 +86,21 @@ class ProgramController extends Controller
                 'level' => $request->level,
                 'type' => $request->type,
                 'vision' => $request->vision,
+                'accreditation' => $request->accreditation,
                 'description' => $request->description,
                 'status' => 1,
             ];
+
             if($request->hasFile('image')){
                 $imageName = Str::uuid() . '.' . $request->image->extension();
                 $request->image->move( public_path( 'images/programs' ), $imageName );
                 $data[ 'image' ] = 'images/programs/' . $imageName;
+            }
+
+            if($request->hasFile('accreditation_file')){
+                $accreditationName = Str::uuid() . '.' . $request->accreditation_file->extension();
+                $request->accreditation_file->move( public_path( 'accreditation' ), $accreditationName );
+                $data[ 'accreditation_file' ] = 'accreditation/' . $accreditationName;
             }
 
             Program::create($data);
@@ -163,6 +174,8 @@ class ProgramController extends Controller
                 'description' => 'nullable',
                 'status' => 'boolean',
                 'image' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
+                'accreditation' => 'nullable',
+                'accreditation_file' => 'nullable|mimes:jpeg,png,jpg,pdf|max:2048',
             ],
             [
                 'code.required' => 'Code is required',
@@ -183,6 +196,7 @@ class ProgramController extends Controller
                 'type.min' => 'Type should not be less than 1 characters',
                 'status.boolean' => 'Status should be boolean',
                 'image.image' => 'Image should be an image',
+                'accreditation.mimes' => 'Accreditation should be an image or pdf',
             ],
         );
 
@@ -194,6 +208,7 @@ class ProgramController extends Controller
                 'level' => $request->level,
                 'type' => $request->type,
                 'vision' => $request->vision,
+                'accreditation' => $request->accreditation,
                 'description' => $request->description,
                 'status' => 1,
             ];
@@ -208,6 +223,16 @@ class ProgramController extends Controller
                 $imageName = Str::uuid() . '.' . $request->image->extension();
                 $request->image->move( public_path( 'images/programs' ), $imageName );
                 $data[ 'image' ] = 'images/programs/' . $imageName;
+            }
+
+            if($request->hasFile('accreditation_file')){
+                if ($program->accreditation_file && file_exists(public_path($program->accreditation_file))) {
+                    unlink(public_path($program->accreditation_file));
+                }
+
+                $accreditationName = Str::uuid() . '.' . $request->accreditation_file->extension();
+                $request->accreditation_file->move( public_path( 'accreditations' ), $accreditationName );
+                $data[ 'accreditation_file' ] = 'accreditations/' . $accreditationName;
             }
 
             $program->update($data);

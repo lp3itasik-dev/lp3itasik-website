@@ -9,6 +9,13 @@
                     <p class="text-gray-700">LP3I hadir dengan kuliah mendukungmu untuk kuliah sambil bekerja, karir
                         unggul, impian terwujud.
                         Bergabunglah dan raih kesuksesan bersama kami sekarang!</p>
+
+                    @if ($program->accreditation && $program->accreditation_file)
+                        <a target="_blank" href="{{ asset($program->accreditation_file) }}"
+                            class="text-gray-700">Terakreditasi: <span
+                                class="font-bold text-lp3i-200">{{ $program->accreditation }}</span> <i
+                                class="fa-solid fa-arrow-up-right-from-square text-xs"></i></a>
+                    @endif
                     @if (count($program->programInterests) > 0)
                         <h3 class="bg-gray-100 px-5 py-2 text-sm border-l-8 border-gray-400 text-gray-700 font-medium">
                             Konsentrasi:</h3>
@@ -136,7 +143,9 @@
                                 <h4 class="font-medium text-sky-700">#mengenalLP3I</h4>
                                 <h2 class="font-bold text-2xl">Testimoni Alumni dan Mahasiswa</h2>
                             </div>
-                            <p class="text-sm text-gray-600 text-justify">Pendidikan di LP3I telah membekali saya dengan keterampilan dan pengalaman yang luar biasa, mempersiapkan saya untuk meraih sukses di dunia profesional.</p>
+                            <p class="text-sm text-gray-600 text-justify">Pendidikan di LP3I telah membekali saya dengan
+                                keterampilan dan pengalaman yang luar biasa, mempersiapkan saya untuk meraih sukses di
+                                dunia profesional.</p>
                         </div>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                             @foreach ($program->programAlumnis as $alumni)
@@ -204,8 +213,7 @@
                 <div class="owl-carousel carousel-two owl-theme">
                     @foreach ($documentations as $no => $documentation)
                         <div class="item">
-                            <img src="{{$documentation->image}}"
-                                alt="Documentation {{ $no + 1 }}" />
+                            <img src="{{ $documentation->image }}" alt="Documentation {{ $no + 1 }}" />
                         </div>
                     @endforeach
                 </div>

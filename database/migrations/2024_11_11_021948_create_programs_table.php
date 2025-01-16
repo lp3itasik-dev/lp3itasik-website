@@ -18,6 +18,8 @@ return new class extends Migration
             $table->string('campus',100);
             $table->string('level',100);
             $table->text('image')->nullable();
+            $table->string('accreditation')->nullable();
+            $table->text('accreditation_file')->nullable();
             $table->char('type', 3);
             $table->text('vision')->nullable();
             $table->text('description')->nullable();

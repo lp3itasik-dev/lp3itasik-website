@@ -56,7 +56,7 @@
                         enctype="multipart/form-data" class="space-y-4">
                         @csrf
                         @method('PATCH')
-                        <div class="grid gap-5 mb-4 grid-cols-1 md:grid-cols-3">
+                        <div class="grid gap-5 mb-4 grid-cols-1 md:grid-cols-4">
                             <div>
                                 <label for="code" class="block mb-2 text-sm font-medium text-gray-900">Kode
                                     Jurusan</label>
@@ -126,13 +126,30 @@
                             <div>
                                 <label for="image" class="block mb-2 text-sm font-medium text-gray-900">Cover</label>
                                 <input type="file" name="image" id="image"
-                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" />
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-xs rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" />
                                 <p class="mt-1 text-xs text-gray-500">
                                     <span class="text-red-500 text-xs">{{ $errors->first('image') }}</span>
                                 </p>
                             </div>
+                            <div>
+                                <label for="accreditation" class="block mb-2 text-sm font-medium text-gray-900">Akreditasi</label>
+                                <input type="text" name="accreditation" id="accreditation" value="{{ $program->accreditation }}"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                                    placeholder="Akreditasi" required />
+                                <p class="mt-1 text-xs text-gray-500">
+                                    <span class="text-red-500 text-xs">{{ $errors->first('accreditation') }}</span>
+                                </p>
+                            </div>
+                            <div>
+                                <label for="accreditation_file" class="block mb-2 text-sm font-medium text-gray-900">Berkas Akreditasi</label>
+                                <input type="file" name="accreditation_file" id="accreditation_file"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-xs rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" />
+                                <p class="mt-1 text-xs text-gray-500">
+                                    <span class="text-red-500 text-xs">{{ $errors->first('accreditation_file') }}</span>
+                                </p>
+                            </div>
                         </div>
-                        <div class="grid grid-cols-1 gap-4">
+                        <div class="grid grid-cols-2 gap-4">
                             <div>
                                 <label for="vision"
                                     class="block mb-2 text-sm font-medium text-gray-900">Visi</label>

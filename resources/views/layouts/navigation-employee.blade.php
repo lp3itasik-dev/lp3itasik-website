@@ -8,7 +8,9 @@
                     <a href="{{ route('welcome') }}" class="flex items-center gap-2">
                         <img src="{{ asset('images/logo/logo-lp3i.svg') }}" alt="" class="h-14">
                     </a>
-                    <img src="{{ asset('images/logo/akreditasi.png') }}" alt="" class="h-14">
+                    <a href="{{ asset('documents/sertifikat-kreditasi-PT-2024-2029.pdf') }}" class="flex items-center gap-2" target="_blank">
+                        <img src="{{ asset('images/logo/akreditasi.png') }}" alt="" class="h-14">
+                    </a>
                 </div>
 
                 <!-- Navigation Links -->

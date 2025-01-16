@@ -3,12 +3,10 @@
         @include('components.popup-reguler')
     @endpush
     <header class="owl-carousel carousel-one owl-theme">
-        @forelse ($banners as $banner)
-        <div class="item h-[450px] bg-cover bg-start"
-            style="background-image: url('{{ asset($banner->image) }}');"></div>
+        @forelse ($banners as $no => $banner)
+            <img src="{{ asset($banner->image) }}" alt="banner-{{ $no + 1 }}" class="item aspect-video">
         @empty
-        <div class="item h-[450px] bg-cover bg-center"
-            style="background-image: url('{{ asset('images/doc-kk/KK-1.jpeg') }}');"></div>
+            <img src="{{ asset('images/doc-kk/KK-1.jpeg') }}" alt="banner-default" class="item aspect-video">
         @endforelse
     </header>
     <section>
@@ -252,8 +250,7 @@
                 <div class="owl-carousel carousel-two owl-theme">
                     @foreach ($documentations as $no => $documentation)
                         <div class="item">
-                            <img src="{{ asset($documentation->image) }}"
-                                alt="Documentation {{ $no + 1 }}" />
+                            <img src="{{ asset($documentation->image) }}" alt="Documentation {{ $no + 1 }}" />
                         </div>
                     @endforeach
                 </div>
