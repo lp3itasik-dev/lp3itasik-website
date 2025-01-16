@@ -66,64 +66,60 @@
                         <div class="space-y-4">
                             <div class="space-y-1">
                                 <h2 class="font-bold text-lg">Politeknik LP3I Kampus Tasikmalaya</h2>
-                                <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Totam,
-                                    possimus?
-                                </p>
+                                <p class="text-gray-600">Politeknik LP3I Kampus Tasikmalaya menyediakan berbagai program
+                                    pendidikan yang mendukung perkembangan keahlian dan karir mahasiswa di berbagai
+                                    bidang.</p>
                             </div>
                             <ul class="space-y-3">
                                 @foreach ($programs_plt as $program)
-                                    <li class="border-l-8 border-lp3i-200 px-5">
-                                        <a href="#"
+                                    <li class="border-l-8 border-lp3i-200 px-5 space-y-1">
+                                        <a href="{{ route('program-studi', $program->code) }}"
                                             class="flex items-center gap-2 text-2xl font-bold hover:underline underline-offset-4">
                                             <span>{{ $program->level }} {{ $program->title }}</span>
-                                            <i class="fa-solid fa-external-link text-sm"></i>
                                         </a>
+                                        <p class="text-gray-700 font-medium">{{ $program->accreditation }}</p>
                                     </li>
                                 @endforeach
                             </ul>
                         </div>
+                        <hr>
                     @endif
                     @if (count($programs_plt_vokasi) > 0)
                         <div class="space-y-4">
                             <div class="space-y-1">
                                 <h2 class="font-bold text-lg">Vokasi 2 Tahun LP3I Tasikmalaya</h2>
-                                <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Totam,
-                                    possimus?
-                                </p>
+                                <p class="text-gray-600">Program vokasi 2 tahun di LP3I Tasikmalaya dirancang untuk
+                                    memberikan keterampilan praktis dan siap pakai bagi mahasiswa yang ingin langsung
+                                    terjun ke dunia kerja.</p>
                             </div>
                             <ul class="space-y-3">
                                 @foreach ($programs_plt_vokasi as $program)
-                                    <li class="border-l-8 border-lp3i-emerald-100 px-5">
-                                        <a href="#"
+                                    <li class="border-l-8 border-lp3i-200 px-5 space-y-1">
+                                        <a href="{{ route('program-studi', $program->code) }}"
                                             class="flex items-center gap-2 text-2xl font-bold hover:underline underline-offset-4">
-                                            <span>{{ $program->title }}</span>
-                                            <i class="fa-solid fa-external-link text-sm"></i>
+                                            <span>{{ $program->level }} {{ $program->title }}</span>
                                         </a>
+                                        <p class="text-gray-700 font-medium">{{ $program->accreditation }}</p>
                                     </li>
                                 @endforeach
                             </ul>
                         </div>
                     @endif
                     @if (count($programs_plb) > 0)
-                        <hr>
                         <div class="space-y-4">
                             <div class="space-y-1">
                                 <h2 class="font-bold text-lg">Kampus Utama</h2>
-                                <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Totam,
-                                    possimus?
-                                </p>
+                                <p class="text-gray-600">Kampus utama dilengkapi dengan berbagai fasilitas modern yang
+                                    mendukung pembelajaran dan kegiatan mahasiswa secara optimal.</p>
                             </div>
                             <ul class="space-y-3">
                                 @foreach ($programs_plb as $program)
-                                    <li class="border-l-8 border-lp3i-red-100 px-5">
-                                        <a href="#"
+                                    <li class="border-l-8 border-lp3i-200 px-5 space-y-1">
+                                        <a href="{{ route('program-studi', $program->code) }}"
                                             class="flex items-center gap-2 text-2xl font-bold hover:underline underline-offset-4">
                                             <span>{{ $program->level }} {{ $program->title }}</span>
-                                            <i class="fa-solid fa-external-link text-sm"></i>
                                         </a>
+                                        <p class="text-gray-700 font-medium">{{ $program->accreditation }}</p>
                                     </li>
                                 @endforeach
                             </ul>
@@ -136,9 +132,9 @@
                         <h2 class="uppercase font-bold text-2xl">
                             <span class="border-l-4 border-sky-500 pl-2">Program Studi</span>
                         </h2>
-                        <p class="text-sm text-gray-600">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            Totam,
-                            possimus?</p>
+                        <p class="text-sm text-gray-600 max-w-md">Berikut adalah daftar program studi yang tersedia di
+                            Politeknik LP3I Kampus Tasikmalaya untuk mendukung perkembangan karir dan keahlian
+                            mahasiswa.</p>
                     </div>
                     <img src="{{ asset('images/illustration/model.png') }}" alt="Computer Engineer"
                         class="text-center w-96 drop-shadow-lg">

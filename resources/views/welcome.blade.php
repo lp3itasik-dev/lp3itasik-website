@@ -173,12 +173,12 @@
                             </div>
                             <ul class="space-y-3">
                                 @foreach ($programs_plt as $program)
-                                    <li class="border-l-8 border-lp3i-200 px-5">
+                                    <li class="border-l-8 border-lp3i-200 px-5 space-y-1">
                                         <a href="{{ route('program-studi', $program->code) }}"
                                             class="flex items-center gap-2 text-2xl font-bold hover:underline underline-offset-4">
                                             <span>{{ $program->level }} {{ $program->title }}</span>
-                                            <i class="fa-solid fa-external-link text-sm"></i>
                                         </a>
+                                        <p class="text-gray-700 font-medium">{{ $program->accreditation }}</p>
                                     </li>
                                 @endforeach
                             </ul>
@@ -195,12 +195,12 @@
                             </div>
                             <ul class="space-y-3">
                                 @foreach ($programs_plt_vokasi as $program)
-                                    <li class="border-l-8 border-lp3i-emerald-100 px-5">
+                                    <li class="border-l-8 border-lp3i-200 px-5 space-y-1">
                                         <a href="{{ route('program-studi', $program->code) }}"
                                             class="flex items-center gap-2 text-2xl font-bold hover:underline underline-offset-4">
-                                            <span>{{ $program->title }}</span>
-                                            <i class="fa-solid fa-external-link text-sm"></i>
+                                            <span>{{ $program->level }} {{ $program->title }}</span>
                                         </a>
+                                        <p class="text-gray-700 font-medium">{{ $program->accreditation }}</p>
                                     </li>
                                 @endforeach
                             </ul>
@@ -216,12 +216,12 @@
                             </div>
                             <ul class="space-y-3">
                                 @foreach ($programs_plb as $program)
-                                    <li class="border-l-8 border-lp3i-red-100 px-5">
+                                    <li class="border-l-8 border-lp3i-200 px-5 space-y-1">
                                         <a href="{{ route('program-studi', $program->code) }}"
                                             class="flex items-center gap-2 text-2xl font-bold hover:underline underline-offset-4">
                                             <span>{{ $program->level }} {{ $program->title }}</span>
-                                            <i class="fa-solid fa-external-link text-sm"></i>
                                         </a>
+                                        <p class="text-gray-700 font-medium">{{ $program->accreditation }}</p>
                                     </li>
                                 @endforeach
                             </ul>
