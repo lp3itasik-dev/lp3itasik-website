@@ -4,10 +4,11 @@
         <div class="flex justify-between h-16">
             <div class="w-full flex justify-between">
                 <!-- Logo -->
-                <div class="shrink-0 flex items-center">
-                    <a href="{{ route('welcome') }}">
+                <div class="shrink-0 flex items-center gap-2">
+                    <a href="{{ route('welcome') }}" class="flex items-center gap-2">
                         <img src="{{ asset('images/logo/logo-lp3i.svg') }}" alt="" class="h-14">
                     </a>
+                    <img src="{{ asset('images/logo/akreditasi.png') }}" alt="" class="h-14">
                 </div>
 
                 <!-- Navigation Links -->

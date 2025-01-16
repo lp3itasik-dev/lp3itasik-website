@@ -5,7 +5,7 @@
                 <img src="{{ asset('images/kepalakampus.png') }}" alt="" class="float-start w-36 mr-3">
                 <div class="space-y-1 mb-2">
                     <h4 class="font-medium text-gray-700">Sambutan Kepala Kampus</h4>
-                    <h2 class="font-bold text-2xl">H. Rudi Kurniawan, ST., MM.</h2>
+                    <h2 class="font-bold text-2xl">Dr. H. Rudi Kurniawan, ST., MM.</h2>
                 </div>
                 <p class="text-sm text-gray-600 text-justify indent-10">Bahagia sekali rasanya kami bisa berada di tengah anda
                     untuk menghadirkan sekelumit informasi

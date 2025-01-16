@@ -4,10 +4,11 @@
         <div class="flex justify-between h-16">
             <div class="w-full flex justify-between">
                 <!-- Logo -->
-                <div class="shrink-0 flex items-center">
-                    <a href="{{ route('welcome') }}">
+                <div class="shrink-0 flex items-center gap-2">
+                    <a href="{{ route('welcome') }}" class="flex items-center gap-2">
                         <img src="{{ asset('images/logo/logo-lp3i.svg') }}" alt="" class="h-14">
                     </a>
+                    <img src="{{ asset('images/logo/akreditasi.png') }}" alt="" class="h-14">
                 </div>
 
                 <!-- Navigation Links -->
@@ -28,7 +29,8 @@
                             x-transition:leave="transition ease-in duration-75"
                             x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-95"
                             class="absolute z-50 top-10 rounded-2xl shadow-xl
-                                style="display: none;" @click="open = false">
+                                style="display:
+                            none;" @click="open = false">
                             <div class="w-[300px] relative top-0 rounded-md">
                                 <div class="w-full bg-white border-4 border-gray-400/500 p-4 rounded-2xl shadow-lg">
                                     <dl class="space-y-3 text-sm">
@@ -130,7 +132,8 @@
 
         <div class="mb-5 px-4">
             <a href="https://pmb.politekniklp3i-tasikmalaya.ac.id" target="_blank"
-                class="block bg-lp3i-200 hover:bg-lp3i-300 transition-all ease-in-out py-3 px-4 text-center font-bold text-white rounded-2xl">Daftar Sekarang!</a>
+                class="block bg-lp3i-200 hover:bg-lp3i-300 transition-all ease-in-out py-3 px-4 text-center font-bold text-white rounded-2xl">Daftar
+                Sekarang!</a>
         </div>
     </div>
 </nav>
