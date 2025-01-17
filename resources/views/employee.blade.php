@@ -108,7 +108,7 @@
                     @if (count($programs_plb) > 0)
                         <div class="space-y-4">
                             <div class="space-y-1">
-                                <h2 class="font-bold text-lg">Kampus Utamas</h2>
+                                <h2 class="font-bold text-lg">Kampus Utama</h2>
                                 <p class="text-gray-600">Kampus utama dilengkapi dengan berbagai fasilitas modern yang
                                     mendukung pembelajaran dan kegiatan mahasiswa secara optimal.</p>
                             </div>
