@@ -13,17 +13,17 @@
         <div class="container mx-auto p-8">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-10 justify-center text-center text-sm">
                 <a href="#"
-                    class="flex items-center justify-center gap-3 bg-red-500 hover:bg-red-600 transition-all ease-in-out px-4 py-3 border-l-8 border-lp3i-red-100 text-white font-medium space-x-1">
+                    class="flex items-center justify-center gap-3 bg-red-500 hover:bg-red-600 transition-all ease-in-out px-4 py-3 border-l-8 border-lp3i-red-100 text-white font-medium space-x-1 rounded-xl">
                     <span>Informasi Pendaftaran</span>
                     <i class="fa-solid fa-external-link"></i>
                 </a>
                 <a href="{{ route('career-center') }}"
-                    class="flex items-center justify-center gap-3 bg-gray-200 hover:bg-gray-300 transition-all ease-in-out px-4 py-3 border-l-8 border-lp3i-emerald-100 text-gray-900 font-medium">
+                    class="flex items-center justify-center gap-3 bg-gray-200 hover:bg-gray-300 transition-all ease-in-out px-4 py-3 border-l-8 border-lp3i-emerald-100 text-gray-900 font-medium rounded-xl">
                     <span>Pusat Karir</span>
                     <i class="fa-solid fa-external-link"></i>
                 </a>
                 <a href="https://virtualkampus.politekniklp3i-tasikmalaya.ac.id" target="_blank"
-                    class="flex items-center justify-center gap-3 bg-gray-200 hover:bg-gray-300 transition-all ease-in-out px-4 py-3 border-l-8 border-lp3i-100 text-gray-900 font-medium space-x-1">
+                    class="flex items-center justify-center gap-3 bg-gray-200 hover:bg-gray-300 transition-all ease-in-out px-4 py-3 border-l-8 border-lp3i-100 text-gray-900 font-medium space-x-1 rounded-xl">
                     <span>Virtual Kampus</span>
                     <i class="fa-solid fa-external-link"></i>
                 </a>
@@ -34,42 +34,42 @@
         <div class="container mx-auto px-8 pb-8">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div
-                    class="text-center bg-gray-50 hover:bg-gray-100 border-b-4 border-lp3i-emerald-200 p-4 space-y-1 transition-all ease-in-out drop-shadow-lg">
+                    class="text-center bg-gray-50 hover:bg-gray-100 border-b-4 border-lp3i-emerald-200 p-4 space-y-1 transition-all ease-in-out drop-shadow-lg rounded-2xl">
                     <i class="fa-solid fa-certificate text-lg bg-sky-200 text-sky-700 p-3 rounded-full"></i>
                     <h2 class="font-bold text-xl">Terakreditasi BAN-PT</h2>
                     <p class="text-sm text-gray-600">Politeknik LP3I Kampus Tasikmalaya telah terakreditasi BAN-PT
                         dengan peringkat B</p>
                 </div>
                 <div
-                    class="text-center bg-gray-50 hover:bg-gray-100 border-b-4 border-lp3i-emerald-200 p-4 space-y-1 transition-all ease-in-out drop-shadow-lg">
+                    class="text-center bg-gray-50 hover:bg-gray-100 border-b-4 border-lp3i-emerald-200 p-4 space-y-1 transition-all ease-in-out drop-shadow-lg rounded-2xl">
                     <i class="fa-solid fa-graduation-cap text-lg bg-sky-200 text-sky-700 p-3 rounded-full"></i>
                     <h2 class="font-bold text-xl">Kurikulum Berbasis Link & Match</h2>
                     <p class="text-sm text-gray-600">Memiliki kerjasama dengan perusahaan serta memiliki kurikulum yang
                         sesuai dengan kebutuhan dunia kerja. Dengan pola perkuliahan 70% praktikum dan 30% teori</p>
                 </div>
                 <div
-                    class="text-center bg-gray-50 hover:bg-gray-100 border-b-4 border-lp3i-emerald-200 p-4 space-y-1 transition-all ease-in-out drop-shadow-lg">
+                    class="text-center bg-gray-50 hover:bg-gray-100 border-b-4 border-lp3i-emerald-200 p-4 space-y-1 transition-all ease-in-out drop-shadow-lg rounded-2xl">
                     <i class="fa-solid fa-medal text-lg bg-sky-200 text-sky-700 p-3 rounded-full"></i>
                     <h2 class="font-bold text-xl">Sertifikasi Kompetensi</h2>
                     <p class="text-sm text-gray-600">Mahasiswa Politeknik LP3I memiliki 4 sertifikasi kompetensi dari
                         Badan Nasional Sertifikasi Profesi (BNSP) dan International Test Center</p>
                 </div>
                 <div
-                    class="text-center bg-gray-50 hover:bg-gray-100 border-b-4 border-lp3i-emerald-200 p-4 space-y-1 transition-all ease-in-out drop-shadow-lg">
+                    class="text-center bg-gray-50 hover:bg-gray-100 border-b-4 border-lp3i-emerald-200 p-4 space-y-1 transition-all ease-in-out drop-shadow-lg rounded-2xl">
                     <i class="fa-solid fa-chalkboard-user text-lg bg-sky-200 text-sky-700 p-3 rounded-full"></i>
                     <h2 class="font-bold text-xl">Dosen Profesional dan Praktisi</h2>
                     <p class="text-sm text-gray-600">Dosen Politeknik LP3I memiliki sertifikasi dosen dari Kemendikbud
                         dan Dosen praktisi yang berpengalaman di bidang industri</p>
                 </div>
                 <div
-                    class="text-center bg-gray-50 hover:bg-gray-100 border-b-4 border-lp3i-emerald-200 p-4 space-y-1 transition-all ease-in-out drop-shadow-lg">
+                    class="text-center bg-gray-50 hover:bg-gray-100 border-b-4 border-lp3i-emerald-200 p-4 space-y-1 transition-all ease-in-out drop-shadow-lg rounded-2xl">
                     <i class="fa-solid fa-briefcase text-lg bg-sky-200 text-sky-700 p-3 rounded-full"></i>
                     <h2 class="font-bold text-xl">Penempatan Magang dan Kerja</h2>
                     <p class="text-sm text-gray-600">Mahasiswa mengikuti proses kuliah kerja industri dan penempatan
                         kerja di industri dan dunia kerja</p>
                 </div>
                 <div
-                    class="text-center bg-gray-50 hover:bg-gray-100 border-b-4 border-lp3i-emerald-200 p-4 space-y-1 transition-all ease-in-out drop-shadow-lg">
+                    class="text-center bg-gray-50 hover:bg-gray-100 border-b-4 border-lp3i-emerald-200 p-4 space-y-1 transition-all ease-in-out drop-shadow-lg rounded-2xl">
                     <i class="fa-regular fa-lightbulb text-lg bg-sky-200 text-sky-700 p-3 rounded-full"></i>
                     <h2 class="font-bold text-xl">Memiliki Hardskill dan Softskill</h2>
                     <p class="text-sm text-gray-600">Mendapatkan pembekalan hardskill dan softskill untuk dunia kerja
