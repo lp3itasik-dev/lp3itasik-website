@@ -104,6 +104,11 @@
                 <p class="text-xs text-white/60 font-light">memudahkan pendaftaran, akses profil, akun dan unggah berkas.</p>
                 <i class="z-[-1] absolute right-5 bottom-8 fa-solid fa-arrow-up-right-from-square text-white/10 fa-2x"></i>
             </a>
+            <a href="https://opac.politekniklp3i-tasikmalaya.ac.id" target="_blank" class="relative bg-lp3i-100 hover:bg-lp3i-200 p-4 rounded-xl space-y-1 drop-shadow-lg text-center link-5">
+                <h4 class="text-white text-center font-bold text-sm">Perpustakaan</h4>
+                <p class="text-xs text-white/60 font-light">memudahkan pendaftaran, akses profil, akun dan unggah berkas.</p>
+                <i class="z-[-1] absolute right-5 bottom-8 fa-solid fa-arrow-up-right-from-square text-white/10 fa-2x"></i>
+            </a>
         </div>
     </div>
     <div class="fixed right-5 bottom-0">
@@ -228,6 +233,13 @@
             y: -700,
             rotation: -30,
             delay: 1.4,
+            ease: "elastic.out(1,0.3)"
+        });
+        gsap.from(".link-6", {
+            duration: 2.5,
+            y: -700,
+            rotation: -30,
+            delay: 1.5,
             ease: "elastic.out(1,0.3)"
         });
         gsap.from(".whatsapp", {
