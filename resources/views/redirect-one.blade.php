@@ -63,7 +63,7 @@
     $(document).ready(function() {
         setTimeout(function() {
             window.location.href = 'https://forms.gle/UqLyNAdcafMQF4PB8';
-        }, 2000);
+        }, 500);
     });
 </script>
 
