@@ -52,9 +52,6 @@
         </div>
         <div class="space-y-3">
             <h2 class="text-center text-gray-700 font-medium tracking-widest">Connecting...</h2>
-            <p class="text-center text-sm text-gray-600">Halo! Kami sedang menyiapkan jalur eksklusif untuk langsung terhubung dengan tim kami
-                melalui WhatsApp. Jangan khawatir, kami akan segera hadir untuk menjawab setiap pertanyaan Anda. Tetap
-                bersama kami, ya!</p>
         </div>
     </div>
 </body>
