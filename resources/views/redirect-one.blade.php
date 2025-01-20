@@ -47,9 +47,9 @@
 
 <body class="flex flex-col justify-center items-center font-sans text-gray-900 antialiased h-screen bg-gray-100">
     <div class="max-w-md mx-auto space-y-10">
-        <div class="flex justify-center">
+        {{-- <div class="flex justify-center">
             <img src="{{ asset('images/logo/logo-lp3i.svg') }}" alt="" class="h-20">
-        </div>
+        </div> --}}
         <div class="space-y-3">
             <h2 class="text-center text-gray-700 font-medium tracking-widest">Connecting...</h2>
         </div>
