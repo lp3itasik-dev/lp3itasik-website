@@ -62,7 +62,7 @@
 <script>
     $(document).ready(function() {
         setTimeout(function() {
-            window.location.href = 'https://forms.gle/UqLyNAdcafMQF4PB8';
+            window.location.href = 'https://forms.gle/X5HbYbjvbz91b8qW6';
         }, 500);
     });
 </script>
