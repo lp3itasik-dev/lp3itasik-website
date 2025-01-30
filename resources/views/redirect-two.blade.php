@@ -59,7 +59,7 @@
 <script>
     $(document).ready(function() {
         setTimeout(function() {
-            window.location.href = 'https://forms.gle/X5HbYbjvbz91b8qW6';
+            window.location.href = 'https://forms.gle/ikZBXWdRL9KxqnFk6';
         }, 500);
     });
 </script>
