@@ -24,8 +24,17 @@ Route::get('/catalog/management', [WelcomeController::class, 'catalog_management
 Route::get('/catalog', [WelcomeController::class, 'catalog'])->name('catalog');
 
 // Redirect
-Route::get('/penerimaan-mahasiswa', [WelcomeController::class, 'redirect_link'])->name('redirect-link');
-Route::get('/beasiswakuliahlp3itasik', [WelcomeController::class, 'redirect_one'])->name('redirect-one');
+Route::get('/penerimaan-mahasiswa', function(){
+    return view('redirect-link');
+})->name('redirect-link');
+
+Route::get('/beasiswakuliahlp3itasik', function(){
+    return view('redirect-one');
+})->name('redirect-one');
+
+Route::get('/penerimaan-mahasiswa-nonreguler', function(){
+    return view('redirect-two');
+})->name('redirect-two');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
