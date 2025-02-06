@@ -9,9 +9,8 @@
             <div>
                 <img src="{{ asset('images/doc-kk/KK-1.jpeg') }}" alt="">
                 <div class="mt-3 space-y-1">
-                    <h2 class="font-bold text-xl uppercase text-gray-900">DIBUKA PENDAFTARAN GEL. 1</h2>
-                    <p class="text-sm text-gray-700">Pendaftaran Gelombang 1 telah resmi dibuka. Ayo daftar sekarang
-                        untuk mendapatkan potongan beasiswa sampai dengan Rp5.000.000!</p>
+                    <h2 class="font-bold text-xl uppercase text-gray-900">DIBUKA PENDAFTARAN GEL. 2</h2>
+                    <p class="text-sm text-gray-700">Pendaftaran Gelombang 2 telah resmi dibuka. Ayo daftar sekarang untuk mendapatkan Beasiswa Kuliah up to 100% + uang saku</p>
                 </div>
             </div>
             <form onsubmit="RegisterPMBAPI(event)" class="grid grid-cols-2 gap-2">
