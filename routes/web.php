@@ -28,6 +28,10 @@ Route::get('/penerimaan-mahasiswa', function(){
     return view('redirect-link');
 })->name('redirect-link');
 
+Route::get('/penerimaan-beasiswa', function(){
+    return view('redirect-link-one');
+})->name('redirect-link-one');
+
 Route::get('/beasiswakuliahlp3itasik', function(){
     return view('redirect-one');
 })->name('redirect-one');
