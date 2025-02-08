@@ -40,6 +40,10 @@ Route::get('/penerimaan-mahasiswa-nonreguler', function(){
     return view('redirect-two');
 })->name('redirect-two');
 
+Route::get('/survey-kebutuhan-aplikasi', function(){
+    return view('redirect-three');
+})->name('redirect-three');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
