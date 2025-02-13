@@ -40,7 +40,7 @@
                         </div>
                         <input type="text" name="search"
                             class="bg-white border border-gray-200 text-gray-700 text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5"
-                            placeholder="Cari jurusan disini..." />
+                            placeholder="Cari nama kegiatan disini..." />
                         <button type="submit" class="absolute inset-y-0 end-0 flex items-center pe-3">
                             <i class="fa-solid fa-magnifying-glass text-gray-400"></i>
                         </button>
@@ -82,7 +82,7 @@
                                             {{ $no + 1 }}
                                         </th>
                                         <td class="px-6 py-4">
-                                            /in/{{ $link->code }}
+                                            /in/<span class="underline font-medium underline-offset-2">{{ $link->code }}</span>
                                         </td>
                                         <td class="px-6 py-4 text-nowrap">
                                             {{ $link->name }}

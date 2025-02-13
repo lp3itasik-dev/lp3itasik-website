@@ -3,10 +3,10 @@
         <nav class="flex" aria-label="Breadcrumb">
             <ol class="inline-flex items-center space-x-3">
                 <li class="inline-flex items-center">
-                    <a href="{{ route('banners.index') }}"
+                    <a href="{{ route('links.index') }}"
                         class="inline-flex items-center gap-2 text-sm font-medium text-gray-700 hover:text-gray-800 transition-all ease-in-out">
-                        <i class="fa-solid fa-book"></i>
-                        <span>Banners</span>
+                        <i class="fa-solid fa-link"></i>
+                        <span>Links</span>
                     </a>
                 </li>
                 <li aria-current="page">
@@ -20,7 +20,7 @@
     </x-slot>
 
     <div class="py-12">
-        <div class="max-w-3xl mx-auto sm:px-6 lg:px-8 space-y-4">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-4">
             @if (session('alert-type') == 'success')
                 <div id="alert" class="flex items-center p-4 text-emerald-50 rounded-xl bg-emerald-500"
                     role="alert">
@@ -52,26 +52,33 @@
 
             <div class="bg-white overflow-hidden border border-gray-200 md:rounded-2xl">
                 <div class="p-6 text-gray-900 space-y-5">
-                    <form method="POST" action="{{ route('banners.update', $banner->id) }}"
+                    <form method="POST" action="{{ route('links.update', $link->id) }}"
                         enctype="multipart/form-data" class="space-y-4">
                         @csrf
                         @method('PATCH')
-                        <div class="grid gap-5 mb-4 grid-cols-1 md:grid-cols-3">
+                        <div class="grid gap-5 mb-4 md:grid-cols-3">
                             <div>
-                                <label for="type" class="block mb-2 text-sm font-medium text-gray-900">Tipe</label>
-                                <select id="type" name="type"
-                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
-                                    <option value="" disabled {{ empty($banner->type) ? 'selected' : '' }}>Pilih
-                                        Tipe</option>
-                                    <option value="R" {{ $banner->type === 'R' ? 'selected' : '' }}>Reguler
-                                    </option>
-                                    <option value="N" {{ $banner->type === 'N' ? 'selected' : '' }}>Non-Reguler
-                                    </option>
-                                    <option value="RPL" {{ $banner->type === 'RPL' ? 'selected' : '' }}>Rekognisi
-                                        Pembelajaran Lampau</option>
-                                </select>
+                                <label for="code" class="block mb-2 text-sm font-medium text-gray-900">Code</label>
+                                <input type="text" name="code" id="code" value="{{ $link->code }}" placeholder="Tuliskan kode disini..."
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-xs rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" />
                                 <p class="mt-1 text-xs text-gray-500">
-                                    <span class="text-red-500 text-xs">{{ $errors->first('type') }}</span>
+                                    <span class="text-red-500 text-xs">{{ $errors->first('code') }}</span>
+                                </p>
+                            </div>
+                            <div>
+                                <label for="name" class="block mb-2 text-sm font-medium text-gray-900">Name</label>
+                                <input type="text" name="name" id="name" value="{{ $link->name }}" placeholder="Tuliskan nama situs disini..."
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-xs rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" />
+                                <p class="mt-1 text-xs text-gray-500">
+                                    <span class="text-red-500 text-xs">{{ $errors->first('name') }}</span>
+                                </p>
+                            </div>
+                            <div>
+                                <label for="url" class="block mb-2 text-sm font-medium text-gray-900">URL</label>
+                                <input type="text" name="url" id="url" value="{{ $link->url }}" placeholder="Tuliskan url situs disini..."
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-xs rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" />
+                                <p class="mt-1 text-xs text-gray-500">
+                                    <span class="text-red-500 text-xs">{{ $errors->first('url') }}</span>
                                 </p>
                             </div>
                         </div>
