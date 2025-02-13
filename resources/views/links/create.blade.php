@@ -58,7 +58,7 @@
                         <div class="grid gap-5 mb-4 md:grid-cols-3">
                             <div>
                                 <label for="code" class="block mb-2 text-sm font-medium text-gray-900">Code</label>
-                                <input type="text" name="code" id="code" placeholder="Contoh: /in/...... | Isi titik-titik saja."
+                                <input type="text" name="code" id="code" placeholder="Contoh: beasiswappo"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-xs rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" />
                                 <p class="mt-1 text-xs text-gray-500">
                                     <span class="text-red-500 text-xs">{{ $errors->first('code') }}</span>
