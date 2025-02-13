@@ -41,6 +41,14 @@
                     ])">
                         {{ __('Documentations') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('links.index')" :active="request()->routeIs([
+                        'links.index',
+                        'links.create',
+                        'links.edit',
+                        'links.show',
+                    ])">
+                        {{ __('Links') }}
+                    </x-nav-link>
                 </div>
             </div>
 
@@ -119,6 +127,14 @@
                 'documentations.show',
             ])">
                 {{ __('Documentations') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('links.index')" :active="request()->routeIs([
+                'links.index',
+                'links.create',
+                'links.edit',
+                'links.show',
+            ])">
+                {{ __('Links') }}
             </x-responsive-nav-link>
         </div>
 

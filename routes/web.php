@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BannerController;
 use App\Http\Controllers\DocumentationController;
+use App\Http\Controllers\LinkController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProgramAlumniController;
 use App\Http\Controllers\ProgramBenefitController;
@@ -67,6 +68,10 @@ Route::middleware('auth')->group(function () {
 
     Route::resource('banners', BannerController::class);
     Route::patch('banners/updatestatus/{id}', [BannerController::class, 'updatestatus'])->name('banners.updatestatus');
+
+    Route::get('/links/{id}/view', [LinkController::class, 'view'])->name('links.view');
+    Route::get('/in/{code}', [LinkController::class, 'show'])->name('links.in');
+    Route::resource('links', LinkController::class);
 
     Route::get('programinterests/create/{id}', [ProgramInterestController::class, 'create'])->name('programinterests.create');
     Route::get('programinterests/edit/{id}', [ProgramInterestController::class, 'edit'])->name('programinterests.edit');
