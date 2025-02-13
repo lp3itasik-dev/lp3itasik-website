@@ -93,7 +93,7 @@
                                         <td class="px-6 py-4 text-nowrap">
                                             {{ $link->view }}
                                         </td>
-                                        <td class="px-6 py-4 flex flex-col md:flex-row items-center gap-2">
+                                        <td class="px-6 py-4 flex flex-col md:flex-row items-center gap-1">
                                             <button type="button"
                                                 onclick="copyToClipboard('{{ $link->code }}', '{{ config('app.url') }}')"
                                                 class="inline-block bg-sky-500 hover:bg-sky-600 text-white px-4 py-2 text-xs rounded-xl hover font-medium">
