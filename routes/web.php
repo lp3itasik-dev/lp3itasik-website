@@ -44,6 +44,10 @@ Route::get('/survey-kebutuhan-aplikasi', function(){
     return view('redirect-three');
 })->name('redirect-three');
 
+Route::get('/beasiswappo', function(){
+    return view('redirect-four');
+})->name('redirect-four');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
