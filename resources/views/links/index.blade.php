@@ -82,7 +82,7 @@
                                             {{ $no + 1 }}
                                         </th>
                                         <td class="px-6 py-4">
-                                            {{ $link->code }}
+                                            /in/{{ $link->code }}
                                         </td>
                                         <td class="px-6 py-4 text-nowrap">
                                             {{ $link->name }}
