@@ -59,6 +59,9 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+Route::get('/links/{id}/view', [LinkController::class, 'view'])->name('links.view');
+Route::get('/in/{code}', [LinkController::class, 'show'])->name('links.in');
+
 Route::middleware('auth')->group(function () {
     Route::resource('programs', ProgramController::class);
     Route::patch('programs/updatestatus/{id}', [ProgramController::class, 'updatestatus'])->name('programs.updatestatus');
@@ -69,8 +72,6 @@ Route::middleware('auth')->group(function () {
     Route::resource('banners', BannerController::class);
     Route::patch('banners/updatestatus/{id}', [BannerController::class, 'updatestatus'])->name('banners.updatestatus');
 
-    Route::get('/links/{id}/view', [LinkController::class, 'view'])->name('links.view');
-    Route::get('/in/{code}', [LinkController::class, 'show'])->name('links.in');
     Route::resource('links', LinkController::class);
 
     Route::get('programinterests/create/{id}', [ProgramInterestController::class, 'create'])->name('programinterests.create');
