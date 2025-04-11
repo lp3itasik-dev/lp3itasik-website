@@ -49,6 +49,10 @@ Route::get('/beasiswappo', function(){
     return view('redirect-four');
 })->name('redirect-four');
 
+Route::get('/tryout-utbksnbt', function(){
+    return view('redirect-five');
+})->name('redirect-five');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
